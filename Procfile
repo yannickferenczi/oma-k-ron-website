@@ -1,0 +1,1 @@
+web: gunicorn oma_k_ron.wsgi
