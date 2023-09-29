@@ -115,7 +115,7 @@ else:
             conn_max_age=600,
             conn_health_checks=True,
         )
-}
+    }
 
 
 # Password validation
