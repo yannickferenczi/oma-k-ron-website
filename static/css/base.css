@@ -8,6 +8,10 @@ body {
     height: calc(100vh - 160px);
 }
 
+.header-rule {
+    border-top: 2px solid #66c7e8;
+}
+
 .logo {
     width: 50px;
 }
@@ -63,6 +67,10 @@ body {
 
 .border-black {
     border: 1px solid black !important;
+}
+
+.bg-black {
+    background-color: black;
 }
 
 /* -------------------------------- Media Queries */
