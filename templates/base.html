@@ -16,6 +16,10 @@
         {% block core_css %}
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
             integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Croissant+One&display=swap" rel="stylesheet">
         {% endblock core_css %}
 
         {% block extra_css %}
@@ -30,6 +34,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
             integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
             crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/d78eb563ab.js" crossorigin="anonymous"></script>
         {% endblock core_js %}
 
         {% block extra_js %}
@@ -40,10 +45,12 @@
 
     <body>
         <header class="container-fluid fixed-top">
-            <div class="row">
-                <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
-                    <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                        <img src="" alt="Oma K-ron logo">
+            <div id="topnav" class="row d-none d-lg-flex">
+                <div class="col-lg-4 my-auto py-lg-0 text-center text-lg-left">
+                    <a href="{% url 'home' %}" class="nav-link">
+                        <h2 class="d-inline-block logo-name">Oma </h2>
+                        <img class="logo" src="{% static '/img/oma_k_ron_logo.png' %}" alt="Oma K-ron logo">
+                        <h2 class="d-inline-block logo-name"> K-ron</h2>
                     </a>
                 </div>
                 <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
@@ -87,7 +94,7 @@
                             <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
                                 href="">
                                 <div class="text-center">
-                                    <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+                                    <div><i class="fa-solid fa-basket-shopping"></i></div>
                                     <p class="my-0">
                                         {% if grand_total %}
                                         ${{ grand_total|floatformat:2 }}
@@ -100,6 +107,23 @@
                         </li>
                     </ul>
                 </div>
+            </div>
+            <div class="row">
+                <div class="col-12 my-auto py-1 text-center d-lg-none">
+                    <a href="{% url 'home' %}" class="nav-link">
+                        <h2 class="d-inline-block logo-name">Oma </h2>
+                        <img class="logo" src="{% static '/img/oma_k_ron_logo.png' %}" alt="Oma K-ron logo">
+                        <h2 class="d-inline-block logo-name"> K-ron</h2>
+                    </a>
+                </div>
+                <nav class="navbar navbar-expand-lg navbar-light w-100">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    {% include 'includes/mobile-top-header.html' %}
+                    {% include 'includes/main-nav.html' %}
+                </nav>
             </div>
         </header>
         {% if messages %}

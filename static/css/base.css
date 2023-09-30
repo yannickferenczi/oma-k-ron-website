@@ -1,0 +1,101 @@
+html {
+    height: 100%;
+}
+
+body {
+    background: url('/media/oma_k_ron_hero_image.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: calc(100vh - 160px);
+}
+
+.logo {
+    width: 50px;
+}
+
+.logo-name {
+    font-family: 'Croissant One', cursive;
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+}
+
+/* from Bulma */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.logo-font {
+    text-transform: uppercase;
+}
+
+.shop-now-button {
+    position: fixed;
+    bottom: 20vh;
+    left: 50%;
+    transform: translate(-50%);
+    background: black;
+    color: white;
+    min-width: 260px;
+}
+
+.btn-black {
+    background: black;
+    color: white;
+}
+
+.shop-now-button:hover,
+.shop-now-button:active,
+.shop-now-button:focus,
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+    background: #222;
+    color: white;
+}
+
+.text-black {
+    color: #000 !important;
+}
+
+.border-black {
+    border: 1px solid black !important;
+}
+
+/* -------------------------------- Media Queries */
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 80%;
+    }
+}
+
+/* fixed top navbar only on medium and up */
+@media (min-width: 768px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .logo {
+        width: 80px;
+    }
+
+    .shop-now-button {
+        position: relative;
+        top:0;
+        left: 0;
+        transform: translate(0);
+    }
+
+    .header-container {
+        padding-top: 180px;
+    }
+}
