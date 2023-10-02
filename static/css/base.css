@@ -17,8 +17,16 @@ body {
     width: 50px;
 }
 
-.logo-name {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Croissant One', cursive;
+}
+
+.logo-name {
     font-size: 24px;
     font-weight: bold;
     color: black;
@@ -113,6 +121,6 @@ body {
     }
 
     .header-container {
-        padding-top: 180px;
+        padding-top: 220px;
     }
 }
