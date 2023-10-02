@@ -10,6 +10,7 @@ body {
 
 .header-rule {
     border-top: 2px solid #66c7e8;
+    margin: 0;
 }
 
 .logo {
@@ -71,6 +72,14 @@ body {
 
 .bg-black {
     background-color: black;
+}
+
+.bg-blue {
+    background-color: #66c7e8;
+}
+
+.bg-pink {
+    background-color: #feb9d5;
 }
 
 /* -------------------------------- Media Queries */
