@@ -1,0 +1,548 @@
+[
+    {
+        "pk": 1,
+        "model": "products.product",
+        "fields": {
+            "name": "Macaron Apple",
+            "product_type": "single",
+            "style": "french",
+            "flavour": "apple",
+            "description": "One 30g French macaron",
+            "price": 1.3,
+            "image": "french_macarons_apple_single.jpg"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "products.product",
+        "fields": {
+            "name": "Macaron Cassis",
+            "product_type": "single",
+            "style": "french",
+            "flavour": "cassis",
+            "description": "One 30g French macaron",
+            "price": 1.4,
+            "image": "french_macarons_cassis_single.jpg"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "products.product",
+        "fields": {
+            "name": "Macaron Dark Chocolate",
+            "product_type": "single",
+            "style": "french",
+            "flavour": "dark chocolate",
+            "description": "One 30g French macaron",
+            "price": 1.5,
+            "image": "french_macarons_darkchocolate_single.jpg"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "products.product",
+        "fields": {
+            "name": "Macaron Nougat",
+            "product_type": "single",
+            "style": "french",
+            "flavour": "nougat",
+            "description": "One 30g French macaron",
+            "price": 1.5,
+            "image": "french_macarons_nougat_single.jpg"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "products.product",
+        "fields": {
+            "name": "Macaron Peach",
+            "product_type": "single",
+            "style": "french",
+            "flavour": "peach",
+            "description": "One 30g French macaron",
+            "price": 1.3,
+            "image": "french_macarons_peach_single.jpg"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "products.product",
+        "fields": {
+            "name": "Macaron Pumpkin",
+            "product_type": "single",
+            "style": "french",
+            "flavour": "pumpkin",
+            "description": "One 30g French macaron",
+            "price": 1.1,
+            "image": "french_macarons_pumpkin_single.jpg"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "products.product",
+        "fields": {
+            "name": "Macaron Raspberry",
+            "product_type": "single",
+            "style": "french",
+            "flavour": "raspberry",
+            "description": "One 30g French macaron",
+            "price": 1.4,
+            "image": "french_macarons_raspberry_single.jpg"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "products.product",
+        "fields": {
+            "name": "Macaron Strawberry",
+            "product_type": "single",
+            "style": "french",
+            "flavour": "strawberry",
+            "description": "One 30g French macaron",
+            "price": 1.4,
+            "image": "french_macarons_strawberry_single.jpg"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "products.product",
+        "fields": {
+            "name": "Macaron Blueberry",
+            "product_type": "single",
+            "style": "italian",
+            "flavour": "blueberry",
+            "description": "One 30g Italian macaron",
+            "price": 1.3,
+            "image": "italian_macarons_blueberry_single.jpg"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "products.product",
+        "fields": {
+            "name": "Macaron Cassis",
+            "product_type": "single",
+            "style": "italian",
+            "flavour": "cassis",
+            "description": "One 30g Italian macaron",
+            "price": 1.6,
+            "image": "italian_macarons_cassis_single.jpg"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "products.product",
+        "fields": {
+            "name": "Macaron Lavender",
+            "product_type": "single",
+            "style": "italian",
+            "flavour": "lavender",
+            "description": "One 30g Italian macaron",
+            "price": 1.4,
+            "image": "italian_macarons_lavender_single.jpg"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "products.product",
+        "fields": {
+            "name": "Macaron Lemon",
+            "product_type": "single",
+            "style": "italian",
+            "flavour": "lemon",
+            "description": "One 30g Italian macaron",
+            "price": 1.2,
+            "image": "italian_macarons_lemon_single.jpg"
+        }
+    },
+    {
+        "pk": 13,
+        "model": "products.product",
+        "fields": {
+            "name": "Macaron Mint",
+            "product_type": "single",
+            "style": "italian",
+            "flavour": "mint",
+            "description": "One 30g Italian macaron",
+            "price": 1.5,
+            "image": "italian_macarons_mint_single.jpg"
+        }
+    },
+    {
+        "pk": 14,
+        "model": "products.product",
+        "fields": {
+            "name": "Macaron Raspberry",
+            "product_type": "single",
+            "style": "italian",
+            "flavour": "raspberry",
+            "description": "One 30g Italian macaron",
+            "price": 1.6,
+            "image": "italian_macarons_raspberry_single.jpg"
+        }
+    },
+    {
+        "pk": 15,
+        "model": "products.product",
+        "fields": {
+            "name": "Macaron Cappuccino",
+            "product_type": "single",
+            "style": "swiss",
+            "flavour": "cappuccino",
+            "description": "One 30g Swiss macaron",
+            "price": 1.7,
+            "image": "swiss_macarons_cappuccino_single.jpg"
+        }
+    },
+    {
+        "pk": 16,
+        "model": "products.product",
+        "fields": {
+            "name": "Macaron Eucalyptus",
+            "product_type": "single",
+            "style": "swiss",
+            "flavour": "eucalyptus",
+            "description": "One 30g Swiss macaron",
+            "price": 1.7,
+            "image": "swiss_macarons_eucalyptus_single.jpg"
+        }
+    },
+    {
+        "pk": 17,
+        "model": "products.product",
+        "fields": {
+            "name": "Macaron Lavender",
+            "product_type": "single",
+            "style": "swiss",
+            "flavour": "lavender",
+            "description": "One 30g Swiss macaron",
+            "price": 1.6,
+            "image": "swiss_macarons_lavender_single.jpg"
+        }
+    },
+    {
+        "pk": 18,
+        "model": "products.product",
+        "fields": {
+            "name": "Macaron Melon",
+            "product_type": "single",
+            "style": "swiss",
+            "flavour": "melon",
+            "description": "One 30g Swiss macaron",
+            "price": 1.5,
+            "image": "swiss_macarons_melon_single.jpg"
+        }
+    },
+    {
+        "pk": 19,
+        "model": "products.product",
+        "fields": {
+            "name": "Macaron Mint",
+            "product_type": "single",
+            "style": "swiss",
+            "flavour": "mint",
+            "description": "One 30g Swiss macaron",
+            "price": 1.6,
+            "image": "swiss_macarons_mint_single.jpg"
+        }
+    },
+    {
+        "pk": 20,
+        "model": "products.product",
+        "fields": {
+            "name": "Macaron Pear",
+            "product_type": "single",
+            "style": "swiss",
+            "flavour": "pear",
+            "description": "One 30g Swiss macaron",
+            "price": 1.2,
+            "image": "swiss_macarons_pear_single.jpg"
+        }
+    },
+    {
+        "pk": 21,
+        "model": "products.product",
+        "fields": {
+            "name": "Macaron Praline",
+            "product_type": "single",
+            "style": "swiss",
+            "flavour": "praline",
+            "description": "One 30g Swiss macaron",
+            "price": 1.6,
+            "image": "swiss_macarons_praline_single.jpg"
+        }
+    },
+    {
+        "pk": 22,
+        "model": "products.product",
+        "fields": {
+            "name": "Macaron Raspberry",
+            "product_type": "single",
+            "style": "swiss",
+            "flavour": "raspberry",
+            "description": "One 30g Swiss macaron",
+            "price": 1.7,
+            "image": "swiss_macarons_raspberry_single.jpg"
+        }
+    },
+    {
+        "pk": 23,
+        "model": "products.product",
+        "fields": {
+            "name": "Macaron Strawberry",
+            "product_type": "single",
+            "style": "swiss",
+            "flavour": "strawberry",
+            "description": "One 30g Swiss macaron",
+            "price": 1.7,
+            "image": "swiss_macarons_strawberry_single.jpg"
+        }
+    },
+    {
+        "pk": 24,
+        "model": "products.product",
+        "fields": {
+            "name": "Tower Champagne",
+            "product_type": "tower",
+            "style": "french",
+            "flavour": "champagne",
+            "description": "One tower of 30 macarons (30g each)",
+            "price": 79.95,
+            "image": "macarons_tower_champagne.jpg"
+        }
+    },
+    {
+        "pk": 25,
+        "model": "products.product",
+        "fields": {
+            "name": "Tower Crème Brulée",
+            "product_type": "tower",
+            "style": "french",
+            "flavour": "crème brulée",
+            "description": "One tower of 30 French macarons (30g each)",
+            "price": 71.25,
+            "image": "macarons_tower_creme_brulee.jpg"
+        }
+    },
+    {
+        "pk": 26,
+        "model": "products.product",
+        "fields": {
+            "name": "Tower Banana Split",
+            "product_type": "tower",
+            "style": "italian",
+            "flavour": "chocolate, vanilla, banana",
+            "description": "One tower of 30 Italian macarons (30g each)",
+            "price": 67.45,
+            "image": "macarons_tower_banana_split.jpg"
+        }
+    },
+    {
+        "pk": 27,
+        "model": "products.product",
+        "fields": {
+            "name": "Tower Three Chocolates",
+            "product_type": "tower",
+            "style": "swiss",
+            "flavour": "dark chocolate, milk chocolate, white chocolate",
+            "description": "One tower of 30 Swiss macarons (30g each)",
+            "price": 56.69,
+            "image": "macarons_tower_three_chocolates.jpg"
+        }
+    },
+    {
+        "pk": 28,
+        "model": "products.product",
+        "fields": {
+            "name": "Tower Pink & Lila",
+            "product_type": "tower",
+            "style": "swiss",
+            "flavour": "cassis, strawberry",
+            "description": "One tower of 30 Swiss macarons (30g each)",
+            "price": 62.49,
+            "image": "macarons_tower_bi_color.jpg"
+        }
+    },
+    {
+        "pk": 29,
+        "model": "products.product",
+        "fields": {
+            "name": "Tower Red & White",
+            "product_type": "tower",
+            "style": "french",
+            "flavour": "strawberry, vanilla",
+            "description": "One tower of 30 French macarons (30g each)",
+            "price": 59.90,
+            "image": "macarons_tower_bi_color_2.jpg"
+        }
+    },
+    {
+        "pk": 30,
+        "model": "products.product",
+        "fields": {
+            "name": "Tower Pastel",
+            "product_type": "tower",
+            "style": "Italian",
+            "flavour": "lemon, orange, lavender",
+            "description": "One tower of 30 Italian macarons (30g each)",
+            "price": 69.45,
+            "image": "macarons_tower_tri_color.jpg"
+        }
+    },
+    {
+        "pk": 31,
+        "model": "products.product",
+        "fields": {
+            "name": "Tower Lagoon",
+            "product_type": "tower",
+            "style": "swiss",
+            "flavour": "lime, mint, eucalyptus",
+            "description": "One tower of 30 Swiss macarons (30g each)",
+            "price": 59.59,
+            "image": "macarons_tower_lagoon.jpg"
+        }
+    },
+    {
+        "pk": 32,
+        "model": "products.product",
+        "fields": {
+            "name": "Box for Two",
+            "product_type": "box",
+            "style": "swiss",
+            "flavour": "chocolate, strawberry, vanilla",
+            "description": "One box of 6 Swiss macarons (30g each)",
+            "price": 12,
+            "image": "box_of_six_macarons_2.jpg"
+        }
+    },
+    {
+        "pk": 33,
+        "model": "products.product",
+        "fields": {
+            "name": "Box for Two",
+            "product_type": "box",
+            "style": "french",
+            "flavour": "chocolate, strawberry, vanilla, mint, lemon, raspberry",
+            "description": "One box of 6 French macarons (30g each)",
+            "price": 11.49,
+            "image": "box_of_six_macarons_1.jpg"
+        }
+    },
+    {
+        "pk": 34,
+        "model": "products.product",
+        "fields": {
+            "name": "Box for Two",
+            "product_type": "box",
+            "style": "italian",
+            "flavour": "chocolate, coffee, vanilla, mint, praline, raspberry",
+            "description": "One box of 6 Italian macarons (30g each)",
+            "price": 12,
+            "image": "box_of_six_macarons_3.jpg"
+        }
+    },
+    {
+        "pk": 35,
+        "model": "products.product",
+        "fields": {
+            "name": "Box for Two",
+            "product_type": "box",
+            "style": "swiss",
+            "flavour": "mint, strawberry, vanilla",
+            "description": "One box of 6 Swiss macarons (30g each)",
+            "price": 12.65,
+            "image": "box_of_six_macarons_4.jpg"
+        }
+    },
+    {
+        "pk": 36,
+        "model": "products.product",
+        "fields": {
+            "name": "Family Box",
+            "product_type": "box",
+            "style": "french",
+            "flavour": "mint, strawberry, vanilla, nougat, blueberry",
+            "description": "One box of 35 French macarons (30g each)",
+            "price": 55.90,
+            "image": "box_of_thirty_five_macarons_1.jpg"
+        }
+    },
+    {
+        "pk": 37,
+        "model": "products.product",
+        "fields": {
+            "name": "Family Box",
+            "product_type": "box",
+            "style": "italian",
+            "flavour": "apple, cassis, cappuccino, white chocolate, dark chocolate, pineapple, banana, almond",
+            "description": "One box of 40 Italian macarons (30g each)",
+            "price": 71.40,
+            "image": "box_of_thirty_five_macarons_1.jpg"
+        }
+    },
+    {
+        "pk": 38,
+        "model": "products.product",
+        "fields": {
+            "name": "Box for three",
+            "product_type": "box",
+            "style": "swiss",
+            "flavour": "orange, lavender, lemon, passion fruit, lime, cranberry, cherry",
+            "description": "One box of 7 Swiss macarons (30g each)",
+            "price": 14.75,
+            "image": "box_of_seven_macarons_1.jpg"
+        }
+    },
+    {
+        "pk": 39,
+        "model": "products.product",
+        "fields": {
+            "name": "Box for three",
+            "product_type": "box",
+            "style": "french",
+            "flavour": "orange, strawberry, mint, peach, pear",
+            "description": "One box of 7 French macarons (30g each)",
+            "price": 16.85,
+            "image": "box_of_seven_macarons_2.jpg"
+        }
+    },
+    {
+        "pk": 40,
+        "model": "products.product",
+        "fields": {
+            "name": "Secret Pleasure",
+            "product_type": "box",
+            "style": "french",
+            "flavour": "vanilla, strawberry, mint",
+            "description": "One box of 3 French macarons (30g each)",
+            "price": 7.3,
+            "image": "box_of_three_macarons_1.jpg"
+        }
+    },
+    {
+        "pk": 41,
+        "model": "products.product",
+        "fields": {
+            "name": "Secret Pleasure",
+            "product_type": "box",
+            "style": "italian",
+            "flavour": "coffee, strawberry, cappuccino",
+            "description": "One box of 3 Italian macarons (30g each)",
+            "price": 8.8,
+            "image": "box_of_three_macarons_2.jpg"
+        }
+    },
+    {
+        "pk": 42,
+        "model": "products.product",
+        "fields": {
+            "name": "Secret Pleasure",
+            "product_type": "box",
+            "style": "swiss",
+            "flavour": "orange, raspberry, white chocolate",
+            "description": "One box of 3 Swiss macarons (30g each)",
+            "price": 6.95,
+            "image": "box_of_three_macarons_3.jpg"
+        }
+    }
+]
