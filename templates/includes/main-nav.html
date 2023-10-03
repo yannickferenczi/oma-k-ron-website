@@ -18,9 +18,9 @@
                 Our macarons
             </a>
             <div class="dropdown-menu border-0 bg-blue" aria-labelledby="clothing-link">
-                <a href="" class="dropdown-item">The Singles</a>
-                <a href="" class="dropdown-item">The Boxes</a>
-                <a href="" class="dropdown-item">The Celebrations</a>
+                <a href="{% url 'products' %}?product_type=single" class="dropdown-item">The Singles</a>
+                <a href="{% url 'products' %}?product_type=box" class="dropdown-item">The Boxes</a>
+                <a href="{% url 'products' %}?product_type=tower" class="dropdown-item">The Celebrations</a>
                 <a href="" class="dropdown-item">All Macarons</a>
             </div>
         </li>
