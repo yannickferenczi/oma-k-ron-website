@@ -9,9 +9,10 @@ def all_products(request):
     """
     products = Product.objects.all()
     context = {
-        "product": product,
+        "products": products,
     }
     return render(request, 'products/all_products.html', context)
+
 
 def product_detail(request, product_id):
     """
@@ -19,6 +20,6 @@ def product_detail(request, product_id):
     """
     product = get_object_or_404(Product, pk=product_id)
     context = {
-        "products": products,
+        "product": product,
     }
     return render(request, 'products/product_detail.html', context)
