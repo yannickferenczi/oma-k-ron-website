@@ -78,6 +78,10 @@ h6 {
     color: #000 !important;
 }
 
+.text-white {
+    color: white !important;
+}
+
 .border-black {
     border: 1px solid black !important;
 }
