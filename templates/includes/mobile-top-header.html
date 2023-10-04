@@ -7,7 +7,7 @@
         </div>
     </a>
     <div class="dropdown-menu border-0 w-100 px-3 rounded-0 my-0 bg-transparent" aria-labelledby="mobile-search">
-        <form class="form" method="GET" action="">
+        <form class="form" method="GET" action="{% url 'products' %}">
             <div class="input-group w-100">
                 <input class="form-control border border-black rounded-0" type="text" name="q"
                     placeholder="Search our site">
@@ -45,14 +45,14 @@
 </li>
 <li class="list-inline-item">
     <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none"
-        href="">
+        href="{% url 'cart' %}">
         <div class="text-center">
             <div><i class="fa-solid fa-basket-shopping"></i></div>
             <p class="my-0">
-                {% if grand_total %}
-                ${{ grand_total|floatformat:2 }}
+                {% if total_with_delivery %}
+                {{ total_with_delivery|floatformat:2 }} €
                 {% else %}
-                $0.00
+                0.00 €
                 {% endif %}
             </p>
         </div>

@@ -12,10 +12,10 @@ body {
     padding-top: 220px;
 }
 
-.header-rule {
+/* .header-rule {
     border-top: 2px solid #66c7e8;
     margin: 0;
-}
+} */
 
 .logo {
     width: 50px;
@@ -51,7 +51,7 @@ h6 {
 
 .shop-now-button {
     position: fixed;
-    bottom: 20vh;
+    bottom: 15vh;
     left: 50%;
     transform: translate(-50%);
     background: black;
@@ -78,6 +78,10 @@ h6 {
     color: #000 !important;
 }
 
+.text-white {
+    color: white !important;
+}
+
 .border-black {
     border: 1px solid black !important;
 }
@@ -87,7 +91,7 @@ h6 {
 }
 
 .bg-blue {
-    background-color: #66c7e8;
+    background-color: #82d9ed;
 }
 
 .bg-pink {
@@ -98,9 +102,9 @@ h6 {
     background-color: transparent;
 }
 
-.border-bottom {
+/* .border-bottom {
     border-bottom: 2px solid #66c7e8 !important;
-}
+} */
 
 .overlay {
     height: 100%;
@@ -114,6 +118,18 @@ h6 {
 
 .card {
     box-shadow: 5px 5px 15px #000;
+}
+
+.btt-button {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.btt-link {
+    cursor: pointer;
 }
 
 /* -------------------------------- Media Queries */
