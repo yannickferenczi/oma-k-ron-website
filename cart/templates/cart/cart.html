@@ -16,9 +16,97 @@
     <div class="container mb-2">
         <div class="row">
             <div class="col">
-                <h2 class="logo-font text-center mb-4">Shopping Bag</h2>
+                <h2 class="logo-font text-center mb-4">Cart</h2>
+                <hr class="w-50 mb-1">
             </div>
         </div>
-        <div class="row"></div>
+        <div class="row">
+            <div class="col">
+                {% if cart_items %}
+                    <div class="table-responsive rounded">
+                        <table class="table table-sm table-borderless">
+                            <thead class="text-black">
+                                <tr>
+                                    <th class="align-middle" scope="col">
+                                        <p>Product Info</p>
+                                    </th>
+                                    <th class="d-none d-md-table-cell" scope="col"></th>
+                                    <th class="align-middle" scope="col">
+                                        <p class="text-center">Price</p>
+                                    </th>
+                                    <th class="align-middle" scope="col">
+                                        <p class="text-center">Qty</p>
+                                    </th>
+                                    <th class="d-none d-md-table-cell align-middle" scope="col">
+                                        <p class="text-center">Subtotal</p>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for item in cart_items %}
+                                    <tr>
+                                        <td class="d-none d-md-table-cell p-3 w-25">
+                                            <a href="{% url 'product_detail' item.product.id %}">
+                                                <img src="{{ item.product.image.url }}" alt="{{ item.product.description }}" class="img-fluid">
+                                            </a>
+                                        </td>
+                                        <td class="py-3 align-middle">
+                                            <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                                            <details class="my-0">
+                                                <summary><small>Product information</small></summary>
+                                                <p class="my-0">Style: {{ item.product.style | title }}</p>
+                                                <p class="my-0">Flavour: {{ item.product.flavour }}</p>
+                                                <p class="my-0">Description:</p>
+                                                <p class="my-0">{{ item.product.description }}</p>
+                                            </details>
+                                        </td>
+                                        <td class="py-3 align-middle">
+                                            <p class="my-0 text-center">{{ item.product.price }}</p>
+                                        </td>
+                                        <td class="py-3 align-middle">
+                                            <p class="my-0 text-center">{{ item.quantity }}</p>
+                                        </td>
+                                        <td class="d-none d-md-table-cell py-3 align-middle">
+                                            <p class="my-0 text-center">{{ item.subtotal }}</p>
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                                <tr>
+                                    <td class="pt-5 text-right" colspan="5">
+                                        <h6><strong>Total order value: {{ total | floatformat:2 }} €</strong></h6>
+                                        <h6>Delivery costs: {{ delivery_costs | floatformat:2 }} €</h6>
+                                        <h4 class="mt-4"><strong>Total: {{ total_with_delivery | floatformat:2 }} €</strong></h4>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-right" colspan="5">
+                                        <a href="{% url 'products' %}" class="btn btn-lg">
+                                            <span class="icon">
+                                                <i class="fas fa-chevron-left"></i>
+                                            </span>
+                                            <span class="text-uppercase">Keep Shopping</span>
+                                        </a>
+                                        <a href="" class="btn bg-blue font-weight-bold btn-lg">
+                                            <span class="text-uppercase">Secure Checkout</span>
+                                            <span class="icon">
+                                                <i class="fas fa-lock"></i>
+                                            </span>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                {% else %}
+                    <p class="lead mb-5">You do not have anything in your shopping cart yet.</p>
+                    <a href="{% url 'products' %}" class="btn btn-lg">
+                        <span class="icon">
+                            <i class="fas fa-chevron-left"></i>
+                        </span>
+                        <span class="text-uppercase">Keep Shopping</span>
+                    </a>
+                {% endif %}
+            </div>
+        </div>
     </div>
 {% endblock content %}

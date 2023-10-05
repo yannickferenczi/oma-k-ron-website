@@ -91,7 +91,7 @@
                             </div>
                         </li>
                         <li class="list-inline-item">
-                            <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
+                            <a class="{% if total_with_delivery %}text-silver font-weight-bold{% else %}text-black{% endif %} nav-link"
                                 href="{% url 'cart' %}">
                                 <div class="text-center">
                                     <div><i class="fa-solid fa-basket-shopping"></i></div>
@@ -108,7 +108,6 @@
                     </ul>
                 </div>
             </div>
-            <!-- <hr class="d-none header-rule d-lg-block"> -->
             <div class="row">
                 <div class="col-12 my-auto py-1 text-center d-lg-none bg-pink border-bottom">
                     <a href="{% url 'home' %}" class="nav-link">
@@ -129,7 +128,7 @@
             <div id="click-and-collect-banner" class="row text-center">
                 <div class="col bg-black text-white">
                     <a href="{% url 'products' %}" class="logo-font my-1 text-white">
-                        'click & collect' now available !
+                        'click & collect' now available with free degustation !
                     </a>
                 </div>
             </div>
