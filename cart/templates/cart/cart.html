@@ -99,12 +99,14 @@
                     </div>
                 {% else %}
                     <p class="lead mb-5">You do not have anything in your shopping cart yet.</p>
-                    <a href="{% url 'products' %}" class="btn btn-lg">
-                        <span class="icon">
-                            <i class="fas fa-chevron-left"></i>
-                        </span>
-                        <span class="text-uppercase">Keep Shopping</span>
-                    </a>
+                    <div class="text-center">
+                        <a href="{% url 'products' %}" class="btn btn-lg">
+                            <span class="icon">
+                                <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="text-uppercase">Keep Shopping</span>
+                        </a>
+                    </div>
                 {% endif %}
             </div>
         </div>

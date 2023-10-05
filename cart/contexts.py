@@ -8,6 +8,7 @@ def cart_contents(request):
     cart_items = []
     total = 0
     product_count = 0
+    delivery_costs = 0
     cart = request.session.get("cart", {})
     for item_id, quantity in cart.items():
         product = get_object_or_404(Product, pk=item_id)
@@ -25,9 +26,10 @@ def cart_contents(request):
     for item in cart_items:
         if item["product"].product_type.lower() == "tower":
             delivery_costs = settings.DELIVERY_COSTS_CELEBRATIONS
+            break
         else:
             delivery_costs = settings.DELIVERY_COSTS_BASICS
-    total_with_delivery = total if total == 0 else total + delivery_costs
+    total_with_delivery = total + delivery_costs
     context = {
         "cart_items": cart_items,
         "total": total,
