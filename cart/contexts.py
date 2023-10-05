@@ -6,7 +6,7 @@ def cart_contents(request):
     total = 0
     product_count = 0
     delivery_costs = settings.DELIVERY_COSTS
-    total_with_delivery = total + delivery_costs
+    total_with_delivery = total if total == 0 else total + delivery_costs
     context = {
         "cart_items": cart_items,
         "total": total,
