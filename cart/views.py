@@ -23,14 +23,14 @@ def add_to_cart(request, item_id):
         cart[item_id] += quantity
         messages.success(
             request,
-            f"The quantity of {product.name} has been successfully \
+            f"The quantity of <strong>{product.name}</strong> has been successfully \
                 updated in your cart."
         )
     else:
         cart[item_id] = quantity
         messages.success(
             request,
-            f"{product.name} has been successfully added to your cart."
+            f"<strong>{product.name}</strong> has been successfully added to your cart."
         )
     request.session["cart"] = cart
     return redirect(redirect_url)

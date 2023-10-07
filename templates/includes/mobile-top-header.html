@@ -44,16 +44,15 @@
     </div>
 </li>
 <li class="list-inline-item">
-    <a class="{% if total_with_delivery%}text-primary font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none"
+    <a class="text-black {% if total_with_delivery %}font-weight-bold{% else %}font-weight-normal{% endif %} nav-link d-block d-lg-none"
         href="{% url 'cart' %}">
         <div class="text-center">
-            <div><i class="fa-solid fa-basket-shopping"></i></div>
+            <div class="position-relative">
+                <p class="count-cart {% if product_count %}d-block{% else %}d-none{% endif %} count-to-{% if product_count > 99 %}999{% elif product_count > 9 %}99{% else %}9{% endif %}">{{ product_count }}</p>
+                <i class="fa-solid fa-basket-shopping"></i>
+            </div>
             <p class="my-0">
-                {% if total_with_delivery %}
                 {{ total_with_delivery|floatformat:2 }} €
-                {% else %}
-                0.00 €
-                {% endif %}
             </p>
         </div>
     </a>

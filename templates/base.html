@@ -44,7 +44,7 @@
     </head>
 
     <body>
-        <header class="container-fluid fixed-top p-0">
+        <header class="container-fluid fixed-top px-2">
             <div id="topnav" class="row d-none d-lg-flex bg-pink">
                 <div class="col-lg-4 my-auto py-lg-0 text-center text-lg-left">
                     <a href="{% url 'home' %}" class="nav-link">
@@ -91,16 +91,15 @@
                             </div>
                         </li>
                         <li class="list-inline-item">
-                            <a class="{% if total_with_delivery %}text-silver font-weight-bold{% else %}text-black{% endif %} nav-link"
+                            <a class="text-black {% if total_with_delivery %}font-weight-bold{% else %}font-weight-normal{% endif %} nav-link"
                                 href="{% url 'cart' %}">
                                 <div class="text-center">
-                                    <div><i class="fa-solid fa-basket-shopping"></i></div>
+                                    <div class="position-relative">
+                                        <p class="count-cart {% if product_count %}d-block{% else %}d-none{% endif %} count-to-{% if product_count > 99 %}999{% elif product_count > 9 %}99{% else %}9{% endif %}">{{ product_count }}</p>
+                                        <i class="fa-solid fa-basket-shopping"></i>
+                                    </div>
                                     <p class="my-0">
-                                        {% if total_with_delivery %}
                                         {{ total_with_delivery|floatformat:2 }} €
-                                        {% else %}
-                                        0.00 €
-                                        {% endif %}
                                     </p>
                                 </div>
                             </a>
@@ -109,14 +108,14 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-12 my-auto py-1 text-center d-lg-none bg-pink border-bottom">
+                <div class="col-12 my-auto py-1 text-center d-lg-none bg-pink">
                     <a href="{% url 'home' %}" class="nav-link">
                         <h2 class="d-inline-block logo-name">Oma </h2>
                         <img class="logo" src="{% static '/img/oma_k_ron_logo.png' %}" alt="Oma K-ron logo">
                         <h2 class="d-inline-block logo-name"> K-ron</h2>
                     </a>
                 </div>
-                <nav class="navbar navbar-expand-lg navbar-light w-100 bg-blue">
+                <nav class="navbar navbar-expand-lg navbar-light w-100 bg-blue px-0">
                     <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav"
                         aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -152,11 +151,77 @@
             </div>
         {% endif %}
 
-        {% block page_header %}
-        {% endblock page_header %}
+        <main class="container-fluid main-content p-0">
+            {% block content %}
+            {% endblock content %}
+        </main>
 
-        {% block content %}
-        {% endblock content %}
+        <footer class="main-footer bg-pink">
+            <div class="container-fluid">
+                <div class="row p-4 pt-1">
+                    <div class="col-md-5 p-0 d-flex align-items-center justify-content-center">
+                        <div class="row">
+                            <div class="col-12 text-center">
+                                <h4><strong>Opening Hours</strong></h4>
+                                <p class="m-0 p-0"><strong>Mon - Fr:</strong> from 10am to 6pm</p>
+                                <p class="m-0 p-0"><strong>Sat:</strong> from 10am to 4pm</p>
+                            </div>
+                            <div class="col-12 text-center my-4">
+                                <iframe class="g-map d-block mx-auto card"
+                                    src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d8658.51364990076!2d7.473120177266967!3d51.51473840672756!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sde!4v1696605199504!5m2!1sen!2sde"
+                                    style="border:0;" allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade">
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="footer-rule"></div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row p-2">
+                            <div class="col">
+                                <div class="row">
+                                    <div class="col-3 text-center">
+                                        <a class="social-media facebook-link p-1" aria-label="Open Facebook in a new tab"
+                                            href="https://www.facebook.com/" target="_blank"><i
+                                                class="fa-brands fa-facebook-f"></i></a>
+                                    </div>
+                                    <div class="col-3 text-center">
+                                        <a class="social-media youtube-link p-1" aria-label="Open Youtube in a new tab"
+                                            href="https://www.youtube.com/" target="_blank"><i
+                                                class="fa-brands fa-youtube"></i></a>
+                                    </div>
+                                    <div class="col-3 text-center">
+                                        <a class="social-media twitter-link p-1" aria-label="Open Twitter in a new tab"
+                                            href="https://www.twitter.com/" target="_blank"><i
+                                                class="fa-brands fa-twitter"></i></a>
+                                    </div>
+                                    <div class="col-3 text-center">
+                                        <a class="social-media linkedin-link p-1" aria-label="Open LinkedIn in a new tab"
+                                            href="https://www.linkedin.com/" target="_blank"><i
+                                                class="fa-brands fa-linkedin-in"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row pt-2">
+                            <div class="col newsletter">
+                                <p class="text-center text-danger">Here will come the embedded newsletter from mailchimp.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright bg-black">
+                <p class="text-white text-center m-0 py-1">Created with passion by
+                    <a class="text-white" aria-label="Go to the GitHub page of the creator of this website"
+                        href="https://github.com/yannickferenczi" target="_blank">
+                        Yannick Ferenczi <i class="fa-brands fa-github text-white"></i>
+                    </a> | Copyright {% now "Y" %}, All rights reserved
+                </p>
+            </div>
+        </footer>
 
         {% block postload_js %}
         <script type="text/javascript">
