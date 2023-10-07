@@ -10,8 +10,8 @@
             {{ message | safe }}
         </div>
     </div>
+    {% if total_with_delivery %}
     <div class="toast-body bg-pink">
-        {% if total_with_delivery %}
         <p class="logo-font text-black text-center py-1">Your cart ({{ product_count }})</p>
         <div class="bag-notification-wrapper">
             {% for item in cart_items %}
@@ -47,6 +47,6 @@
                 </a>
             </div>
         </div>
-        {% endif %}
     </div>
+    {% endif %}
 </div>
