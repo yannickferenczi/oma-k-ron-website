@@ -107,6 +107,10 @@ h6 {
     color: white;
 }
 
+.form-container {
+    padding: 30px;
+}
+
 .text-black {
     color: #000 !important;
 }
@@ -284,6 +288,12 @@ h6 {
         top: 0;
         left: 0;
         transform: translate(0);
+    }
+
+    .form-container {
+        padding: 30px;
+        width: 50%;
+        margin: auto;
     }
 
     .message-container {
