@@ -92,8 +92,14 @@
             </fieldset>
             <fieldset class="px-3">
                 <legend class="fieldset-label small text-black px-2 w-auto">Payment Information</legend>
-                <div class="mb-3" id="card-element"></div>
-                <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
+                <!-- form from the Stripe documentation -->
+                <div id="payment-element">
+                    <!-- Elements will create form elements here -->
+                </div>
+                <div id="error-message">
+                    <!-- Display error message to your customers here -->
+                </div>
+                <!-- End of the Stripe form -->
             </fieldset>
             <div class="submit-button text-right mt-5 mb-2">
                 <a href="{% url 'cart' %}" class="btn">
@@ -123,6 +129,8 @@
 {% block postload_js %}
     {{ block.super }}
     <script type="text/javascript">
+        // Update the checkout page depending on the client wish to have their
+        // purchase delivered or to collect them on-site
         $(".collect-only").hide();
         $("#id_click_and_collect").change(function() {
             if ($("#id_click_and_collect").is(":checked")) {
@@ -134,4 +142,8 @@
             };
         });
     </script>
+    <!-- Setup for Stripe -->
+    {{ stripe_public_key|json_script:"id_stripe_public_key" }}
+    {{ client_secret|json_script:"id_client_secret" }}
+    <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
 {% endblock postload_js %}
