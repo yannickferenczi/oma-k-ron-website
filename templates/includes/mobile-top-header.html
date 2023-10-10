@@ -44,7 +44,7 @@
     </div>
 </li>
 <li class="list-inline-item">
-    <a class="text-black {% if total_with_delivery %}font-weight-bold{% else %}font-weight-normal{% endif %} nav-link d-block d-lg-none"
+    <a class="text-black {% if total %}font-weight-bold{% else %}font-weight-normal{% endif %} nav-link d-block d-lg-none"
         href="{% url 'cart' %}">
         <div class="text-center">
             <div class="position-relative">
@@ -52,7 +52,7 @@
                 <i class="fa-solid fa-basket-shopping"></i>
             </div>
             <p class="my-0">
-                {{ total_with_delivery|floatformat:2 }} €
+                {{ order_value|floatformat:2 }} €
             </p>
         </div>
     </a>

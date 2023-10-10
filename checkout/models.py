@@ -35,7 +35,7 @@ class Order(models.Model):
         default="Germany"
     )
     date_of_order = models.DateTimeField(auto_now_add=True)
-    pick_and_collect = models.BooleanField(default=False)
+    click_and_collect = models.BooleanField(default=False)
     delivery_costs = models.DecimalField(
         max_digits=5,
         decimal_places=2,
@@ -67,7 +67,7 @@ class Order(models.Model):
         """
         self.order_value = self.lineitems.aggregate(
             Sum("lineitem_total"))["lineitem_total__sum"]
-        if self.pick_and_collect:
+        if self.click_and_collect:
             self.delivery_costs = 0
         else:
             for item in self.lineitems:

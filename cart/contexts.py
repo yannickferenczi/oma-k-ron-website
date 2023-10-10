@@ -1,3 +1,4 @@
+import json
 from django.conf import settings
 from django.shortcuts import get_object_or_404
 
@@ -6,14 +7,14 @@ from products.models import Product
 
 def cart_contents(request):
     cart_items = []
-    total = 0
+    order_value = 0
     product_count = 0
     delivery_costs = 0
     cart = request.session.get("cart", {})
     for item_id, quantity in cart.items():
         product = get_object_or_404(Product, pk=item_id)
         subtotal = quantity * product.price
-        total += subtotal
+        order_value += subtotal
         product_count += quantity
         cart_items.append(
             {
@@ -29,13 +30,13 @@ def cart_contents(request):
             break
         else:
             delivery_costs = settings.DELIVERY_COSTS_BASICS
-    total_with_delivery = total + delivery_costs
+    total = order_value + delivery_costs
     context = {
         "cart_items": cart_items,
-        "total": total,
+        "order_value": order_value,
         "product_count": product_count,
         "delivery_costs": delivery_costs,
-        "total_with_delivery": total_with_delivery,
+        "total": total,
     }
 
     return context
