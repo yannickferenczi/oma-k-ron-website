@@ -17,7 +17,6 @@ class OrderForm(forms.ModelForm):
             "city",
             "county",
             "country",
-            "click_and_collect",
         )
 
     def __init__(self, *args, **kwargs):
@@ -37,16 +36,14 @@ class OrderForm(forms.ModelForm):
             "city": "City",
             "county": "County",
             "country": "Country",
-            "click_and_collect": "click_and_collect",
         }
 
         self.fields["first_name"].widget.attrs["autofocus"] = True
         for field in self.fields:
-            if field != "click_and_collect":
-                if self.fields[field].required:
-                    placeholder = f"{placeholders[field]} *"
-                else:
-                    placeholder = placeholders[field]
-                self.fields[field].widget.attrs["placeholder"] = placeholder
-                self.fields[field].widget.attrs["class"] = "stripe-style-input"
-                self.fields[field].label = False
+            if self.fields[field].required:
+                placeholder = f"{placeholders[field]} *"
+            else:
+                placeholder = placeholders[field]
+            self.fields[field].widget.attrs["placeholder"] = placeholder
+            self.fields[field].widget.attrs["class"] = "stripe-style-input"
+            self.fields[field].label = False
