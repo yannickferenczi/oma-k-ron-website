@@ -60,17 +60,17 @@ class Order(models.Model):
         Generate a random, unique order number using UUID.
         """
         return uuid.uuid4().hex.upper()
-    
+
     def update_total(self):
         """
         Update the total of the order each time a line item is added.
         """
         self.order_value = self.lineitems.aggregate(
-            Sum("lineitem_total"))["lineitem_total__sum"]
-        if self.click_and_collect:
+            Sum("lineitem_total"))["lineitem_total__sum"] or 0
+        if self.order_value == 0:
             self.delivery_costs = 0
         else:
-            for item in self.lineitems:
+            for item in self.lineitems.all():
                 if item.product.product_type.lower() == "tower":
                     self.delivery_costs = settings.DELIVERY_COSTS_CELEBRATIONS
                     break
@@ -85,7 +85,7 @@ class Order(models.Model):
         has not been set yet.
         """
         if not self.order_number:
-            self._generate_order_number()
+            self.order_number = self._generate_order_number()
         super().save(*args, **kwargs)
 
     def __str__(self):
