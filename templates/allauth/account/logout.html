@@ -2,11 +2,12 @@
 
 {% load i18n %}
 
-{% block head_title %}{% trans "Sign Out" %}{% endblock %}
+{% block extra_title %}{% trans "Sign Out" %}{% endblock extra_title %}
 
 {% block content %}
 <div class="form-container text-center">
-    <h1 class="text-center">{% trans "Sign Out" %}</h1>
+    <h2 class="text-center">{% trans "Sign Out" %}</h2>
+    <hr class="w-50 mb-1">
 
     <p class="text-center">{% trans 'Are you sure you want to sign out?' %}</p>
 

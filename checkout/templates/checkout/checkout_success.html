@@ -1,10 +1,17 @@
-{% extends "base.html" %} {% load static %} {% block extra_css %}
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
 <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}" />
-{% endblock extra_css %} {% block content %}
+{% endblock extra_css %}
+
+{% block extra_title %}Success Checkout{% endblock extra_title %}
+
+{% block content %}
 <div class="row">
     <div class="col">
         <h2 class="logo-font text-center mb-4">Thank You</h2>
-        <hr class="w-50 mb-1" />
+        <hr class="w-50 mb-1">
         <p class="text-black m-3 text-center">
             Your order information is below. A confirmation email will be sent to
             <strong>{{ order.email }}</strong>
@@ -92,7 +99,9 @@
                     <p class="mb-0">{{ order.street_address_2 }}</p>
                 </div>
             </div>
-            {% endif %} {% if order.county %}
+            {% endif %}
+            
+            {% if order.county %}
             <div class="row">
                 <div class="col-12 col-md-4">
                     <p class="mb-0 text-black font-weight-bold">County</p>
@@ -181,5 +190,5 @@
             </a>
         </div>
     </div>
-    {% endblock content %}
 </div>
+{% endblock content %}

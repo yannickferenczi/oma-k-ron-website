@@ -1,13 +1,15 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_title %}Home{% endblock extra_title %}
+
 {% block content %}
     <div class="row m-0 p-0">
         <div class="col m-0 p-0">
             <div class="cta-container m-0 p-0">
-                <h1 class="d-none d-md-block logo-font text-black">
+                <h2 class="d-none d-md-block logo-font text-black">
                     Try out our new flavours
-                </h1>
+                </h2>
                 <div class="my-5">
                     <h4>
                         <a href="{% url 'products' %}" class="shop-now-button btn btn-lg text-uppercase py-3">Shop Now</a>
