@@ -22,8 +22,7 @@ class OrderAdmin(admin.ModelAdmin):
 
     fields = (
         "order_number",
-        "first_name",
-        "last_name",
+        "full_name",
         "email",
         "phone_number",
         "street_address_1",
@@ -40,8 +39,7 @@ class OrderAdmin(admin.ModelAdmin):
 
     list_display = (
         "order_number",
-        "first_name",
-        "last_name",
+        "full_name",
         "date_of_order",
         "delivery_costs",
         "order_value",

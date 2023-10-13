@@ -7,8 +7,7 @@ class OrderForm(forms.ModelForm):
     class Meta:
         model = Order
         fields = (
-            "first_name",
-            "last_name",
+            "full_name",
             "email",
             "phone_number",
             "street_address_1",
@@ -26,8 +25,7 @@ class OrderForm(forms.ModelForm):
         """
         super().__init__(*args, *kwargs)
         placeholders = {
-            "first_name": "First Name",
-            "last_name": "Last Name",
+            "full_name": "Full Name",
             "email": "Email Address",
             "phone_number": "Phone Number",
             "street_address_1": "Street Address 1",
@@ -38,7 +36,7 @@ class OrderForm(forms.ModelForm):
             "country": "Country",
         }
 
-        self.fields["first_name"].widget.attrs["autofocus"] = True
+        self.fields["full_name"].widget.attrs["autofocus"] = True
         for field in self.fields:
             if self.fields[field].required:
                 placeholder = f"{placeholders[field]} *"
@@ -47,3 +45,5 @@ class OrderForm(forms.ModelForm):
             self.fields[field].widget.attrs["placeholder"] = placeholder
             self.fields[field].widget.attrs["class"] = "stripe-style-input"
             self.fields[field].label = False
+            if field == "country":
+                self.fields[field].widget.attrs["readonly"] = True

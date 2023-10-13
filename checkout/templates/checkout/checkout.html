@@ -49,12 +49,12 @@
             <div class="col-7 offset-2">
                 <p class="my-0">Order value:</p>
                 <p class="my-0">Delivery costs:</p>
-                <p class="my-0">Total:</p>
+                <p class="my-0"><strong>Total:</strong></p>
             </div>
             <div class="col-3">
                 <p class="my-0">{{ order_value | floatformat:2 }} €</p>
                 <p class="my-0">{{ delivery_costs | floatformat:2 }} €</p>
-                <p class="my-0">{{ total | floatformat:2 }} €</p>
+                <p class="my-0"><strong>{{ total | floatformat:2 }} €</strong></p>
             </div>
         </div>
     </div>
@@ -64,8 +64,7 @@
             {% csrf_token %}
             <fieldset class="rounded px-3 mb-5">
                 <legend class="fieldset-label small text-black px-2 w-auto">Personal Details</legend>
-                {{ order_form.first_name | as_crispy_field }}
-                {{ order_form.last_name | as_crispy_field }}
+                {{ order_form.full_name | as_crispy_field }}
                 {{ order_form.email | as_crispy_field }}
             </fieldset>
             <fieldset class="rounded px-3 mb-5">
@@ -81,7 +80,7 @@
                         <span class="icon">
                             <i class="fas fa-exclamation-circle"></i>
                         </span>
-                        <span>We only deliver in <strong>Germany</strong>.
+                        <span>We only deliver within <strong>Germany</strong>.
                     </p>
                 <div class="form-check form-check-inline float-right mr-0 my-3">
                     {% if user.is_authenticated %}
@@ -121,7 +120,7 @@
                     <span class="icon">
                         <i class="fas fa-exclamation-circle"></i>
                     </span>
-                    <span>Your card will be charged <strong class="delivery-info">{{ total | floatformat:2 }} €</strong><strong class="collect-only">{{ order_value| floatformat:2 }} €</strong>.</span>
+                    <span>Your card will be charged <strong>{{ total | floatformat:2 }} €</strong></span>
                 </p>
             </div>
         </form>
