@@ -4,6 +4,8 @@ from django.db import models
 from django.db.models import Sum
 from django.conf import settings
 
+from django_countries.fields import CountryField
+
 from products.models import Product
 from profiles.models import UserProfile
 
@@ -36,10 +38,8 @@ class Order(models.Model):
     postcode = models.CharField(max_length=5, null=False, blank=False)
     city = models.CharField(max_length=250, null=False, blank=False)
     county = models.CharField(max_length=250, null=True, blank=True)
-    country = models.CharField(
-        max_length=250,
-        null=False,
-        default="Germany"
+    country = CountryField(
+        blank_label="Germany"
     )
     date_of_order = models.DateTimeField(auto_now_add=True)
     delivery_costs = models.DecimalField(
