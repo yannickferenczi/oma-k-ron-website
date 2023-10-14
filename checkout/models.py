@@ -4,7 +4,10 @@ from django.db import models
 from django.db.models import Sum
 from django.conf import settings
 
+from django_countries.fields import CountryField
+
 from products.models import Product
+from profiles.models import UserProfile
 
 
 class Order(models.Model):
@@ -12,8 +15,14 @@ class Order(models.Model):
     This class creates a table to save Order instances in the database.
     """
     order_number = models.CharField(max_length=32, null=False, editable=False)
-    first_name = models.CharField(max_length=250, null=False, blank=False)
-    last_name = models.CharField(max_length=250, null=False, blank=False)
+    user_profile = models.ForeignKey(
+        UserProfile,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name="orders",
+    )
+    full_name = models.CharField(max_length=250, null=False, blank=False)
     email = models.EmailField(max_length=250, null=False, blank=False)
     phone_number = models.CharField(max_length=20, null=False, blank=False)
     street_address_1 = models.CharField(
@@ -29,13 +38,10 @@ class Order(models.Model):
     postcode = models.CharField(max_length=5, null=False, blank=False)
     city = models.CharField(max_length=250, null=False, blank=False)
     county = models.CharField(max_length=250, null=True, blank=True)
-    country = models.CharField(
-        max_length=250,
-        null=False,
-        default="Germany"
+    country = CountryField(
+        blank_label="Germany"
     )
     date_of_order = models.DateTimeField(auto_now_add=True)
-    click_and_collect = models.BooleanField(default=False)
     delivery_costs = models.DecimalField(
         max_digits=5,
         decimal_places=2,
@@ -54,23 +60,31 @@ class Order(models.Model):
         null=False,
         default=0,
     )
+    original_cart = models.TextField(null=False, blank=False, default='')
+    stripe_pid = models.CharField(
+        max_length=250,
+        null=False,
+        blank=False,
+        default='',
+    )
+
 
     def _generate_order_number(self):
         """
         Generate a random, unique order number using UUID.
         """
         return uuid.uuid4().hex.upper()
-    
+
     def update_total(self):
         """
         Update the total of the order each time a line item is added.
         """
         self.order_value = self.lineitems.aggregate(
-            Sum("lineitem_total"))["lineitem_total__sum"]
-        if self.click_and_collect:
+            Sum("lineitem_total"))["lineitem_total__sum"] or 0
+        if self.order_value == 0:
             self.delivery_costs = 0
         else:
-            for item in self.lineitems:
+            for item in self.lineitems.all():
                 if item.product.product_type.lower() == "tower":
                     self.delivery_costs = settings.DELIVERY_COSTS_CELEBRATIONS
                     break
@@ -85,7 +99,7 @@ class Order(models.Model):
         has not been set yet.
         """
         if not self.order_number:
-            self._generate_order_number()
+            self.order_number = self._generate_order_number()
         super().save(*args, **kwargs)
 
     def __str__(self):

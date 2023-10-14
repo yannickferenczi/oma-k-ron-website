@@ -18,12 +18,15 @@ class OrderAdmin(admin.ModelAdmin):
         "delivery_costs",
         "order_value",
         "total",
+        "original_cart",
+        "stripe_pid",
     )
 
     fields = (
         "order_number",
-        "first_name",
-        "last_name",
+        "date_of_order",
+        "full_name",
+        "user_profile",
         "email",
         "phone_number",
         "street_address_1",
@@ -32,19 +35,17 @@ class OrderAdmin(admin.ModelAdmin):
         "city",
         "county",
         "country",
-        "date_of_order",
-        "click_and_collect",
-        "delivery_costs",
         "order_value",
+        "delivery_costs",
         "total",
+        "original_cart",
+        "stripe_pid",
     )
 
     list_display = (
         "order_number",
-        "first_name",
-        "last_name",
+        "full_name",
         "date_of_order",
-        "click_and_collect",
         "delivery_costs",
         "order_value",
         "total",

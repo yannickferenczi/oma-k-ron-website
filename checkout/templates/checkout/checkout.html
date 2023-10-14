@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
 {% endblock extra_css %}
 
+{% block extra_title %}Checkout{% endblock extra_title %}
 
 {% block content %}
 <div class="row">
@@ -49,12 +50,12 @@
             <div class="col-7 offset-2">
                 <p class="my-0">Order value:</p>
                 <p class="my-0">Delivery costs:</p>
-                <p class="my-0">Total:</p>
+                <p class="my-0"><strong>Total:</strong></p>
             </div>
             <div class="col-3">
                 <p class="my-0">{{ order_value | floatformat:2 }} €</p>
-                <p class="my-0"><span class="delivery-info">{{ delivery_costs | floatformat:2 }}</span><span class="collect-only">0.00</span> €</p>
-                <p class="my-0"><span class="delivery-info">{{ total | floatformat:2 }}</span><span class="collect-only">{{ order_value | floatformat:2 }}</span> €</p>
+                <p class="my-0">{{ delivery_costs | floatformat:2 }} €</p>
+                <p class="my-0"><strong>{{ total | floatformat:2 }} €</strong></p>
             </div>
         </div>
     </div>
@@ -64,12 +65,10 @@
             {% csrf_token %}
             <fieldset class="rounded px-3 mb-5">
                 <legend class="fieldset-label small text-black px-2 w-auto">Personal Details</legend>
-                {{ order_form.first_name | as_crispy_field }}
-                {{ order_form.last_name | as_crispy_field }}
+                {{ order_form.full_name | as_crispy_field }}
                 {{ order_form.email | as_crispy_field }}
             </fieldset>
-            {{ order_form.click_and_collect | as_crispy_field }}
-            <fieldset class="delivery-info" class="rounded px-3 mb-5">
+            <fieldset class="rounded px-3 mb-5">
                 <legend class="fieldset-label small text-black px-2 w-auto">Delivery Information</legend>
                     {{ order_form.phone_number | as_crispy_field }}
                     {{ order_form.street_address_1 | as_crispy_field }}
@@ -78,7 +77,13 @@
                     {{ order_form.city | as_crispy_field }}
                     {{ order_form.county | as_crispy_field }}
                     {{ order_form.country | as_crispy_field }}
-                <div class="form-check form-check-inline float-right mr-0">
+                    <p class="small text-danger my-0 text-right">
+                        <span class="icon">
+                            <i class="fas fa-exclamation-circle"></i>
+                        </span>
+                        <span>We only deliver within <strong>Germany</strong>.
+                    </p>
+                <div class="form-check form-check-inline float-right mr-0 my-3">
                     {% if user.is_authenticated %}
                         <label for="id-save-info" class="form-check-label">Save this delivery information to my profile.</label>
                         <input type="checkbox" class="form-check-input ml-2 mr0" id="id-save-info" name="save-info" checked>
@@ -92,8 +97,12 @@
             </fieldset>
             <fieldset class="px-3">
                 <legend class="fieldset-label small text-black px-2 w-auto">Payment Information</legend>
+                <!-- A Stripe card element will go here -->
                 <div class="mb-3" id="card-element"></div>
+                <!-- Used to display form errors -->
                 <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
+                <!-- Pass the client secret to the view so we can get the payment intent id -->
+                <input type="hidden" value="{{ client_secret }}" name="client_secret">
             </fieldset>
             <div class="submit-button text-right mt-5 mb-2">
                 <a href="{% url 'cart' %}" class="btn">
@@ -112,26 +121,25 @@
                     <span class="icon">
                         <i class="fas fa-exclamation-circle"></i>
                     </span>
-                    <span>Your card will be charged <strong class="delivery-info">{{ total | floatformat:2 }} €</strong><strong class="collect-only">{{ order_value| floatformat:2 }} €</strong></span>
+                    <span>Your card will be charged <strong>{{ total | floatformat:2 }} €</strong></span>
                 </p>
             </div>
         </form>
     </div>
 </div>
+<div id="loading-overlay">
+    <h1 class="text-light logo-font loading-spinner">
+        <span class="icon">
+            <i class="fas fa-3x fa-sync-alt fa-spin"></i>
+        </span>
+    </h1>
+</div>
 {% endblock content %}
 
 {% block postload_js %}
     {{ block.super }}
-    <script type="text/javascript">
-        $(".collect-only").hide();
-        $("#id_click_and_collect").change(function() {
-            if ($("#id_click_and_collect").is(":checked")) {
-                $(".delivery-info").hide();
-                $(".collect-only").show();
-            } else {
-                $(".delivery-info").show();
-                $(".collect-only").hide();
-            };
-        });
-    </script>
+    <!-- Setup for Stripe -->
+    {{ stripe_public_key|json_script:"id_stripe_public_key" }}
+    {{ client_secret|json_script:"id_client_secret" }}
+    <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
 {% endblock postload_js %}
