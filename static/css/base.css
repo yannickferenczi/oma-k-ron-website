@@ -7,6 +7,10 @@ html {
     margin-top: 211px;
 }
 
+.main-content > div:first-child {
+    padding-top: 5px;
+}
+
 .logo {
     width: 50px;
 }
@@ -168,9 +172,17 @@ h6 {
 }
 
 .cta-container {
+    position: relative;
     background: url('/media/oma_k_ron_hero_image.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 200px);
+}
+
+.cta-container > div {
+    position: absolute;
+    width: 40%;
+    top: 5vh;
+    right: 5vw;
 }
 
 .custom-toast {
@@ -240,6 +252,17 @@ h6 {
         padding-bottom: 40px;
     }
 }
+/* Styles for screens larger than 435px */
+@media (min-width: 436px) {
+    .main-content {
+        min-height: calc(100vh - 165px - 320px);
+        margin-top: 165px;
+    }
+
+    .main-content > div:first-child {
+        padding-top: 30px;
+    }
+}
 
 /* Styles for screens larger than 767px */
 @media (min-width: 768px) {
@@ -249,6 +272,10 @@ h6 {
         right: 0;
         left: 0;
         z-index: 1030;
+    }
+
+    .main-content > div:first-child {
+        padding-top: 5px;
     }
 
     .count-cart {
@@ -275,8 +302,8 @@ h6 {
     }
 
     .main-content {
-        min-height: calc(100vh - 224px - 300px);
-        margin-top: 224px;
+        min-height: calc(100vh - 220px - 300px);
+        margin-top: 220px;
     }
 
     .logo {
