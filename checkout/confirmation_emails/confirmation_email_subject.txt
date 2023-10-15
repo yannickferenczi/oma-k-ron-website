@@ -1,0 +1,1 @@
+Confirmation order from Oma K-ron - Order N. {{ order.order_number }}
