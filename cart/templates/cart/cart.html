@@ -37,7 +37,11 @@
                                 <tr>
                                     <td class="d-none d-md-table-cell p-3 w-25">
                                         <a href="{% url 'product_detail' item.product.id %}">
-                                            <img src="{{ item.product.image.url }}" alt="{{ item.product.description }}" class="img-fluid">
+                                            {% if item.product.image %}
+                                                <img class="w-100" src="{{ item.product.image.url }}" alt="{{ item.product.description }}">
+                                            {% else %}
+                                                <img class="w-100" src="{{ MEDIA_URL }}no_image.jpg" alt="{{ item.product.description }}">
+                                            {% endif %}
                                         </a>
                                     </td>
                                     <td class="py-3 align-middle">
