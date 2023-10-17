@@ -71,7 +71,7 @@ def add_product(request):
     if not request.user.is_superuser:
         messages.error(
             request,
-            "Sorry, this page is a restricted to the store owners.",
+            "Sorry, this page is restricted to the store owners.",
         )
         return redirect(reverse("home"))
     if request.method == "POST":
@@ -100,7 +100,7 @@ def edit_product(request, product_id):
     if not request.user.is_superuser:
         messages.error(
             request,
-            "Sorry, this page is a restricted to the store owners.",
+            "Sorry, this page is restricted to the store owners.",
         )
         return redirect(reverse("home"))
     product = get_object_or_404(Product, pk=product_id)
@@ -131,7 +131,7 @@ def delete_product(request, product_id):
     if not request.user.is_superuser:
         messages.error(
             request,
-            "Sorry, this page is a restricted to the store owners.",
+            "Sorry, this page is restricted to the store owners.",
         )
         return redirect(reverse("home"))
     product = get_object_or_404(Product, pk=product_id)

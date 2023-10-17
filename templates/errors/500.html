@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}Error 500{% endblock extra_title %}
+
+{% block content %}
+    <div class="row h-100">
+        <div class="col">
+            <h2 class="logo-font text-center">Error 400 - Bad Request</h2>
+            <hr class="w-50 mb-1">
+        </div>
+    </div>
+    <div class="row h-100">
+        <div class="col">
+            <h4 class="text-center">
+                For security reasons, your request could not be treated!
+            </h4>
+            <div class="my-5">
+                <p class="text-center">
+                    <a href="{% url 'products' %}" class="btn btn-lg bg-blue font-weight-bold text-black text-uppercase py-3">
+                        Return to shop
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
