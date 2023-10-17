@@ -14,13 +14,13 @@
         <hr class="w-50 mb-1">
     </div>
 </div>
-<div class="row">
+<div class="row mb-3">
     <div class="col-12 col-lg-6">
-        <p class="text-muted">Default Delivery Information</p>
-        <form class="mt-3" action="{% url 'profile' %}" method="POST" id="profile-update-form">
+        <p class="text-muted pl-3">Default Delivery Information</p>
+        <form class="mt-3 px-3" action="{% url 'profile' %}" method="POST" id="profile-update-form">
             {% csrf_token %}
             {{ form|crispy }}
-            <button class="btn bg-blue text-uppercase float-right">Update Information</button>
+            <button class="btn bg-blue font-weight-bold text-uppercase float-right">Update Information</button>
         </form>
     </div>
     <div class="col-12 col-lg-6">
