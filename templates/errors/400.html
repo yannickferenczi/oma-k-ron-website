@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}Error 400{% endblock extra_title %}
+
+{% block content %}
+    <div class="row h-100">
+        <div class="col">
+            <h2 class="logo-font text-center">Error 400 - Internal Servor Error</h2>
+            <hr class="w-50 mb-1">
+        </div>
+    </div>
+    <div class="row h-100">
+        <div class="col">
+            <h4 class="text-center">
+                We are sorry for the inconvenience, the server encountered an internal error or misconfiguration and was unable to
+    complete your request.
+            </h4>
+            <div class="my-5">
+                <p class="text-center">
+                    <a href="{% url 'products' %}" class="btn btn-lg bg-blue font-weight-bold text-black text-uppercase py-3">
+                        Return to shop
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
