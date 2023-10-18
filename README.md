@@ -214,3 +214,55 @@ This project is a full-stack web application using a cloud-based database (Postg
 ![Authentication system](documentation/search_and_filter_functionalities.png)
 
 ### More features to implement
+
+---
+
+<div align="center">
+
+## Technology Used
+
+</div>
+
+- Languages, Databases, Frameworks and libraries:
+
+  - HTML5
+  - CSS3
+  - Javascript
+  - Bootstrap 4.6.2
+  - boto3 1.28.64
+  - Python 3.9.17
+  - Django 3.2.21
+  - django-allauth 0.41.0
+  - django-countries 7.5.1
+  - django-crispy-forms 1.14.0
+  - django-storages 1.14.2
+  - dj-database-url 2.1.0
+  - gunicorn 20.0.4
+  - Pillow 10.0.1
+  - PostgreSQL
+  - psycopg2-binary 2.9.8
+  - stripe 2.42.0
+  - Markdown
+
+- Other tools:
+
+  - [Git](https://git-scm.com/) has been used for version control
+  - [GitHub](https://github.com/) has been used to store the project code
+  - [Code Anywhere](https://codeanywhere.com/) has been used as cloud ide
+  - [Google Fonts](https://fonts.google.com/) has been used for the fonts
+  - [Font Awesome](https://fontawesome.com/) has been used for the icons
+  - [Pexels](https://www.pexels.com/) has been used to find free pictures
+  - [Tiny PNG](https://tinypng.com/) has been used to further optimize the images for the site and reduce the file size
+  - [ElephantSQL](https://customer.elephantsql.com/) has been used to store the database
+  - [Heroku](https://www.heroku.com/) has been used to deploy the live website
+  - [Google Chrome Dev Tools](https://developers.google.com/web/tools/chrome-devtools) has been used to inspect page elements, debug issues with the site & test responsiveness on different mockup devices.
+  - [Markup Validation Service](https://validator.w3.org/) has been used to check the HTML code
+  - [CSS Validation Service](https://jigsaw.w3.org/css-validator/) has been used to check the CSS code
+  - [CI Python Linter](https://pep8ci.herokuapp.com/) has been used to check the Python code
+  - [JSHint](https://jshint.com/) has been used to check the Javascript code
+  - [PageSpeed Insights](https://pagespeed.web.dev/) has been used to check the speed of the website
+  - [Wave](https://wave.webaim.org/) has been used to test the accessibility of the website
+  - [Accessibility Checker](https://www.accessibilitychecker.org/) has been used to test the accessibility of the website
+  - [Am I responsive](https://ui.dev/amiresponsive) has been used to create a mockup of responsiveness
+  - [Shields.io](https://shields.io/) has been used to create badges within the README.md file
+  - [Mailchimp](https://mailchimp.com/) has been used to collect email from potential customers
