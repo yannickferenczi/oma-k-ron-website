@@ -4,7 +4,7 @@ This settings file handle all settings specific to the production deployment.
 
 import dj_database_url
 
-from .base_settings import *
+from .settings import *
 
 DATABASES = {
     'default': dj_database_url.parse(
