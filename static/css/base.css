@@ -153,6 +153,7 @@ h6 {
     position: fixed;
     bottom: 100px;
     right: 25px;
+    box-shadow: 2px 2px 5px black;
     z-index: 10;
 }
 

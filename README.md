@@ -164,3 +164,53 @@ To conclude, I must admit that I have started this project with a very high leve
 ## Features
 
 </div>
+
+This project is a full-stack web application using a cloud-based database (PostgreSQL) to record data and an online-payment provider (Stripe) to accept payments.
+
+### Features currently available
+
+- A branding with a logo, a name, and the colors of the company
+
+![Hands Home Helpers branding](documentation/oma-k-ron_branding.png)
+
+- A navigation menu
+
+![Navigation menu](documentation/navigation_menu.png)
+
+- A call to action (CTA) on a Hero-image
+
+![Call to action](documentation/call_to_action.png)
+
+- A footer with opening-hours, a newsletter subscription and links to social media
+
+![Footer](documentation/footer.png)
+
+- A copyright
+
+![Copyright](documentation/copyright.png)
+
+- A profile page
+
+![Personal dashboard](documentation/profile.png)
+
+- A notification system
+
+![Notification system](documentation/notification_system.png)
+
+- An authentication system
+
+![Authentication system](documentation/authentication_system.png)
+
+- A shopping cart
+
+![Authentication system](documentation/shopping_cart.png)
+
+- A checkout system
+
+![Authentication system](documentation/checkout_system.png)
+
+- Searching and filtering functionalities
+
+![Authentication system](documentation/search_and_filter_functionalities.png)
+
+### More features to implement
