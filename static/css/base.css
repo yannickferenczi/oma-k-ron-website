@@ -207,6 +207,7 @@ h6 {
 .main-footer {
     position: relative;
     padding-bottom: 65px;
+    box-shadow: 0 -2px 50px black;
 }
 
 .social-media {
@@ -241,7 +242,20 @@ h6 {
 }
 
 .footer-rule {
-    display: none;
+    border-top: 2px solid black;
+    width: 50%;
+    margin: auto;
+}
+
+#mc_embed_signup {
+    clear: left;
+    width: 100%;
+}
+
+#mc_embed_signup .button {
+    background-color: #82d9ed !important;
+    color: #000 !important;
+    font-weight: bold !important;
 }
 
 /* -------------------------------- Media Queries */
@@ -334,6 +348,7 @@ h6 {
 
     .footer-rule {
         display: block;
+        border-top: none;
         border-left: 2px solid black;
         width: 0;
         height: 150px;

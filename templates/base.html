@@ -20,6 +20,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Croissant+One&display=swap" rel="stylesheet">
+        <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
         {% endblock core_css %}
 
         {% block extra_css %}
@@ -160,9 +161,9 @@
 
         <footer class="main-footer bg-pink">
             <div class="container-fluid">
-                <div class="row p-4 pt-1">
+                <div class="row p-1 pt-1">
                     <div class="col-md-5 p-0 d-flex align-items-center justify-content-center">
-                        <div class="row">
+                        <div class="row pt-2">
                             <div class="col-12 text-center">
                                 <h4 id="opening-hours"><strong>Opening Hours</strong></h4>
                                 <p class="m-0 p-0"><strong>Mon - Fr:</strong> from 10am to 6pm</p>
@@ -177,39 +178,65 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-1">
+                    <div class="col-md-2">
                         <div class="footer-rule"></div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="row p-2">
-                            <div class="col">
-                                <div class="row">
-                                    <div class="col-3 text-center">
-                                        <a class="social-media facebook-link p-1" aria-label="Open Facebook in a new tab"
-                                            href="https://www.facebook.com/" target="_blank"><i
-                                                class="fa-brands fa-facebook-f"></i></a>
-                                    </div>
-                                    <div class="col-3 text-center">
-                                        <a class="social-media youtube-link p-1" aria-label="Open Youtube in a new tab"
-                                            href="https://www.youtube.com/" target="_blank"><i
-                                                class="fa-brands fa-youtube"></i></a>
-                                    </div>
-                                    <div class="col-3 text-center">
-                                        <a class="social-media twitter-link p-1" aria-label="Open Twitter in a new tab"
-                                            href="https://www.twitter.com/" target="_blank"><i
-                                                class="fa-brands fa-twitter"></i></a>
-                                    </div>
-                                    <div class="col-3 text-center">
-                                        <a class="social-media linkedin-link p-1" aria-label="Open LinkedIn in a new tab"
-                                            href="https://www.linkedin.com/" target="_blank"><i
-                                                class="fa-brands fa-linkedin-in"></i></a>
+                    <div class="col-md-5">
+                        <div class="row pt-2">
+                            <div class="col newsletter">
+                                <div id="mc_embed_shell">
+                                    <div id="mc_embed_signup">
+                                        <form
+                                            action="https://herokuapp.us21.list-manage.com/subscribe/post?u=263ebb679632ad35001a3cfe2&amp;id=ffb6722349&amp;f_id=00eee7e6f0"
+                                            method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate m-0"
+                                            target="_blank">
+                                            <div id="mc_embed_signup_scroll">
+                                                <h4 class="text-center font-weight-bold">Subscribe to our Newsletter</h4>
+                                                <div class="mc-field-group pb-0"><label for="mce-EMAIL">Email Address <span
+                                                            class="asterisk">*</span></label><input type="email" name="EMAIL" class="required email"
+                                                        id="mce-EMAIL" required="" value=""></div>
+                                                <div id="mce-responses" class="clear foot">
+                                                    <div class="response" id="mce-error-response" style="display: none;"></div>
+                                                    <div class="response" id="mce-success-response" style="display: none;"></div>
+                                                </div>
+                                                <div aria-hidden="true" style="position: absolute; left: -5000px;">
+                                                    /* real people should not fill this in and expect good things - do not remove this or risk form bot
+                                                    signups */
+                                                    <input type="text" name="b_263ebb679632ad35001a3cfe2_ffb6722349" tabindex="-1" value="">
+                                                </div>
+                                                <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+                                                <div class="optionalParent">
+                                                    <div class="clear foot text-right">
+                                                        <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button btn text-uppercase"
+                                                            value="Subscribe">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="row pt-2">
-                            <div class="col newsletter">
-                                <p class="text-center text-danger">Here will come the embedded newsletter from mailchimp.</p>
+                    </div>
+                </div>
+                <div class="row bg-blue px-2 mb-4">
+                    <div class="col-6 offset-3">
+                        <div class="row">
+                            <div class="col-3 text-center">
+                                <a class="social-media facebook-link p-1" aria-label="Open Facebook in a new tab"
+                                    href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                            </div>
+                            <div class="col-3 text-center">
+                                <a class="social-media youtube-link p-1" aria-label="Open Youtube in a new tab"
+                                    href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                            </div>
+                            <div class="col-3 text-center">
+                                <a class="social-media twitter-link p-1" aria-label="Open Twitter in a new tab"
+                                    href="https://www.twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                            </div>
+                            <div class="col-3 text-center">
+                                <a class="social-media linkedin-link p-1" aria-label="Open LinkedIn in a new tab"
+                                    href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
                             </div>
                         </div>
                     </div>
@@ -229,6 +256,9 @@
         <script type="text/javascript">
             $(".toast").toast("show");
         </script>
+        <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+        <script
+            type="text/javascript">(function ($) { window.fnames = new Array(); window.ftypes = new Array(); fnames[0] = 'EMAIL'; ftypes[0] = 'email'; fnames[1] = 'FNAME'; ftypes[1] = 'text'; fnames[2] = 'LNAME'; ftypes[2] = 'text'; fnames[3] = 'ADDRESS'; ftypes[3] = 'address'; fnames[4] = 'PHONE'; ftypes[4] = 'phone'; fnames[5] = 'BIRTHDAY'; ftypes[5] = 'birthday'; }(jQuery)); var $mcj = jQuery.noConflict(true);</script>
         {% endblock postload_js %}
     </body>
 </html>
