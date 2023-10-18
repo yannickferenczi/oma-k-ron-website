@@ -13,11 +13,11 @@
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="clothing-link"
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="macaron-link"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Our macarons
             </a>
-            <div class="dropdown-menu border-0 bg-blue" aria-labelledby="clothing-link">
+            <div class="dropdown-menu border-0 bg-blue" aria-labelledby="macaron-link">
                 <a href="{% url 'products' %}?product_type=single" class="dropdown-item">The Singles</a>
                 <a href="{% url 'products' %}?product_type=box" class="dropdown-item">The Boxes</a>
                 <a href="{% url 'products' %}?product_type=tower" class="dropdown-item">The Celebrations</a>
@@ -26,15 +26,20 @@
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="homeware-link"
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="event-link"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Our events
             </a>
-            <div class="dropdown-menu border-0 bg-blue" aria-labelledby="homeware-link">
+            <div class="dropdown-menu border-0 bg-blue" aria-labelledby="event-link">
                 <a href="" class="dropdown-item">Visit our factory</a>
                 <a href="" class="dropdown-item">Learn how to bake</a>
                 <a href="" class="dropdown-item">All Events</a>
             </div>
+        </li>
+        <li class="nav-item">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'contact' %}">
+                Contact us
+            </a>
         </li>
     </ul>
 </div>
