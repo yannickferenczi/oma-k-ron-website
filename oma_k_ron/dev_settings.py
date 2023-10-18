@@ -2,7 +2,7 @@
 This settings file handle all settings specific to the development deployment.
 """
 
-from .base_settings import *
+from .settings import *
 
 DATABASES = {
     'default': {
