@@ -22,6 +22,8 @@ def all_products(request):
         if "sort" in request.GET:
             sortkey = request.GET["sort"]
             sort = sortkey
+            if sortkey == "style":
+                products = products.filter(product_type=1)
             if sortkey == "name":
                 sortkey = "lower_name"
                 products = products.annotate(lower_name=Lower("name"))
@@ -33,7 +35,11 @@ def all_products(request):
 
         if "product_type" in request.GET:
             product_type = request.GET["product_type"]
-            products = products.filter(product_type=product_type)
+            products = products.filter(product_type__name=product_type)
+
+        if "category" in request.GET:
+            category = request.GET["category"]
+            products = products.filter(category__name=category)
 
         if "q" in request.GET:
             query = request.GET["q"]
@@ -82,9 +88,9 @@ def add_product(request):
             return redirect(reverse("product_detail", args=[product.id]))
         else:
             messages.error(
-            request,
-            "Failed to add product. Please ensure the form is valid",
-        )
+                request,
+                "Failed to add product. Please ensure the form is valid",
+            )
     else:
         form = ProductForm()
     template = "products/add_product.html"

@@ -18,10 +18,10 @@
                 Our macarons
             </a>
             <div class="dropdown-menu border-0 bg-blue" aria-labelledby="macaron-link">
-                <a href="{% url 'products' %}?product_type=single" class="dropdown-item">The Singles</a>
-                <a href="{% url 'products' %}?product_type=box" class="dropdown-item">The Boxes</a>
-                <a href="{% url 'products' %}?product_type=tower" class="dropdown-item">The Celebrations</a>
-                <a href="" class="dropdown-item">All Macarons</a>
+                <a href="{% url 'products' %}?category=single" class="dropdown-item">The Singles</a>
+                <a href="{% url 'products' %}?category=box" class="dropdown-item">The Boxes</a>
+                <a href="{% url 'products' %}?category=tower" class="dropdown-item">The Celebrations</a>
+                <a href="{% url 'products' %}?product_type=macaron" class="dropdown-item">All Macarons</a>
             </div>
         </li>
 
@@ -31,9 +31,9 @@
                 Our events
             </a>
             <div class="dropdown-menu border-0 bg-blue" aria-labelledby="event-link">
-                <a href="" class="dropdown-item">Visit our factory</a>
-                <a href="" class="dropdown-item">Learn how to bake</a>
-                <a href="" class="dropdown-item">All Events</a>
+                <a href="{% url 'products' %}?category=visit" class="dropdown-item">Visit our factory</a>
+                <a href="{% url 'products' %}?category=course" class="dropdown-item">Learn how to bake</a>
+                <a href="{% url 'products' %}?product_type=event" class="dropdown-item">All Events</a>
             </div>
         </li>
         <li class="nav-item">

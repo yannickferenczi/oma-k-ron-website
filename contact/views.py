@@ -23,6 +23,5 @@ def contact(request):
                     information.",
             )
     else:
-        if request.user.is_authenticated:
-            form = ContactForm()
+        form = ContactForm()
     return render(request, "contact/contact.html", {"form": form})
