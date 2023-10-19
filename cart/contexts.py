@@ -25,11 +25,10 @@ def cart_contents(request):
             }
         )
     for item in cart_items:
-        if item["product"].product_type.lower() == "tower":
-            delivery_costs = settings.DELIVERY_COSTS_CELEBRATIONS
-            break
-        else:
+        if item["product"].category.id in [1, 2] and delivery_costs < 10:
             delivery_costs = settings.DELIVERY_COSTS_BASICS
+        elif item["product"].category.id == 3:
+            delivery_costs = settings.DELIVERY_COSTS_CELEBRATIONS
     total = order_value + delivery_costs
     context = {
         "cart_items": cart_items,

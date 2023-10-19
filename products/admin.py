@@ -8,6 +8,7 @@ class ProductAdmin(admin.ModelAdmin):
     list_display = (
         "name",
         "product_type",
+        "date_of_event",
         "category",
         "flavour",
         "price",

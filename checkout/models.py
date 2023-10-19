@@ -80,15 +80,12 @@ class Order(models.Model):
         """
         self.order_value = self.lineitems.aggregate(
             Sum("lineitem_total"))["lineitem_total__sum"] or 0
-        if self.order_value == 0:
-            self.delivery_costs = 0
-        else:
-            for item in self.lineitems.all():
-                if item.product.product_type.lower() == "tower":
-                    self.delivery_costs = settings.DELIVERY_COSTS_CELEBRATIONS
-                    break
-                else:
-                    self.delivery_costs = settings.DELIVERY_COSTS_BASICS
+        self.delivery_costs = 0
+        for item in self.lineitems.all():
+            if item.product.category.id in [1, 2] and self.delivery_costs < 10:
+                self.delivery_costs = settings.DELIVERY_COSTS_BASICS
+            elif item.product.category.id == 3:
+                self.delivery_costs = settings.DELIVERY_COSTS_CELEBRATIONS
         self.total = self.order_value + self.delivery_costs
         self.save()
 
