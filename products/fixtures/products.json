@@ -4,7 +4,8 @@
         "model": "products.product",
         "fields": {
             "name": "Macaron Apple",
-            "product_type": "single",
+            "product_type": 1,
+            "category": 1,
             "style": "french",
             "flavour": "apple",
             "description": "One 30g French macaron",
@@ -17,7 +18,8 @@
         "model": "products.product",
         "fields": {
             "name": "Macaron Cassis",
-            "product_type": "single",
+            "product_type": 1,
+            "category": 1,
             "style": "french",
             "flavour": "cassis",
             "description": "One 30g French macaron",
@@ -30,7 +32,8 @@
         "model": "products.product",
         "fields": {
             "name": "Macaron Dark Chocolate",
-            "product_type": "single",
+            "product_type": 1,
+            "category": 1,
             "style": "french",
             "flavour": "dark chocolate",
             "description": "One 30g French macaron",
@@ -43,7 +46,8 @@
         "model": "products.product",
         "fields": {
             "name": "Macaron Nougat",
-            "product_type": "single",
+            "product_type": 1,
+            "category": 1,
             "style": "french",
             "flavour": "nougat",
             "description": "One 30g French macaron",
@@ -56,7 +60,8 @@
         "model": "products.product",
         "fields": {
             "name": "Macaron Peach",
-            "product_type": "single",
+            "product_type": 1,
+            "category": 1,
             "style": "french",
             "flavour": "peach",
             "description": "One 30g French macaron",
@@ -69,7 +74,8 @@
         "model": "products.product",
         "fields": {
             "name": "Macaron Pumpkin",
-            "product_type": "single",
+            "product_type": 1,
+            "category": 1,
             "style": "french",
             "flavour": "pumpkin",
             "description": "One 30g French macaron",
@@ -82,7 +88,8 @@
         "model": "products.product",
         "fields": {
             "name": "Macaron Raspberry",
-            "product_type": "single",
+            "product_type": 1,
+            "category": 1,
             "style": "french",
             "flavour": "raspberry",
             "description": "One 30g French macaron",
@@ -95,7 +102,8 @@
         "model": "products.product",
         "fields": {
             "name": "Macaron Strawberry",
-            "product_type": "single",
+            "product_type": 1,
+            "category": 1,
             "style": "french",
             "flavour": "strawberry",
             "description": "One 30g French macaron",
@@ -108,7 +116,8 @@
         "model": "products.product",
         "fields": {
             "name": "Macaron Blueberry",
-            "product_type": "single",
+            "product_type": 1,
+            "category": 1,
             "style": "italian",
             "flavour": "blueberry",
             "description": "One 30g Italian macaron",
@@ -121,7 +130,8 @@
         "model": "products.product",
         "fields": {
             "name": "Macaron Cassis",
-            "product_type": "single",
+            "product_type": 1,
+            "category": 1,
             "style": "italian",
             "flavour": "cassis",
             "description": "One 30g Italian macaron",
@@ -134,7 +144,8 @@
         "model": "products.product",
         "fields": {
             "name": "Macaron Lavender",
-            "product_type": "single",
+            "product_type": 1,
+            "category": 1,
             "style": "italian",
             "flavour": "lavender",
             "description": "One 30g Italian macaron",
@@ -147,7 +158,8 @@
         "model": "products.product",
         "fields": {
             "name": "Macaron Lemon",
-            "product_type": "single",
+            "product_type": 1,
+            "category": 1,
             "style": "italian",
             "flavour": "lemon",
             "description": "One 30g Italian macaron",
@@ -160,7 +172,8 @@
         "model": "products.product",
         "fields": {
             "name": "Macaron Mint",
-            "product_type": "single",
+            "product_type": 1,
+            "category": 1,
             "style": "italian",
             "flavour": "mint",
             "description": "One 30g Italian macaron",
@@ -173,7 +186,8 @@
         "model": "products.product",
         "fields": {
             "name": "Macaron Raspberry",
-            "product_type": "single",
+            "product_type": 1,
+            "category": 1,
             "style": "italian",
             "flavour": "raspberry",
             "description": "One 30g Italian macaron",
@@ -186,7 +200,8 @@
         "model": "products.product",
         "fields": {
             "name": "Macaron Cappuccino",
-            "product_type": "single",
+            "product_type": 1,
+            "category": 1,
             "style": "swiss",
             "flavour": "cappuccino",
             "description": "One 30g Swiss macaron",
@@ -199,7 +214,8 @@
         "model": "products.product",
         "fields": {
             "name": "Macaron Eucalyptus",
-            "product_type": "single",
+            "product_type": 1,
+            "category": 1,
             "style": "swiss",
             "flavour": "eucalyptus",
             "description": "One 30g Swiss macaron",
@@ -212,7 +228,8 @@
         "model": "products.product",
         "fields": {
             "name": "Macaron Lavender",
-            "product_type": "single",
+            "product_type": 1,
+            "category": 1,
             "style": "swiss",
             "flavour": "lavender",
             "description": "One 30g Swiss macaron",
@@ -225,7 +242,8 @@
         "model": "products.product",
         "fields": {
             "name": "Macaron Melon",
-            "product_type": "single",
+            "product_type": 1,
+            "category": 1,
             "style": "swiss",
             "flavour": "melon",
             "description": "One 30g Swiss macaron",
@@ -238,7 +256,8 @@
         "model": "products.product",
         "fields": {
             "name": "Macaron Mint",
-            "product_type": "single",
+            "product_type": 1,
+            "category": 1,
             "style": "swiss",
             "flavour": "mint",
             "description": "One 30g Swiss macaron",
@@ -251,7 +270,8 @@
         "model": "products.product",
         "fields": {
             "name": "Macaron Pear",
-            "product_type": "single",
+            "product_type": 1,
+            "category": 1,
             "style": "swiss",
             "flavour": "pear",
             "description": "One 30g Swiss macaron",
@@ -264,7 +284,8 @@
         "model": "products.product",
         "fields": {
             "name": "Macaron Praline",
-            "product_type": "single",
+            "product_type": 1,
+            "category": 1,
             "style": "swiss",
             "flavour": "praline",
             "description": "One 30g Swiss macaron",
@@ -277,7 +298,8 @@
         "model": "products.product",
         "fields": {
             "name": "Macaron Raspberry",
-            "product_type": "single",
+            "product_type": 1,
+            "category": 1,
             "style": "swiss",
             "flavour": "raspberry",
             "description": "One 30g Swiss macaron",
@@ -290,7 +312,8 @@
         "model": "products.product",
         "fields": {
             "name": "Macaron Strawberry",
-            "product_type": "single",
+            "product_type": 1,
+            "category": 1,
             "style": "swiss",
             "flavour": "strawberry",
             "description": "One 30g Swiss macaron",
@@ -303,7 +326,8 @@
         "model": "products.product",
         "fields": {
             "name": "Tower Champagne",
-            "product_type": "tower",
+            "product_type": 1,
+            "category": 3,
             "style": "french",
             "flavour": "champagne",
             "description": "One tower of 30 macarons (30g each)",
@@ -316,7 +340,8 @@
         "model": "products.product",
         "fields": {
             "name": "Tower Crème Brulée",
-            "product_type": "tower",
+            "product_type": 1,
+            "category": 3,
             "style": "french",
             "flavour": "crème brulée",
             "description": "One tower of 30 French macarons (30g each)",
@@ -329,7 +354,8 @@
         "model": "products.product",
         "fields": {
             "name": "Tower Banana Split",
-            "product_type": "tower",
+            "product_type": 1,
+            "category": 3,
             "style": "italian",
             "flavour": "chocolate, vanilla, banana",
             "description": "One tower of 30 Italian macarons (30g each)",
@@ -342,7 +368,8 @@
         "model": "products.product",
         "fields": {
             "name": "Tower Three Chocolates",
-            "product_type": "tower",
+            "product_type": 1,
+            "category": 3,
             "style": "swiss",
             "flavour": "dark chocolate, milk chocolate, white chocolate",
             "description": "One tower of 30 Swiss macarons (30g each)",
@@ -355,7 +382,8 @@
         "model": "products.product",
         "fields": {
             "name": "Tower Pink & Lila",
-            "product_type": "tower",
+            "product_type": 1,
+            "category": 3,
             "style": "swiss",
             "flavour": "cassis, strawberry",
             "description": "One tower of 30 Swiss macarons (30g each)",
@@ -368,7 +396,8 @@
         "model": "products.product",
         "fields": {
             "name": "Tower Red & White",
-            "product_type": "tower",
+            "product_type": 1,
+            "category": 3,
             "style": "french",
             "flavour": "strawberry, vanilla",
             "description": "One tower of 30 French macarons (30g each)",
@@ -381,7 +410,8 @@
         "model": "products.product",
         "fields": {
             "name": "Tower Pastel",
-            "product_type": "tower",
+            "product_type": 1,
+            "category": 3,
             "style": "italian",
             "flavour": "lemon, orange, lavender",
             "description": "One tower of 30 Italian macarons (30g each)",
@@ -394,7 +424,8 @@
         "model": "products.product",
         "fields": {
             "name": "Tower Lagoon",
-            "product_type": "tower",
+            "product_type": 1,
+            "category": 3,
             "style": "swiss",
             "flavour": "lime, mint, eucalyptus",
             "description": "One tower of 30 Swiss macarons (30g each)",
@@ -407,7 +438,8 @@
         "model": "products.product",
         "fields": {
             "name": "Box for Two",
-            "product_type": "box",
+            "product_type": 1,
+            "category": 2,
             "style": "swiss",
             "flavour": "chocolate, strawberry, vanilla",
             "description": "One box of 6 Swiss macarons (30g each)",
@@ -420,7 +452,8 @@
         "model": "products.product",
         "fields": {
             "name": "Box for Two",
-            "product_type": "box",
+            "product_type": 1,
+            "category": 2,
             "style": "french",
             "flavour": "chocolate, strawberry, vanilla, mint, lemon, raspberry",
             "description": "One box of 6 French macarons (30g each)",
@@ -433,7 +466,8 @@
         "model": "products.product",
         "fields": {
             "name": "Box for Two",
-            "product_type": "box",
+            "product_type": 1,
+            "category": 2,
             "style": "italian",
             "flavour": "chocolate, coffee, vanilla, mint, praline, raspberry",
             "description": "One box of 6 Italian macarons (30g each)",
@@ -446,7 +480,8 @@
         "model": "products.product",
         "fields": {
             "name": "Box for Two",
-            "product_type": "box",
+            "product_type": 1,
+            "category": 2,
             "style": "swiss",
             "flavour": "mint, strawberry, vanilla",
             "description": "One box of 6 Swiss macarons (30g each)",
@@ -459,7 +494,8 @@
         "model": "products.product",
         "fields": {
             "name": "Family Box",
-            "product_type": "box",
+            "product_type": 1,
+            "category": 2,
             "style": "french",
             "flavour": "mint, strawberry, vanilla, nougat, blueberry",
             "description": "One box of 35 French macarons (30g each)",
@@ -472,7 +508,8 @@
         "model": "products.product",
         "fields": {
             "name": "Family Box",
-            "product_type": "box",
+            "product_type": 1,
+            "category": 2,
             "style": "italian",
             "flavour": "apple, cassis, cappuccino, white chocolate, dark chocolate, pineapple, banana, almond",
             "description": "One box of 40 Italian macarons (30g each)",
@@ -485,7 +522,8 @@
         "model": "products.product",
         "fields": {
             "name": "Box for three",
-            "product_type": "box",
+            "product_type": 1,
+            "category": 2,
             "style": "swiss",
             "flavour": "orange, lavender, lemon, passion fruit, lime, cranberry, cherry",
             "description": "One box of 7 Swiss macarons (30g each)",
@@ -498,7 +536,8 @@
         "model": "products.product",
         "fields": {
             "name": "Box for three",
-            "product_type": "box",
+            "product_type": 1,
+            "category": 2,
             "style": "french",
             "flavour": "orange, strawberry, mint, peach, pear",
             "description": "One box of 7 French macarons (30g each)",
@@ -511,7 +550,8 @@
         "model": "products.product",
         "fields": {
             "name": "Secret Pleasure",
-            "product_type": "box",
+            "product_type": 1,
+            "category": 2,
             "style": "french",
             "flavour": "vanilla, strawberry, mint",
             "description": "One box of 3 French macarons (30g each)",
@@ -524,7 +564,8 @@
         "model": "products.product",
         "fields": {
             "name": "Secret Pleasure",
-            "product_type": "box",
+            "product_type": 1,
+            "category": 2,
             "style": "italian",
             "flavour": "coffee, strawberry, cappuccino",
             "description": "One box of 3 Italian macarons (30g each)",
@@ -537,12 +578,117 @@
         "model": "products.product",
         "fields": {
             "name": "Secret Pleasure",
-            "product_type": "box",
+            "product_type": 1,
+            "category": 2,
             "style": "swiss",
             "flavour": "orange, raspberry, white chocolate",
             "description": "One box of 3 Swiss macarons (30g each)",
             "price": 6.95,
             "image": "box_of_three_macarons_3.jpg"
+        }
+    },
+    {
+        "pk": 43,
+        "model": "products.product",
+        "fields": {
+            "name": "Baking course - Beginner",
+            "product_type": 2,
+            "category": 4,
+            "description": "Learn how to bake macarons. You have no idea how to bake anything? We show you the fundamentals! Then enjoy the result of your effort with our finest Champagne.",
+            "price": 35.95,
+            "image": "course_beginner.jpg",
+            "duration": 60
+        }
+    },
+    {
+        "pk": 44,
+        "model": "products.product",
+        "fields": {
+            "name": "Baking course - Advanced",
+            "product_type": 2,
+            "category": 4,
+            "description": "Learn how to bake macarons. You have already some basic knowledge and can bake some good stuff? Updgrade your skills to the next level with our Master Chef! Then enjoy the result of your effort with our finest Champagne.",
+            "price": 45.95,
+            "image": "course_advanced.jpg",
+            "duration": 60
+        }
+    },
+    {
+        "pk": 45,
+        "model": "products.product",
+        "fields": {
+            "name": "Baking course - Expert",
+            "product_type": 2,
+            "category": 4,
+            "description": "Learn how to bake macarons. You are a professional baker and you want to know how to master your art? This course is for you! Then enjoy the result of your effort with our finest Champagne.",
+            "price": 75.95,
+            "image": "course_expert.jpg",
+            "duration": 120
+        }
+    },
+    {
+        "pk": 46,
+        "model": "products.product",
+        "fields": {
+            "name": "Visit our Factory",
+            "product_type": 2,
+            "category": 5,
+            "description": "You want to see why our macarons are the best in whole Germany? Join one of our factory visit and then enjoy some of them with our finest Champagne.",
+            "price": 15.50,
+            "image": "factory_visit.jpg",
+            "duration": 45
+        }
+    },
+    {
+        "pk": 47,
+        "model": "products.product",
+        "fields": {
+            "name": "Baking course - Beginner",
+            "product_type": 2,
+            "category": 4,
+            "description": "Learn how to bake macarons. You have no idea how to bake anything? We show you the fundamentals! Then enjoy the result of your effort with our finest Champagne.",
+            "price": 35.95,
+            "image": "course_beginner.jpg",
+            "duration": 60
+        }
+    },
+    {
+        "pk": 48,
+        "model": "products.product",
+        "fields": {
+            "name": "Baking course - Advanced",
+            "product_type": 2,
+            "category": 4,
+            "description": "Learn how to bake macarons. You have already some basic knowledge and can bake some good stuff? Updgrade your skills to the next level with our Master Chef! Then enjoy the result of your effort with our finest Champagne.",
+            "price": 45.95,
+            "image": "course_advanced.jpg",
+            "duration": 60
+        }
+    },
+    {
+        "pk": 49,
+        "model": "products.product",
+        "fields": {
+            "name": "Baking course - Expert",
+            "product_type": 2,
+            "category": 4,
+            "description": "Learn how to bake macarons. You are a professional baker and you want to know how to master your art? This course is for you! Then enjoy the result of your effort with our finest Champagne.",
+            "price": 75.95,
+            "image": "course_expert.jpg",
+            "duration": 120
+        }
+    },
+    {
+        "pk": 50,
+        "model": "products.product",
+        "fields": {
+            "name": "Visit our Factory",
+            "product_type": 2,
+            "category": 5,
+            "description": "You want to see why our macarons are the best in whole Germany? Join one of our factory visit and then enjoy some of them with our finest Champagne.",
+            "price": 15.50,
+            "image": "factory_visit.jpg",
+            "duration": 45
         }
     }
 ]

@@ -1,0 +1,16 @@
+[
+    {
+        "pk": 1,
+        "model": "products.producttype",
+        "fields": {
+            "name": "macaron"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "products.producttype",
+        "fields": {
+            "name": "event"
+        }
+    }
+]

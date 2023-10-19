@@ -68,7 +68,6 @@ class Order(models.Model):
         default='',
     )
 
-
     def _generate_order_number(self):
         """
         Generate a random, unique order number using UUID.
