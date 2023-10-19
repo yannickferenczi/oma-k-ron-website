@@ -29,8 +29,16 @@
                 </small>
             </div>
             {% endif %}
-            <p class="text-center mt-3">{{ product.description }}</p>
-            <p class="text-center mt-3">flavour: {{ product.flavour }}</p>
+            <p class="mt-3">{{ product.description }}</p>
+            {% if product.flavour %}
+                <p class="text-center mt-3">flavour: {{ product.flavour }}</p>
+            {% endif %}
+            {% if product.date_of_event %}
+                <p class="text-center mt-3"><strong>{{ product.date_of_event | date:"D jS \o\f M\. Y \a\t P" }}</strong></p>
+            {% endif %}
+            {% if product.duration %}
+                <p class="text-center mt-3">duration: {{ product.duration }} minutes</p>
+            {% endif %}
             <p class="lead mb-0 text-center font-weight-bold">{{ product.price }} €</p>
             <form action="{% url 'add_to_cart' product.id %}" class="form" method="POST">
                 {% csrf_token %}
