@@ -40,20 +40,22 @@
                     </p>
                 </div>
             </div>
-            <div class="row gap-1">
+            <div class="row gap-0">
                 {% for product in products %}
-                    <div class="col-sm-6 col-lg-4 col-xl-3">
-                        <div class="card mb-4">
-                            {% if product.image %}
-                            <a href="{% url 'product_detail' product.id %}">
-                                <img src="{{ product.image.url }}" alt="{{ product.description }}" class="card-img-top img-fluid my-auto">
-                            </a>
-                            {% else %}
-                            <a href="{% url 'product_detail' product.id %}">
-                                <img src="{{ MEDIA_URL }}no_image.jpg" alt="{{ product.description }}" class="card-img-top img-fluid my-auto">
-                            </a>
-                            {% endif %}
-                            <div class="card-body pb-0">
+                    <div class="col-sm-6 col-lg-4 col-xl-3 p-2">
+                        <div class="card m-0">
+                            <div class="img-container mx-auto">
+                                {% if product.image %}
+                                <a href="{% url 'product_detail' product.id %}">
+                                    <img src="{{ product.image.url }}" alt="{{ product.description }}" class="card-img-top img-fluid">
+                                </a>
+                                {% else %}
+                                <a href="{% url 'product_detail' product.id %}">
+                                    <img src="{{ MEDIA_URL }}no_image.jpg" alt="{{ product.description }}" class="card-img-top img-fluid">
+                                </a>
+                                {% endif %}
+                            </div>
+                            <div class="card-body pb-1">
                                 {% if request.user.is_superuser %}
                                     <div class="text-center">
                                         <small class="ml-3">
@@ -66,21 +68,17 @@
                                 {% if product.style %}
                                     <p class="text-center">{{ product.style | title }} style</p>
                                 {% endif %}
+                                {% if product.flavour %}
+                                <p class="lead m-0 text-left"><small>flavour: {{ product.flavour }}</small></p>
+                                {% endif %}
                                 {% if product.date_of_event %}
-                                <p class="text-center">{{ product.date_of_event | date:"D jS \o\f M\. Y \a\t P" }}</p>
+                                <p class="text-center mt-2 mb-0">{{ product.date_of_event | date:"D jS \o\f M\. Y \a\t P" }}</p>
                                 {% endif %}
                                 {% if product.duration %}
                                 <p class="text-center">duration: {{ product.duration }} minutes</p>
                                 {% endif %}
                             </div>
-                            <div class="card-footer bg-white pt-0 border-0 text-left">
-                                <div class="row">
-                                    <div class="col">
-                                        {% if product.flavour %}
-                                            <p class="lead mb-0 text-left">flavour: {{ product.flavour }}</p>
-                                        {% endif %}
-                                    </div>
-                                </div>
+                            <div class="card-footer bg-pink py-2 border-0 text-left">
                                 <div class="row">
                                     <div class="col">
                                         <p class="lead mb-0 text-right font-weight-bold">{{ product.price }} €</p>

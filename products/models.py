@@ -23,6 +23,8 @@ class Category(models.Model):
 
 
 class Product(models.Model):
+    class Meta:
+        ordering = ["product_type", "date_of_event"]
     name = models.CharField(max_length=250, )
     product_type = models.ForeignKey(
         'ProductType',

@@ -2,6 +2,22 @@ html {
     height: 100%;
 }
 
+.active {
+    background-color: #f6b0cc !important;
+    color: black !important;
+}
+
+.main-nav-link:hover {
+    background-color: #f6b0cc !important;
+    color: black !important;
+    text-decoration: underline !important;
+}
+
+.text-underlined {
+    text-decoration: underline !important;
+    text-underline-offset: 8px;
+}
+
 .main-content {
     min-height: calc(100vh - 211px - 468px);
     margin-top: 211px;
@@ -144,7 +160,24 @@ h6 {
 }
 
 .card {
+    height: 450px;
     box-shadow: 5px 5px 15px #000;
+    overflow: auto;
+}
+
+.img-container {
+    height: 200px;
+    line-height: 200px;
+    vertical-align: middle;
+}
+
+.card-img-top {
+    max-height: 200px;
+    width: auto;
+}
+
+.card-body {
+    overflow: auto;
 }
 
 .btt-button {
@@ -207,7 +240,8 @@ h6 {
 
 .main-footer {
     position: relative;
-    padding-bottom: 65px;
+    padding-bottom: 80px;
+    margin-bottom: 80px;
     box-shadow: 0 -2px 50px black;
 }
 
@@ -264,9 +298,11 @@ h6 {
 /* Styles for screens larger than 289px */
 @media (min-width: 290px) {
     .main-footer {
-        padding-bottom: 40px;
+        padding-bottom: 56px;
+        margin-bottom: 56px;
     }
 }
+
 /* Styles for screens larger than 435px */
 @media (min-width: 436px) {
     .main-content {
@@ -276,6 +312,14 @@ h6 {
 
     .main-content > div:first-child {
         padding-top: 30px;
+    }
+}
+
+/* Styles for screens larger than 565px */
+@media (min-width: 566px) {
+    .main-footer {
+        padding-bottom: 32px;
+        margin-bottom: 32px;
     }
 }
 
@@ -341,10 +385,6 @@ h6 {
     .message-container {
         top: 90px;
         right: 15px;
-    }
-
-    .main-footer {
-        padding-bottom: 10px;
     }
 
     .footer-rule {
