@@ -48,8 +48,18 @@
                                         <p class="my-0"><strong>{{ item.product.name }}</strong></p>
                                         <details class="my-0">
                                             <summary><small>Product information</small></summary>
-                                            <p class="my-0">Style: {{ item.product.style | title }}</p>
-                                            <p class="my-0">Flavour: {{ item.product.flavour }}</p>
+                                            {% if product.style %}
+                                                <p class="my-0">Style: {{ item.product.style | title }}</p>
+                                            {% endif %}
+                                            {% if product.flavour %}
+                                                <p class="my-0">Flavour: {{ item.product.flavour }}</p>
+                                            {% endif %}
+                                            {% if product.date_of_event %}
+                                                <p class="text-center mt-2 mb-0">{{ product.date_of_event | date:"D jS \o\f M\. Y \a\t P" }}</p>
+                                            {% endif %}
+                                            {% if product.duration %}
+                                                <p class="text-center">duration: {{ product.duration }} minutes</p>
+                                            {% endif %}
                                             <p class="my-0">Description:</p>
                                             <p class="my-0">{{ item.product.description }}</p>
                                         </details>

@@ -1,7 +1,7 @@
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
         <li class="nav-item dropdown">
-            <a class="main-nav-link logo-font font-weight-bold nav-link text-black px-4 py-3 {% if 'products' in request.path and not 'category' in request.GET and not 'product_type' in request.GET %}active text-underlined{% else %}{% endif %}" href="#" id="all-products-link"
+            <a class="main-nav-link logo-font font-weight-bold nav-link text-black px-4 py-3 {% if request.path == '/products/' and not 'category' in request.GET and not 'product_type' in request.GET %}active text-underlined{% else %}{% endif %}" href="#" id="all-products-link"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 All Products
             </a>
