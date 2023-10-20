@@ -19,8 +19,8 @@ html {
 }
 
 .main-content {
-    min-height: calc(100vh - 211px - 468px);
-    margin-top: 211px;
+    min-height: calc(100vh - 195px - 468px);
+    margin-top: 195px;
 }
 
 .main-content > div:first-child {
@@ -303,11 +303,11 @@ h6 {
     }
 }
 
-/* Styles for screens larger than 435px */
-@media (min-width: 436px) {
+/* Styles for screens larger than 419px */
+@media (min-width: 420px) {
     .main-content {
-        min-height: calc(100vh - 165px - 320px);
-        margin-top: 165px;
+        min-height: calc(100vh - 171px - 320px);
+        margin-top: 171px;
     }
 
     .main-content > div:first-child {
@@ -361,8 +361,8 @@ h6 {
     }
 
     .main-content {
-        min-height: calc(100vh - 220px - 300px);
-        margin-top: 220px;
+        min-height: calc(100vh - 206px - 300px);
+        margin-top: 206px;
     }
 
     .logo {
