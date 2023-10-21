@@ -24,7 +24,11 @@ html {
 }
 
 .main-content > div:first-child {
-    padding-top: 5px;
+    padding-top: 15px;
+}
+
+.main-content > div:last-child {
+    padding-bottom: 30px;
 }
 
 .logo {
@@ -176,8 +180,12 @@ h6 {
     width: auto;
 }
 
-.card-body {
+.card-body-product {
     overflow: auto;
+}
+
+.post-link:hover {
+    box-shadow: 5px 5px 30px black;
 }
 
 .btt-button {
@@ -311,7 +319,7 @@ h6 {
     }
 
     .main-content > div:first-child {
-        padding-top: 30px;
+        padding-top: 40px;
     }
 }
 
@@ -334,7 +342,7 @@ h6 {
     }
 
     .main-content > div:first-child {
-        padding-top: 5px;
+        padding-top: 15px;
     }
 
     .count-cart {

@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_title %}Post Detail{% endblock extra_title %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12 col-lg-6 offset-lg-3">
+        <div class="text-center">
+            <h4 class="mb-0 text-center font-weight-bold">{{ post.title | title }}</h4>
+            <small class="text-center"><span>by {{ post.author }}</span> | <span>last update: {{ post.last_update | date:"d.n.Y" }}</span></small>
+        </div>
+        <div class="img-container mx-auto text-center">
+            {% if post.image %}
+                <img src="{{ post.image.url }}" alt="{{ post.title }}" class="card-img-top img-fluid">
+            {% else %}
+                <img src="{{ MEDIA_URL }}no_image.jpg" alt="{{ post.title }}" class="card-img-top img-fluid">
+            {% endif %}
+        </div>
+        <div class="pb-1">
+            {{ post.content | safe | truncatewords:15 }}
+        </div>
+    </div>
+</div>
+    {% endblock content %}
