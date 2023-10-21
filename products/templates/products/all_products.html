@@ -6,9 +6,22 @@
 {% block content %}
     <div class="row">
         <div class="col text-center">
-            <h2 class="logo-font">Products</h2>
+            <h2 class="logo-font">
+                {% if 'macaron' in request.get_full_path or 'single' in request.get_full_path or 'box' in request.get_full_path or 'tower' in request.get_full_path %}
+                    Our Macarons
+                {% elif 'event' in request.get_full_path or 'course' in request.get_full_path or 'visit' in request.get_full_path %}
+                    Our Events
+                {% else %}
+                    All Products
+                {% endif %}
+            </h2>
             <hr class="w-50 mb-1">
         </div>
+    </div>
+    <div class="btt-button bg-blue">
+        <a class="btt-link d-flex h-100">
+            <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
+        </a>
     </div>
     <div class="row">
         <div class="product-container col-10 offset-1">
@@ -55,7 +68,7 @@
                                 </a>
                                 {% endif %}
                             </div>
-                            <div class="card-body pb-1">
+                            <div class="card-body card-body-product pb-1">
                                 {% if request.user.is_superuser %}
                                     <div class="text-center">
                                         <small class="ml-3">
@@ -91,11 +104,6 @@
 
             </div>
         </div>
-    </div>
-    <div class="btt-button bg-blue">
-        <a class="btt-link d-flex h-100">
-            <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
-        </a>
     </div>
 {% endblock content %}
 

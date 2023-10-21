@@ -37,6 +37,12 @@
             </div>
         </li>
         <li class="nav-item">
+            <a class="main-nav-link logo-font font-weight-bold nav-link text-black px-4 py-3 {% if 'blog' in request.path %}active text-underlined{% else %}{% endif %}"
+                href="{% url 'post_list' %}">
+                Our blog
+            </a>
+        </li>
+        <li class="nav-item">
             <a class="main-nav-link logo-font font-weight-bold nav-link text-black px-4 py-3 {% if 'contact' in request.path %}active text-underlined{% else %}{% endif %}" href="{% url 'contact' %}">
                 Contact us
             </a>
