@@ -44,7 +44,7 @@
                         <div class="text-center">
                             <small class="ml-3">
                                 <a href="{% url 'edit_post' post.slug %}">Edit</a> |
-                                <a class="text-danger" href="">Delete</a>
+                                <a class="text-danger" href="{% url 'delete_post' post.slug %}">Delete</a>
                             </small>
                         </div>
                     </div>
