@@ -6,6 +6,13 @@
 {% block content %}
 <div class="row">
     <div class="col-12 col-lg-6 offset-lg-3">
+        <h2 class="logo-font text-center mb-4">Blog Management</h2>
+        <hr class="w-50 mb-1">
+        <H5 class="text-muted text-center">Delete Post</H5>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12 col-lg-6 offset-lg-3">
         <form action="{% url 'delete_post' post.slug %}" method="post" class="centered-content">
             {% csrf_token %}
             <div class="text-center">

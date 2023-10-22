@@ -4,32 +4,34 @@
 {% block extra_title %}Contact{% endblock extra_title %}
 
 {% block content %}
-<div class="row">
-    <div class="col">
-        <h2 class="logo-font text-center mb-4">Contact Form</h2>
-        <hr class="w-50 mb-1">
+<div class="forms-background">
+    <div class="row">
+        <div class="col">
+            <h2 class="logo-font text-center mb-4">Contact Form</h2>
+            <hr class="w-50 mb-1">
+        </div>
     </div>
-</div>
-<div class="row p-4">
-    <div class="col-12 col-md-6 offset-md-3">
-        <form action="{% url 'contact' %}" method="POST">
-            {% csrf_token %}
-            {{ form | crispy }}
-            <div class="submit-button text-right mt-5 mb-2">
-                <a href="{% url 'products' %}" class="btn">
-                    <span class="icon">
-                        <i class="fas fa-chevron-left"></i>
-                    </span>
-                    <span class="font-weight-bold">Back to the shop</span>
-                </a>
-                <button id="submit-button" class="btn bg-blue">
-                    <span class="font-weight-bold">Submit my Request</span>
-                    <span class="icon">
-                        <i class="fa-regular fa-paper-plane"></i>
-                    </span>
-                </button>
-            </div>
-        </form>
+    <div class="row p-4">
+        <div class="col-12 col-md-6 offset-md-3">
+            <form action="{% url 'contact' %}" method="POST">
+                {% csrf_token %}
+                {{ form | crispy }}
+                <div class="submit-button text-right mt-5 mb-2">
+                    <a href="{% url 'products' %}" class="btn">
+                        <span class="icon">
+                            <i class="fas fa-chevron-left"></i>
+                        </span>
+                        <span class="font-weight-bold">Back to the shop</span>
+                    </a>
+                    <button id="submit-button" class="btn bg-blue">
+                        <span class="font-weight-bold">Submit my Request</span>
+                        <span class="icon">
+                            <i class="fa-regular fa-paper-plane"></i>
+                        </span>
+                    </button>
+                </div>
+            </form>
+        </div>
     </div>
 </div>
 {% endblock content %}

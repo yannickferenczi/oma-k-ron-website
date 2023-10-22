@@ -4,23 +4,25 @@
 {% block extra_title %}Blog Management{% endblock extra_title %}
 
 {% block content %}
-<div class="row">
-    <div class="col-12 col-lg-6 offset-lg-3">
-        <h2 class="logo-font text-center mb-4">Blog Management</h2>
-        <H5 class="text-muted text-center">Add a Post</H5>
-        <hr class="w-50 mb-1">
+<div class="forms-background">
+    <div class="row">
+        <div class="col-12 col-lg-6 offset-lg-3">
+            <h2 class="logo-font text-center mb-4">Blog Management</h2>
+            <hr class="w-50 mb-1">
+            <H5 class="text-muted text-center">Add a Post</H5>
+        </div>
     </div>
-</div>
-<div class="row">
-    <div class="col-12 col-lg-6 offset-lg-3">
-        <form action="{% url 'create_post' %}" class="form mb-2 px-3" method="POST" enctype="multipart/form-data">
-            {% csrf_token %}
-            {{ form | crispy }}
-            <div class="text-right">
-                <a href="{% url 'post_list' %}" class="btn btn-outline-black">Cancel</a>
-                <button class="btn bg-blue font-weight-bold" type="submit">Add Post</button>
-            </div>
-        </form>
+    <div class="row">
+        <div class="col-12 col-lg-6 offset-lg-3">
+            <form action="{% url 'create_post' %}" class="form mb-2 px-3" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form | crispy }}
+                <div class="text-right">
+                    <a href="{% url 'post_list' %}" class="btn btn-outline-black">Cancel</a>
+                    <button class="btn bg-blue font-weight-bold" type="submit">Add Post</button>
+                </div>
+            </form>
+        </div>
     </div>
 </div>
 {% endblock content %}

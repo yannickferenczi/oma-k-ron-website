@@ -18,6 +18,10 @@ html {
     text-underline-offset: 8px;
 }
 
+.forms-background {
+    background: url(../../media/background_forms_overlayed.jpg) no-repeat fixed center/cover;
+}
+
 .main-content {
     min-height: calc(100vh - 195px - 468px);
     margin-top: 195px;

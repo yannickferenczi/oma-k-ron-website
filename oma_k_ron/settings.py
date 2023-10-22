@@ -170,5 +170,15 @@ STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY', '')
 STRIPE_WH_SECRET = os.environ.get('STRIPE_WH_SECRET', '')
 
 # CountryField
-
 COUNTRIES_ONLY = ["DE", ]
+
+# Change settings of summernote
+SUMMERNOTE_CONFIG = {
+    'summernote': {
+        # Change editor size
+        'width': '100%',
+        'note-editor': {
+            'width': '100%',
+        },
+    },
+}
