@@ -16,43 +16,42 @@
     </a>
 </div>
 <div class="row">
-    <div class="product-container col-10 offset-1">
+    <div class="col-10 offset-1">
         <div class="row gap-0">
             {% for post in post_list %}
-            <div class="col-12 col-lg-6 p-2">
-                <div class="card m-0 post-link">
-                    <a href="{% url 'post_detail' post.slug %}" class="text-decoration-none text-black">
+                <div class="col-12 col-lg-6 p-2">
+                    <div class="card m-0 post-link">
                         <div>
+                            <a href="{% url 'post_detail' post.slug %}" class="text-decoration-none text-black">
+                                <div class="text-center">
+                                    <h4 class="mb-0 text-center font-weight-bold">{{ post.title | title }}</h4>
+                                    <small class="text-center"><span>by {{ post.author }}</span> | <span>last update: {{ post.last_update | date:"d.n.Y" }}</span></small>
+                                </div>
+                                <div class="img-container mx-auto text-center">
+                                    {% if post.image %}
+                                        <img src="{{ post.image.url }}" alt="{{ post.title }}" class="card-img-top img-fluid">
+                                    {% else %}
+                                        <img src="{{ MEDIA_URL }}no_image.jpg" alt="{{ post.title }}" class="card-img-top img-fluid">
+                                    {% endif %}
+                                </div>
+                                <div class="card-body pb-1">
+                                    {{ post.content | safe | truncatewords:15 }}
+                                </div>
+                            </a>
+                        </div>
+                        {% if request.user.is_superuser %}
+                        <div class="card-footer py-2 border-0">
                             <div class="text-center">
-                                <h4 class="mb-0 text-center font-weight-bold">{{ post.title | title }}</h4>
-                                <small class="text-center"><span>by {{ post.author }}</span> | <span>last update: {{ post.last_update | date:"d.n.Y" }}</span></small>
-                            </div>
-                            <div class="img-container mx-auto text-center">
-                                {% if post.image %}
-                                    <img src="{{ post.image.url }}" alt="{{ post.title }}" class="card-img-top img-fluid">
-                                {% else %}
-                                    <img src="{{ MEDIA_URL }}no_image.jpg" alt="{{ post.title }}" class="card-img-top img-fluid">
-                                {% endif %}
-                            </div>
-                            <div class="card-body pb-1">
-                                {{ post.content | safe | truncatewords:15 }}
+                                <small class="ml-3">
+                                    <a href="{% url 'edit_post' post.slug %}">Edit</a> |
+                                    <a class="text-danger" href="{% url 'delete_post' post.slug %}">Delete</a>
+                                </small>
                             </div>
                         </div>
-                    </a>
-                    {% if request.user.is_superuser %}
-                    <div class="card-footer py-2 border-0">
-                        <div class="text-center">
-                            <small class="ml-3">
-                                <a href="{% url 'edit_post' post.slug %}">Edit</a> |
-                                <a class="text-danger" href="{% url 'delete_post' post.slug %}">Delete</a>
-                            </small>
-                        </div>
+                        {% endif %}
                     </div>
-                    {% endif %}
                 </div>
-            </div>
             {% endfor %}
-
         </div>
     </div>
 </div>

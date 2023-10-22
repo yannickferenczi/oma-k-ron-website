@@ -4,26 +4,54 @@
 {% block extra_title %}Product Management{% endblock extra_title %}
 
 {% block content %}
-<div class="row">
-    <div class="col-12 col-lg-6">
-        <h2 class="logo-font text-center mb-4">Product Management</h2>
-        <H5 class="text-muted text-center">Edit Product</H5>
-        <hr class="w-50 mb-1">
+<div class="forms-background">
+    <div class="row">
+        <div class="col-12 col-lg-6 offset-lg-3">
+            <h2 class="logo-font text-center mb-4">Product Management</h2>
+            <hr class="w-50 mb-1">
+            <H5 class="text-muted text-center">Edit Product</H5>
+        </div>
     </div>
-</div>
-<div class="row">
-    <div class="col-12 col-lg-6">
-        <form action="{% url 'edit_product' product.id %}" class="form mb-2 px-3" method="POST" enctype="multipart/form-data">
-            {% csrf_token %}
-            {{ form | crispy }}
-            <div class="text-right">
-                <a href="{% url 'products' %}" class="btn btn-outline-black">Cancel</a>
-                <button class="btn bg-blue font-weight-bold" type="submit">Update Product</button>
-            </div>
-        </form>
+    <div class="row">
+        <div class="col-12 col-lg-6 offset-lg-3">
+            <form action="{% url 'edit_product' product.id %}" class="form mb-2 px-3" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form | crispy }}
+                <div class="text-right">
+                    <a href="{% url 'products' %}" class="btn btn-outline-black">Cancel</a>
+                    <button class="btn bg-blue font-weight-bold" type="submit">Update Product</button>
+                </div>
+            </form>
+        </div>
     </div>
-</div>
-<div class="row p-4">
-    
 </div>
 {% endblock content %}
+
+{% block postload_js %}
+    {{ block.super }}
+    <script type="text/javascript">
+        let productType = document.querySelector('#id_product_type');
+        if (productType.value == 1) {
+            document.querySelector("#div_id_duration").style.display = "none";
+            document.querySelector("#div_id_date_of_event").style.display = "none";
+        } else {
+            document.querySelector("#div_id_style").style.display = "none";
+            document.querySelector("#div_id_flavour").style.display = "none";
+        }
+        productType.addEventListener("change", (event) => {
+            if (event.target.value === "1") {
+                document.querySelector("#div_id_duration").style.display = "none";
+                console.log(document.querySelector("#div_id_duration").style.display);
+                document.querySelector("#div_id_date_of_event").style.display = "none";
+                document.querySelector("#div_id_style").style.display = "block";
+                document.querySelector("#div_id_flavour").style.display = "block";
+            } else if (event.target.value === "2") {
+                document.querySelector("#div_id_duration").style.display = "block";
+                console.log(document.querySelector("#div_id_duration").style.display);
+                document.querySelector("#div_id_date_of_event").style.display = "block";
+                document.querySelector("#div_id_style").style.display = "none";
+                document.querySelector("#div_id_flavour").style.display = "none";
+            }
+        });
+    </script>
+{% endblock postload_js %}
