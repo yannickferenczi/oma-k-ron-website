@@ -258,11 +258,10 @@ h6 {
 }
 
 .social-media {
-    width: 60px;
-    height: 60px;
+    height: 30px;
     overflow: hidden;
     border-radius: 50%;
-    line-height: 60px;
+    line-height: 30px;
     vertical-align: middle;
     text-align: center;
     color: black;
