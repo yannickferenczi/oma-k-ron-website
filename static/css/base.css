@@ -257,6 +257,11 @@ h6 {
     box-shadow: 0 -2px 50px black;
 }
 
+#mce-success-response {
+    width: 100% !important;
+    margin: 0 !important;
+}
+
 .social-media {
     height: 30px;
     overflow: hidden;
