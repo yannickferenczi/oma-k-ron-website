@@ -11,7 +11,7 @@ if os.path.isfile('env.py'):
 
 development = os.environ.get('DEVELOPMENT', False)
 
-DEBUG = True
+DEBUG = development
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent

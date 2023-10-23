@@ -19,7 +19,7 @@ html {
 }
 
 .forms-background {
-    background: url(../../media/background_forms_overlayed.jpg) no-repeat fixed center/cover;
+    background: url(https://oma-k-ron.s3.amazonaws.com/media/background_forms_overlayed.jpg) no-repeat fixed center/cover;
 }
 
 .main-content {
@@ -258,11 +258,10 @@ h6 {
 }
 
 .social-media {
-    width: 60px;
-    height: 60px;
+    height: 30px;
     overflow: hidden;
     border-radius: 50%;
-    line-height: 60px;
+    line-height: 30px;
     vertical-align: middle;
     text-align: center;
     color: black;
