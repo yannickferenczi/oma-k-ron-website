@@ -257,6 +257,11 @@ h6 {
     box-shadow: 0 -2px 50px black;
 }
 
+#mce-success-response {
+    width: 100% !important;
+    margin: 0 !important;
+}
+
 .social-media {
     height: 30px;
     overflow: hidden;
@@ -268,11 +273,15 @@ h6 {
 }
 
 .social-media:hover {
-    font-size: 20px;
+    font-size: 17px;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
 }
 
-.facebook-link:hover {
-    color: #1877f2;
+.privacy-policy-content p {
+    text-align: justify;
+    text-indent: 20px;
 }
 
 .youtube-link:hover {

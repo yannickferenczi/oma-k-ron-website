@@ -6,34 +6,34 @@
                 All Products
             </a>
             <div class="dropdown-menu border-0 bg-blue p-0" aria-labelledby="all-products-link">
-                <a href="{% url 'products' %}?sort=price&direction=asc" class="main-nav-link dropdown-item {% if 'price' in request.get_full_path %}active{% else %}{% endif %}">By Price</a>
-                <a href="{% url 'products' %}?sort=style&direction=asc" class="main-nav-link dropdown-item {% if 'style' in request.get_full_path %}active{% else %}{% endif %}">By Style</a>
+                <a href="{% url 'products' %}?sort=price&direction=asc" class="main-nav-link dropdown-item {% if 'sort=price' in request.get_full_path %}active{% else %}{% endif %}">By Price</a>
+                <a href="{% url 'products' %}?sort=style&direction=asc" class="main-nav-link dropdown-item {% if 'sort=style' in request.get_full_path %}active{% else %}{% endif %}">By Style</a>
                 <a href="{% url 'products' %}" class="main-nav-link dropdown-item {% if request.get_full_path == '/products/' %}active{% else %}{% endif %}">All Products</a>
             </div>
         </li>
 
         <li class="nav-item dropdown">
-            <a class="main-nav-link logo-font font-weight-bold nav-link text-black px-4 py-3 {% if 'single' in request.get_full_path or 'box' in request.get_full_path or 'tower' in request.get_full_path or 'macaron' in request.get_full_path %}active text-underlined{% else %}{% endif %}" href="#" id="macaron-link"
+            <a class="main-nav-link logo-font font-weight-bold nav-link text-black px-4 py-3 {% if 'category=single' in request.get_full_path or 'category=box' in request.get_full_path or 'category=tower' in request.get_full_path or 'product_type=macaron' in request.get_full_path %}active text-underlined{% else %}{% endif %}" href="#" id="macaron-link"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Our macarons
             </a>
             <div class="dropdown-menu border-0 bg-blue p-0" aria-labelledby="macaron-link">
-                <a href="{% url 'products' %}?category=single" class="main-nav-link dropdown-item {% if 'single' in request.get_full_path %}active{% else %}{% endif %}">The Singles</a>
-                <a href="{% url 'products' %}?category=box" class="main-nav-link dropdown-item {% if 'box' in request.get_full_path %}active{% else %}{% endif %}">The Boxes</a>
-                <a href="{% url 'products' %}?category=tower" class="main-nav-link dropdown-item {% if 'tower' in request.get_full_path %}active{% else %}{% endif %}">The Celebrations</a>
-                <a href="{% url 'products' %}?product_type=macaron" class="main-nav-link dropdown-item {% if 'macaron' in request.get_full_path %}active{% else %}{% endif %}">All Macarons</a>
+                <a href="{% url 'products' %}?category=single" class="main-nav-link dropdown-item {% if 'category=single' in request.get_full_path %}active{% else %}{% endif %}">The Singles</a>
+                <a href="{% url 'products' %}?category=box" class="main-nav-link dropdown-item {% if 'category=box' in request.get_full_path %}active{% else %}{% endif %}">The Boxes</a>
+                <a href="{% url 'products' %}?category=tower" class="main-nav-link dropdown-item {% if 'category=tower' in request.get_full_path %}active{% else %}{% endif %}">The Celebrations</a>
+                <a href="{% url 'products' %}?product_type=macaron" class="main-nav-link dropdown-item {% if 'product_type=macaron' in request.get_full_path %}active{% else %}{% endif %}">All Macarons</a>
             </div>
         </li>
 
         <li class="nav-item dropdown">
-            <a class="main-nav-link logo-font font-weight-bold nav-link text-black px-4 py-3 {% if 'visit' in request.get_full_path or 'course' in request.get_full_path or 'event' in request.get_full_path %}active text-underlined{% else %}{% endif %}" href="#" id="event-link"
+            <a class="main-nav-link logo-font font-weight-bold nav-link text-black px-4 py-3 {% if 'category=visit' in request.get_full_path or 'category=course' in request.get_full_path or 'product_type=event' in request.get_full_path %}active text-underlined{% else %}{% endif %}" href="#" id="event-link"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Our events
             </a>
             <div class="dropdown-menu border-0 bg-blue p-0" aria-labelledby="event-link">
-                <a href="{% url 'products' %}?category=visit" class="main-nav-link dropdown-item {% if 'visit' in request.get_full_path %}active{% else %}{% endif %}">Visit our factory</a>
-                <a href="{% url 'products' %}?category=course" class="main-nav-link dropdown-item {% if 'course' in request.get_full_path %}active{% else %}{% endif %}">Learn how to bake</a>
-                <a href="{% url 'products' %}?product_type=event" class="main-nav-link dropdown-item {% if 'event' in request.get_full_path %}active{% else %}{% endif %}">All Events</a>
+                <a href="{% url 'products' %}?category=visit" class="main-nav-link dropdown-item {% if 'category=visit' in request.get_full_path %}active{% else %}{% endif %}">Visit our factory</a>
+                <a href="{% url 'products' %}?category=course" class="main-nav-link dropdown-item {% if 'category=course' in request.get_full_path %}active{% else %}{% endif %}">Learn how to bake</a>
+                <a href="{% url 'products' %}?product_type=event" class="main-nav-link dropdown-item {% if 'product_type=event' in request.get_full_path %}active{% else %}{% endif %}">All Events</a>
             </div>
         </li>
         <li class="nav-item">

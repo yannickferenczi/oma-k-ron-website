@@ -195,7 +195,7 @@
                                                 <h4 class="text-center font-weight-bold">Subscribe to our Newsletter</h4>
                                                 <div class="mc-field-group pb-0"><label for="mce-EMAIL">Email Address <span
                                                             class="asterisk">*</span></label><input type="email" name="EMAIL" class="required email"
-                                                        id="mce-EMAIL" required="" value=""></div>
+                                                        id="mce-EMAIL" required="" value="{% if request.user.is_authenticated %}{{ user.email }}{% endif %}"></div>
                                                 <div id="mce-responses" class="clear foot">
                                                     <div class="response" id="mce-error-response" style="display: none;"></div>
                                                     <div class="response" id="mce-success-response" style="display: none;"></div>
@@ -223,7 +223,7 @@
                 <div class="row bg-blue p-0 m-0 gap-0">
                     <div class="col-12 col-md-4 offset-md-2">
                         <div class="text-center">
-                            <a class="social-media facebook-link p-1" aria-label="Open Facebook in a new tab"
+                            <a class="social-media p-1" aria-label="Open Facebook in a new tab"
                                 href="https://www.facebook.com/profile.php?id=61552315335813" target="_blank"><i class="fa-brands fa-facebook-f"></i> Follow us on Facebook</a>
                         </div>
                     </div>

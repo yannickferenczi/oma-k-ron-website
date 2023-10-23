@@ -215,6 +215,10 @@ This project is a full-stack web application using a cloud-based database (Postg
 
 ### More features to implement
 
+It would be nice to have the possibility to add a discount code within the checkout process so customers who have already purchase something are more likely to purchase again if they can benefit from a discount.
+
+It would also be nice to have a "click and collect" option. I actually wanted to implement this feature at first and I have wasted a lot of time troubleshooting the checkout process so that I have decided to give up on that feature as it was not a must have for the assessement criteria.
+
 ---
 
 <div align="center">

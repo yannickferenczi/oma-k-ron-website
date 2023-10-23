@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
+from datetime import date
 
 from .models import Product
 from .forms import ProductForm
@@ -12,7 +13,11 @@ def all_products(request):
     """
     A view to display all products, including sorting and search queries.
     """
-    products = Product.objects.all()
+    products = Product.objects.filter(
+        Q(product_type="1"
+    ) | Q(
+        date_of_event__gt=date.today()
+    ))
     query = None
     product_type = None
     sort = None
@@ -36,6 +41,8 @@ def all_products(request):
         if "product_type" in request.GET:
             product_type = request.GET["product_type"]
             products = products.filter(product_type__name=product_type)
+            # if product_type == 2:
+            #     products = products.filter(date_of_event__gt=date.today)
 
         if "category" in request.GET:
             category = request.GET["category"]
@@ -44,9 +51,18 @@ def all_products(request):
         if "q" in request.GET:
             query = request.GET["q"]
             if not query:
-                messages.error(request, "You did not enter any search criteria!")
+                messages.error(
+                    request,
+                    "You did not enter any search criteria!",
+                )
                 return redirect(reverse('products'))
-            queries = Q(name__icontains=query) | Q(description__icontains=query) | Q(flavour__icontains=query)
+            queries = Q(
+                name__icontains=query
+            ) | Q(
+                description__icontains=query
+            ) | Q(
+                flavour__icontains=query
+            )
             products = products.filter(queries)
 
     current_sorting = f"{sort}_{direction}"

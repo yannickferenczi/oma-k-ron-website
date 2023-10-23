@@ -20,7 +20,7 @@
         <div class="row gap-0">
             {% for post in post_list %}
                 <div class="col-12 col-lg-6 p-2">
-                    <div class="card m-0 post-link">
+                    <div class="card m-0 p-2 post-link">
                         <div>
                             <a href="{% url 'post_detail' post.slug %}" class="text-decoration-none text-black">
                                 <div class="text-center">
@@ -35,7 +35,7 @@
                                     {% endif %}
                                 </div>
                                 <div class="card-body pb-1">
-                                    {{ post.content | safe | truncatewords:15 }}
+                                    {{ post.content | safe | truncatechars_html:100 }}
                                 </div>
                             </a>
                         </div>
