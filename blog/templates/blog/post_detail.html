@@ -11,8 +11,8 @@
             <small class="text-center"><span>by {{ post.author }}</span> | <span>last update: {{ post.last_update | date:"d.n.Y" }}</span></small>
         </div>
         <div class="img-container mx-auto text-center">
-            {% if post.image %}
-                <img src="{{ post.image.url }}" alt="{{ post.title }}" class="card-img-top img-fluid">
+            {% if post.featured_image %}
+                <img src="{{ post.featured_image.url }}" alt="{{ post.title }}" class="card-img-top img-fluid">
             {% else %}
                 <img src="{{ MEDIA_URL }}no_image.jpg" alt="{{ post.title }}" class="card-img-top img-fluid">
             {% endif %}
