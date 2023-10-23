@@ -9,7 +9,9 @@ Order Value: {{ order.order_value }}
 Delivery Costs: {{ order.delivery_costs }}
 Order Total: {{ order.total }}
 
-Your order will be shipped to {{ order.street_address_1 }} in {{ order.city }}, {{ order.country }}.
+If your order contains Macarons, it will be shipped to {{ order.street_address_1 }} in {{ order.city }}, {{ order.country }}.
+
+If you booked a ticket for one of our event, we advise you to arrive on site 15 minutes before.
 
 We have got your phone number on file as {{ order.phone_number }}.
 

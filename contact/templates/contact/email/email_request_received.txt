@@ -1,0 +1,19 @@
+Dear {{ full_name }},
+
+Thank you for your email.
+
+Here is your request:
+
+**************************************************
+subject: {{ request_subject }}
+
+message:
+
+{{ message }}
+**************************************************
+
+We will do our best to answer within 24 hours.
+
+Have a wonderful day
+
+Oma K-ron
