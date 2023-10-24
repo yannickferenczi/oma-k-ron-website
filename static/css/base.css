@@ -8,7 +8,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Croissant One', cursive;
+    font-family: 'Croissant One', cursive !important;
 }
 
 /* The colors */
@@ -110,6 +110,17 @@ h6 {
 
 .main-content > div:last-child {
     padding-bottom: 30px;
+}
+
+.about-text {
+    text-align: justify;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 20px;
+}
+
+.keyword {
+    font-weight: normal;
 }
 
 /* from Bulma */
