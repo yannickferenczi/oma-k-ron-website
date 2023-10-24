@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /accounts/
+Sitemap: https://oma-k-ron-0db832a08dd8.herokuapp.com/sitemap.xml
