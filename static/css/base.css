@@ -2,69 +2,54 @@ html {
     height: 100%;
 }
 
-.active {
-    background-color: #f6b0cc !important;
-    color: black !important;
-}
-
-.main-nav-link:hover {
-    background-color: #f6b0cc !important;
-    color: black !important;
-    text-decoration: underline !important;
-}
-
-.text-underlined {
-    text-decoration: underline !important;
-    text-underline-offset: 8px;
-}
-
-.forms-background {
-    background: url(https://oma-k-ron.s3.eu-north-1.amazonaws.com/media/background_forms_overlayed.jpg) no-repeat fixed center/cover;
-}
-
-.main-content {
-    min-height: calc(100vh - 195px - 468px);
-    margin-top: 195px;
-}
-
-.main-content > div:first-child {
-    padding-top: 15px;
-}
-
-.main-content > div:last-child {
-    padding-bottom: 30px;
-}
-
-.logo {
-    width: 50px;
-}
-
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-    font-family: 'Croissant One', cursive;
+    font-family: 'Croissant One', cursive !important;
+}
+
+/* The colors */
+
+.text-black {
+    color: #000 !important;
+}
+
+.text-white {
+    color: white !important;
+}
+
+.border-black {
+    border: 1px solid black !important;
+}
+
+.bg-black {
+    background-color: black;
+}
+
+.bg-blue {
+    background-color: #82d9ed;
+}
+
+.bg-pink {
+    background-color: #f6b0cc;
+}
+
+.bg-transparent {
+    background-color: transparent;
+}
+
+/* Style the main Header */
+.logo {
+    width: 50px;
 }
 
 .logo-name {
     font-size: 24px;
     font-weight: bold;
     color: black;
-}
-
-/* from Bulma */
-.icon {
-    align-items: center;
-    display: inline-flex;
-    justify-content: center;
-    height: 1.5rem;
-    width: 1.5rem;
-}
-
-.logo-font {
-    text-transform: uppercase;
 }
 
 .count-cart {
@@ -95,6 +80,60 @@ h6 {
     width: 23px;
     height: 23px;
     line-height: 23px;
+}
+
+.active {
+    background-color: #f6b0cc !important;
+    color: black !important;
+}
+
+.main-nav-link:hover {
+    background-color: #f6b0cc !important;
+    color: black !important;
+    text-decoration: underline !important;
+}
+
+.text-underlined {
+    text-decoration: underline !important;
+    text-underline-offset: 8px;
+}
+
+/* Style the main content */
+.main-content {
+    min-height: calc(100vh - 195px - 468px);
+    margin-top: 195px;
+}
+
+.main-content > div:first-child {
+    padding-top: 15px;
+}
+
+.main-content > div:last-child {
+    padding-bottom: 30px;
+}
+
+.about-text {
+    text-align: justify;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 20px;
+}
+
+.keyword {
+    font-weight: normal;
+}
+
+/* from Bulma */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.logo-font {
+    text-transform: uppercase;
 }
 
 .shop-now-button {
@@ -139,32 +178,8 @@ h6 {
     padding: 30px;
 }
 
-.text-black {
-    color: #000 !important;
-}
-
-.text-white {
-    color: white !important;
-}
-
-.border-black {
-    border: 1px solid black !important;
-}
-
-.bg-black {
-    background-color: black;
-}
-
-.bg-blue {
-    background-color: #82d9ed;
-}
-
-.bg-pink {
-    background-color: #f6b0cc;
-}
-
-.bg-transparent {
-    background-color: transparent;
+.forms-background {
+    background: url(https://oma-k-ron.s3.eu-north-1.amazonaws.com/media/background_forms_overlayed.jpg) no-repeat fixed center/cover;
 }
 
 .card {
@@ -208,7 +223,10 @@ h6 {
 
 .message-container {
     position: fixed;
-    top: 80px;
+    width: 70%;
+    top: 35%;
+    right: 50%;
+    transform: translate(50%, -50%);
     z-index: 99999999;
     box-shadow: 5px 5px 15px #000;
 }
@@ -239,22 +257,17 @@ h6 {
     height: 2px;
 }
 
-.g-map {
-    width: 80%;
-    height: 100px;
-}
-
-.copyright {
-    position: fixed;
-    bottom: 0;
-    width: 100vw;
-}
-
+/* Style the main Footer */
 .main-footer {
     position: relative;
     padding-bottom: 80px;
     margin-bottom: 80px;
     box-shadow: 0 -2px 50px black;
+}
+
+.g-map {
+    width: 80%;
+    height: 100px;
 }
 
 #mce-success-response {
@@ -284,16 +297,10 @@ h6 {
     text-indent: 20px;
 }
 
-.youtube-link:hover {
-    color: #ff0000;
-}
-
-.twitter-link:hover {
-    color: #1da1f2;
-}
-
-.linkedin-link:hover {
-    color: #0a66c2;
+.copyright {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
 }
 
 .footer-rule {
@@ -355,6 +362,13 @@ h6 {
 
     .main-content > div:first-child {
         padding-top: 15px;
+    }
+
+    .message-container {
+        width: 350px;
+        top: 5vh;
+        right: 20vw;
+        transform: translate(0, 0);
     }
 
     .count-cart {
