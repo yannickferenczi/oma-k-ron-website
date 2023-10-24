@@ -223,7 +223,10 @@ h6 {
 
 .message-container {
     position: fixed;
-    top: 80px;
+    width: 70%;
+    top: 35%;
+    right: 50%;
+    transform: translate(50%, -50%);
     z-index: 99999999;
     box-shadow: 5px 5px 15px #000;
 }
@@ -359,6 +362,13 @@ h6 {
 
     .main-content > div:first-child {
         padding-top: 15px;
+    }
+
+    .message-container {
+        width: 350px;
+        top: 5vh;
+        right: 20vw;
+        transform: translate(0, 0);
     }
 
     .count-cart {
