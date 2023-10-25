@@ -1,9 +1,9 @@
 <ul class="p-0 m-0 w-75 list-small-screens text-center d-lg-none">
     <li class="list-inline-item menu-small-screens">
         <a class="text-black nav-link d-block d-lg-none px-0" href="#" id="mobile-search" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
+            aria-haspopup="true" aria-expanded="false" aria-label="Toggle the search bar">
             <div class="text-center">
-                <div><i class="fas fa-search fa-lg"></i></div>
+                <div><i class="fas fa-search fa-lg" aria-hidden="true"></i></div>
                 <p class="d-none d-md-block my-0">Search</p>
             </div>
         </a>
@@ -13,9 +13,9 @@
                     <input class="form-control border border-black rounded-0" type="text" name="q"
                         placeholder="Search our site">
                     <div class="input-group-append">
-                        <button class="form-control form-control btn btn-black border border-black rounded-0" type="submit">
+                        <button class="form-control form-control btn btn-black border border-black rounded-0" type="submit" aria-label="Submit your search">
                             <span class="icon">
-                                <i class="fas fa-search"></i>
+                                <i class="fas fa-search" aria-hidden="true"></i>
                             </span>
                         </button>
                     </div>
@@ -25,7 +25,7 @@
     </li>
     <li class="list-inline-item dropdown menu-small-screens">
         <a class="text-black nav-link d-block d-lg-none px-0" href="#" id="user-options-sm" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
+            aria-haspopup="true" aria-expanded="false" aria-label="Toggle the personal account options">
             <div class="text-center">
                 <div><i class="fas fa-user fa-lg"></i></div>
                 <p class="d-none d-md-block my-0">My Account</p>
@@ -34,24 +34,24 @@
         <div class="dropdown-menu border-0 bg-blue" aria-labelledby="user-options-sm">
             {% if request.user.is_authenticated %}
             {% if request.user.is_superuser %}
-            <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
-            <a href="{% url 'create_post' %}" class="dropdown-item">Blog Management</a>
+            <a href="{% url 'add_product' %}" class="dropdown-item" aria-label="Go to the product management page">Product Management</a>
+            <a href="{% url 'create_post' %}" class="dropdown-item" aria-label="Go to the blog management page">Blog Management</a>
             {% endif %}
-            <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
-            <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+            <a href="{% url 'profile' %}" class="dropdown-item" aria-label="Go to your profile page">My Profile</a>
+            <a href="{% url 'account_logout' %}" class="dropdown-item" aria-label="Log out">Logout</a>
             {% else %}
-            <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-            <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+            <a href="{% url 'account_signup' %}" class="dropdown-item" aria-label="Go to the sign up page">Register</a>
+            <a href="{% url 'account_login' %}" class="dropdown-item" aria-label="Go to the sign in page">Login</a>
             {% endif %}
         </div>
     </li>
     <li class="list-inline-item menu-small-screens">
         <a class="text-black {% if total %}font-weight-bold{% else %}font-weight-normal{% endif %} nav-link d-block d-lg-none px-0"
-            href="{% url 'cart' %}">
+            href="{% url 'cart' %}" aria-label="Go to your shopping cart">
             <div class="text-center">
                 <div class="position-relative">
                     <p class="count-cart {% if product_count %}d-block{% else %}d-none{% endif %} count-to-{% if product_count > 99 %}999{% elif product_count > 9 %}99{% else %}9{% endif %}">{{ product_count }}</p>
-                    <i class="fa-solid fa-basket-shopping"></i>
+                    <i class="fa-solid fa-basket-shopping" aria-hidden="true"></i>
                 </div>
                 <p class="my-0">
                     {{ order_value|floatformat:2 }} €

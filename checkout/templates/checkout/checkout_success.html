@@ -183,16 +183,16 @@
         </div>
         <div class="col-12 text-center">
             {% if from_profile %}
-            <a href="{% url 'profile' %}" class="btn bg-blue my-2">
+            <a href="{% url 'profile' %}" class="btn bg-blue my-2" aria-label="Go to your customer profile">
                 <span class="icon mr-2">
-                    <i class="fa-solid fa-angle-left"></i>
+                    <i class="fa-solid fa-angle-left" aria-hidden="true"></i>
                 </span>
                 <span class="text-uppercase">Back to my profile</span>
             </a>
             {% else %}
-            <a href="{% url 'products' %}" class="btn bg-blue my-2">
+            <a href="{% url 'products' %}" class="btn bg-blue my-2" aria-label="Go back to the list of products">
                 <span class="icon mr-2">
-                    <i class="fa-solid fa-cake-candles"></i>
+                    <i class="fa-solid fa-cake-candles" aria-hidden="true"></i>
                 </span>
                 <span class="text-uppercase">Head back to our selection of products!</span>
             </a>

@@ -17,8 +17,8 @@
             {% csrf_token %}
             Do you really want to delete this item?
             <div class="text-right">
-                <a href="{% url 'products' %}" class="btn btn-outline-black">Cancel</a>
-                <button class="btn btn-danger font-weight-bold" type="submit">Delete Product</button>
+                <a href="{% url 'products' %}" class="btn btn-outline-black" aria-label="Go back to the list of products">Cancel</a>
+                <button class="btn btn-danger font-weight-bold" type="submit" aria-label="Delete {{ product.name }} from the database">Delete Product</button>
             </div>
         </form>
     </div>

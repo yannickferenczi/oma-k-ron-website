@@ -18,8 +18,8 @@
                 {% csrf_token %}
                 {{ form | crispy }}
                 <div class="text-right">
-                    <a href="{% url 'post_list' %}" class="btn btn-outline-black">Cancel</a>
-                    <button class="btn bg-blue font-weight-bold" type="submit">Update Post</button>
+                    <a href="{% url 'post_list' %}" class="btn btn-outline-black" aria-label="Go back to the list of blog posts">Cancel</a>
+                    <button class="btn bg-blue font-weight-bold" type="submit" aria-label="Submit the form to update the blog post">Update Post</button>
                 </div>
             </form>
         </div>

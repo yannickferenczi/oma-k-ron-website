@@ -27,23 +27,23 @@ Those errors were really frustrating as in the walkthrough project we exactly le
 
 - w3c markup validator results for the Product listing page:
 
-![w3c markup validator results for the Product listing page](documentation/.png)
+![w3c markup validator results for the Product listing page](documentation/product_listing_page_html_validator_no-error.png)
 
 - w3c markup validator results for the product detail page:
 
-![w3c markup validator results for the product detail page](documentation/.png)
+![w3c markup validator results for the product detail page](documentation/product_detail_page_html_validator_no-error.png)
 
 - w3c markup validator results for the shopping cart page:
 
-![w3c markup validator results for the shopping cart page](documentation/.png)
+![w3c markup validator results for the shopping cart page](documentation/shopping_cart_page_html_validator_no-error.png)
 
 - w3c markup validator results for the checkout page:
 
-![w3c markup validator results for the checkout page](documentation/.png)
+![w3c markup validator results for the checkout page](documentation/checkout_page_html_validator_no-error.png)
 
 - w3c markup validator results for the checkout success page:
 
-![w3c markup validator results for the checkout success page](documentation/.png)
+![w3c markup validator results for the checkout success page](documentation/checkout_success_page_html_validator_no-error.png)
 
 - w3c markup validator results for the blog listing page at the first verification <img src="https://img.shields.io/static/v1?label=&message=FAIL&color=bb0000&style=plastic" alt="test status">:
 
@@ -53,7 +53,7 @@ Those errors were coming from the summernote widget used to create the blogs so 
 
 - w3c markup validator results for the blog listing page after fixing the errors <img src="https://img.shields.io/static/v1?label=&message=PASS&color=success&style=plastic" alt="test status">:
 
-![w3c markup validator results for the blog listing page after fixing the errors](documentation/.png)
+![w3c markup validator results for the blog listing page after fixing the errors](documentation/blog_listing_page_html_validator_no-error.png)
 
 - w3c markup validator results for the blog detail page:
 
@@ -88,3 +88,178 @@ Result of the W3C CSS validation service for the base.css file:
 Result of the W3C CSS validation service for the checkout.css file:
 
 ![w3c css validator results](documentation/results_of_checkout_css_validator_no-error.png)
+
+### Python
+
+Every Python file has been ran through the [CI Python Linter](https://pep8ci.herokuapp.com/) and for all of them the result was:
+> All clear, no errors found
+
+The flake8 module has been use on the project too to detect errors. Most of them have been fix.
+The remaining ones are listed below:
+
+![Flake8 report](documentation/flake8_last_report.png)
+
+
+---
+
+## Lighthouse
+
+The main pages of the website have been tested with the Lighthouse validator from Google Chrome.
+
+The results are shown below.
+
+### The landing page
+
+<details>
+    <summary>Desktop</summary>
+    <img src="documentation/.png" alt="Lighthouse results of the  page on desktop">
+</details>
+
+<details>
+    <summary>Mobile</summary>
+    <img src="documentation/.png" alt="Lighthouse results of the  page on mobile">
+</details>
+
+### The Product listing page
+
+<details>
+    <summary>Desktop</summary>
+    <img src="documentation/.png" alt="Lighthouse results of the  page on desktop">
+</details>
+
+<details>
+    <summary>Mobile</summary>
+    <img src="documentation/.png" alt="Lighthouse results of the  page on mobile">
+</details>
+
+### The product detail page
+
+<details>
+    <summary>Desktop</summary>
+    <img src="documentation/.png" alt="Lighthouse results of the  page on desktop">
+</details>
+
+<details>
+    <summary>Mobile</summary>
+    <img src="documentation/.png" alt="Lighthouse results of the  page on mobile">
+</details>
+
+### The shopping cart page
+
+<details>
+    <summary>Desktop</summary>
+    <img src="documentation/.png" alt="Lighthouse results of the  page on desktop">
+</details>
+
+<details>
+    <summary>Mobile</summary>
+    <img src="documentation/.png" alt="Lighthouse results of the  page on mobile">
+</details>
+
+### The checkout page
+
+<details>
+    <summary>Desktop</summary>
+    <img src="documentation/.png" alt="Lighthouse results of the  page on desktop">
+</details>
+
+<details>
+    <summary>Mobile</summary>
+    <img src="documentation/.png" alt="Lighthouse results of the  page on mobile">
+</details>
+
+### The checkout success page
+
+<details>
+    <summary>Desktop</summary>
+    <img src="documentation/.png" alt="Lighthouse results of the  page on desktop">
+</details>
+
+<details>
+    <summary>Mobile</summary>
+    <img src="documentation/.png" alt="Lighthouse results of the  page on mobile">
+</details>
+
+### The blog listing page
+
+<details>
+    <summary>Desktop</summary>
+    <img src="documentation/.png" alt="Lighthouse results of the  page on desktop">
+</details>
+
+<details>
+    <summary>Mobile</summary>
+    <img src="documentation/.png" alt="Lighthouse results of the  page on mobile">
+</details>
+
+### The blog detail page
+
+<details>
+    <summary>Desktop</summary>
+    <img src="documentation/.png" alt="Lighthouse results of the  page on desktop">
+</details>
+
+<details>
+    <summary>Mobile</summary>
+    <img src="documentation/.png" alt="Lighthouse results of the  page on mobile">
+</details>
+
+### The contact page
+
+<details>
+    <summary>Desktop</summary>
+    <img src="documentation/.png" alt="Lighthouse results of the  page on desktop">
+</details>
+
+<details>
+    <summary>Mobile</summary>
+    <img src="documentation/.png" alt="Lighthouse results of the  page on mobile">
+</details>
+
+### The product management page
+
+<details>
+    <summary>Desktop</summary>
+    <img src="documentation/.png" alt="Lighthouse results of the  page on desktop">
+</details>
+
+<details>
+    <summary>Mobile</summary>
+    <img src="documentation/.png" alt="Lighthouse results of the  page on mobile">
+</details>
+
+### The blog management page
+
+<details>
+    <summary>Desktop</summary>
+    <img src="documentation/.png" alt="Lighthouse results of the  page on desktop">
+</details>
+
+<details>
+    <summary>Mobile</summary>
+    <img src="documentation/.png" alt="Lighthouse results of the  page on mobile">
+</details>
+
+### The profile page
+
+<details>
+    <summary>Desktop</summary>
+    <img src="documentation/.png" alt="Lighthouse results of the  page on desktop">
+</details>
+
+<details>
+    <summary>Mobile</summary>
+    <img src="documentation/.png" alt="Lighthouse results of the  page on mobile">
+</details>
+
+### The privacy policy page
+
+<details>
+    <summary>Desktop</summary>
+    <img src="documentation/.png" alt="Lighthouse results of the  page on desktop">
+</details>
+
+<details>
+    <summary>Mobile</summary>
+    <img src="documentation/.png" alt="Lighthouse results of the  page on mobile">
+</details>

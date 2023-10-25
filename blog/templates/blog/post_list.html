@@ -11,8 +11,8 @@
     </div>
 </div>
 <div class="btt-button bg-blue">
-    <a class="btt-link d-flex h-100">
-        <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
+    <a class="btt-link d-flex h-100" aria-label="Go back to the top of the current page">
+        <i class="fas fa-arrow-up text-black mx-auto my-auto" aria-hidden="true"></i>
     </a>
 </div>
 <div class="row">
@@ -22,7 +22,7 @@
                 <div class="col-12 col-lg-6 p-2">
                     <div class="card m-0 p-2 post-link">
                         <div>
-                            <a href="{% url 'post_detail' post.slug %}" class="text-decoration-none text-black">
+                            <a href="{% url 'post_detail' post.slug %}" class="text-decoration-none text-black" aria-label="Go to the blog post with the title {{ post.title }}">
                                 <div class="text-center">
                                     <h4 class="mb-0 text-center font-weight-bold">{{ post.title | title }}</h4>
                                     <small class="text-center"><span>by {{ post.author }}</span> | <span>last update: {{ post.last_update | date:"d.n.Y" }}</span></small>
@@ -43,8 +43,8 @@
                         <div class="card-footer py-2 border-0">
                             <div class="text-center">
                                 <small class="ml-3">
-                                    <a href="{% url 'edit_post' post.slug %}">Edit</a> |
-                                    <a class="text-danger" href="{% url 'delete_post' post.slug %}">Delete</a>
+                                    <a href="{% url 'edit_post' post.slug %}" aria-label="Go to the edit page of the blog post with the title {{ post.title }}">Edit</a> |
+                                    <a class="text-danger" href="{% url 'delete_post' post.slug %}" aria-label="Delete the blog post with the title {{ post.title }}">Delete</a>
                                 </small>
                             </div>
                         </div>
