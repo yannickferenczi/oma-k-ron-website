@@ -27,23 +27,23 @@ Those errors were really frustrating as in the walkthrough project we exactly le
 
 - w3c markup validator results for the Product listing page:
 
-![w3c markup validator results for the Product listing page](documentation/.png)
+![w3c markup validator results for the Product listing page](documentation/product_listing_page_html_validator_no-error.png)
 
 - w3c markup validator results for the product detail page:
 
-![w3c markup validator results for the product detail page](documentation/.png)
+![w3c markup validator results for the product detail page](documentation/product_detail_page_html_validator_no-error.png)
 
 - w3c markup validator results for the shopping cart page:
 
-![w3c markup validator results for the shopping cart page](documentation/.png)
+![w3c markup validator results for the shopping cart page](documentation/shopping_cart_page_html_validator_no-error.png)
 
 - w3c markup validator results for the checkout page:
 
-![w3c markup validator results for the checkout page](documentation/.png)
+![w3c markup validator results for the checkout page](documentation/checkout_page_html_validator_no-error.png)
 
 - w3c markup validator results for the checkout success page:
 
-![w3c markup validator results for the checkout success page](documentation/.png)
+![w3c markup validator results for the checkout success page](documentation/checkout_success_page_html_validator_no-error.png)
 
 - w3c markup validator results for the blog listing page at the first verification <img src="https://img.shields.io/static/v1?label=&message=FAIL&color=bb0000&style=plastic" alt="test status">:
 
@@ -53,7 +53,7 @@ Those errors were coming from the summernote widget used to create the blogs so 
 
 - w3c markup validator results for the blog listing page after fixing the errors <img src="https://img.shields.io/static/v1?label=&message=PASS&color=success&style=plastic" alt="test status">:
 
-![w3c markup validator results for the blog listing page after fixing the errors](documentation/.png)
+![w3c markup validator results for the blog listing page after fixing the errors](documentation/blog_listing_page_html_validator_no-error.png)
 
 - w3c markup validator results for the blog detail page:
 
