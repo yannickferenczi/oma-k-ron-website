@@ -12,7 +12,7 @@ class ProductType(models.Model):
 
 
 class Category(models.Model):
-
+    """ A model to define the category of product """
     class Meta:
         verbose_name_plural = 'Categories'
 
@@ -23,6 +23,10 @@ class Category(models.Model):
 
 
 class Product(models.Model):
+    """
+    This class creates a table in the database to storage product
+    information.
+    """
     class Meta:
         ordering = ["product_type", "date_of_event"]
     name = models.CharField(max_length=250, )

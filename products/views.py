@@ -14,10 +14,9 @@ def all_products(request):
     A view to display all products, including sorting and search queries.
     """
     products = Product.objects.filter(
-        Q(product_type="1"
-    ) | Q(
-        date_of_event__gt=date.today()
-    ))
+        Q(product_type="1")
+        | Q(date_of_event__gt=date.today())
+    )
     query = None
     product_type = None
     sort = None
@@ -89,7 +88,11 @@ def product_detail(request, product_id):
 
 @login_required
 def add_product(request):
-    """ Add a product to the store """
+    """
+    Add a product to the store
+
+    This view is restricted to superusers only
+    """
     if not request.user.is_superuser:
         messages.error(
             request,
@@ -118,7 +121,11 @@ def add_product(request):
 
 @login_required
 def edit_product(request, product_id):
-    """ Edit a product in the store """
+    """
+    Edit a product in the store
+
+    This view is restricted to superusers only
+    """
     if not request.user.is_superuser:
         messages.error(
             request,
@@ -150,6 +157,11 @@ def edit_product(request, product_id):
 
 @login_required
 def delete_product(request, product_id):
+    """
+    Delete a product from the store
+
+    This view is restricted to superusers only
+    """
     if not request.user.is_superuser:
         messages.error(
             request,

@@ -5,6 +5,7 @@ from .models import Product
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
+    """ This class add the Product model to the admin panel """
     list_display = (
         "name",
         "product_type",

@@ -37,6 +37,7 @@ def cache_checkout_data(request):
 
 
 def checkout(request):
+    """ Creates a view to display the checkout page """
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
     if request.method == "POST":

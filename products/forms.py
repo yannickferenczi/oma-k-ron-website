@@ -4,13 +4,14 @@ from .models import Product
 
 
 class ProductForm(forms.ModelForm):
+    """ This class creates a custom form for the Product model """
     class Meta:
         model = Product
         fields = "__all__"
         widgets = {
-            "date_of_event": forms.TextInput(attrs={'type':'datetime-local'}),
+            "date_of_event": forms.TextInput(attrs={'type': 'datetime-local'}),
         }
-        
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         for field_name, field in self.fields.items():

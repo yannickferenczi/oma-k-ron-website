@@ -7,6 +7,7 @@ from .models import Post
 
 @admin.register(Post)
 class PostAdmin(SummernoteModelAdmin):
+    """ A class to add the Post model to the admin panel """
     list_display = ("title", "slug", "published", "last_update")
     search_fields = ["title", "content", ]
     prepopulated_fields = {"slug": ("title", )}
