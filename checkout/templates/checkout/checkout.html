@@ -28,7 +28,7 @@
         {% for item in cart_items %}
         <div class="row">
             <div class="col-2 mb-1">
-                <a href="{% url 'product_detail' item.product.id %}">
+                <a href="{% url 'product_detail' item.product.id %}" aria-label="Go to the details of {{ item.product.name }}">
                     {% if item.product.image %}
                         <img src="{{ item.product.image.url }}" alt="{{ item.product.description }}" class="w-100">
                     {% else %}
@@ -79,7 +79,7 @@
                     {{ order_form.country | as_crispy_field }}
                     <p class="small text-danger my-0 text-right">
                         <span class="icon">
-                            <i class="fas fa-exclamation-circle"></i>
+                            <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
                         </span>
                         <span>We only deliver within <strong>Germany</strong>.
                     </p>
@@ -89,8 +89,8 @@
                         <input type="checkbox" class="form-check-input ml-2 mr0" id="id-save-info" name="save-info" checked>
                     {% else %}
                         <label for="id-save-info" class="form-check-label">
-                            <a href="{% url 'account_signup' %}" class="text-info">Create an account</a> or
-                            <a href="{% url 'account_login' %}" class="text-info">login</a> to save this information
+                            <a href="{% url 'account_signup' %}" class="text-info" aria-label="Go to the sign up page">Create an account</a> or
+                            <a href="{% url 'account_login' %}" class="text-info" aria-label="Go to the sign in page">login</a> to save this information
                         </label>
                     {% endif %}
                 </div>
@@ -105,21 +105,21 @@
                 <input type="hidden" value="{{ client_secret }}" name="client_secret">
             </fieldset>
             <div class="submit-button text-right mt-5 mb-2">
-                <a href="{% url 'cart' %}" class="btn">
+                <a href="{% url 'cart' %}" class="btn" aria-label="Go back to your current shopping cart">
                     <span class="icon">
-                        <i class="fas fa-chevron-left"></i>
+                        <i class="fas fa-chevron-left" aria-hidden="true"></i>
                     </span>
                     <span class="font-weight-bold">Adjust Cart</span>
                 </a>
-                <button id="submit-button" class="btn bg-blue">
+                <button id="submit-button" class="btn bg-blue" aria-label="Go to the payment process">
                     <span class="font-weight-bold">Complete Order</span>
                     <span class="icon">
-                        <i class="fas fa-lock"></i>
+                        <i class="fas fa-lock" aria-hidden="true"></i>
                     </span>
                 </button>
                 <p class="small text-danger my-0">
                     <span class="icon">
-                        <i class="fas fa-exclamation-circle"></i>
+                        <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
                     </span>
                     <span>Your card will be charged <strong>{{ total | floatformat:2 }} €</strong></span>
                 </p>
@@ -130,7 +130,7 @@
 <div id="loading-overlay">
     <h1 class="text-light logo-font loading-spinner">
         <span class="icon">
-            <i class="fas fa-3x fa-sync-alt fa-spin"></i>
+            <i class="fas fa-3x fa-sync-alt fa-spin" aria-hidden="true"></i>
         </span>
     </h1>
 </div>

@@ -88,3 +88,178 @@ Result of the W3C CSS validation service for the base.css file:
 Result of the W3C CSS validation service for the checkout.css file:
 
 ![w3c css validator results](documentation/results_of_checkout_css_validator_no-error.png)
+
+### Python
+
+Every Python file has been ran through the [CI Python Linter](https://pep8ci.herokuapp.com/) and for all of them the result was:
+> All clear, no errors found
+
+The flake8 module has been use on the project too to detect errors. Most of them have been fix.
+The remaining ones are listed below:
+
+![Flake8 report](documentation/flake8_last_report.png)
+
+
+---
+
+## Lighthouse
+
+The main pages of the website have been tested with the Lighthouse validator from Google Chrome.
+
+The results are shown below.
+
+### The landing page
+
+<details>
+    <summary>Desktop</summary>
+    <img src="documentation/.png" alt="Lighthouse results of the  page on desktop">
+</details>
+
+<details>
+    <summary>Mobile</summary>
+    <img src="documentation/.png" alt="Lighthouse results of the  page on mobile">
+</details>
+
+### The Product listing page
+
+<details>
+    <summary>Desktop</summary>
+    <img src="documentation/.png" alt="Lighthouse results of the  page on desktop">
+</details>
+
+<details>
+    <summary>Mobile</summary>
+    <img src="documentation/.png" alt="Lighthouse results of the  page on mobile">
+</details>
+
+### The product detail page
+
+<details>
+    <summary>Desktop</summary>
+    <img src="documentation/.png" alt="Lighthouse results of the  page on desktop">
+</details>
+
+<details>
+    <summary>Mobile</summary>
+    <img src="documentation/.png" alt="Lighthouse results of the  page on mobile">
+</details>
+
+### The shopping cart page
+
+<details>
+    <summary>Desktop</summary>
+    <img src="documentation/.png" alt="Lighthouse results of the  page on desktop">
+</details>
+
+<details>
+    <summary>Mobile</summary>
+    <img src="documentation/.png" alt="Lighthouse results of the  page on mobile">
+</details>
+
+### The checkout page
+
+<details>
+    <summary>Desktop</summary>
+    <img src="documentation/.png" alt="Lighthouse results of the  page on desktop">
+</details>
+
+<details>
+    <summary>Mobile</summary>
+    <img src="documentation/.png" alt="Lighthouse results of the  page on mobile">
+</details>
+
+### The checkout success page
+
+<details>
+    <summary>Desktop</summary>
+    <img src="documentation/.png" alt="Lighthouse results of the  page on desktop">
+</details>
+
+<details>
+    <summary>Mobile</summary>
+    <img src="documentation/.png" alt="Lighthouse results of the  page on mobile">
+</details>
+
+### The blog listing page
+
+<details>
+    <summary>Desktop</summary>
+    <img src="documentation/.png" alt="Lighthouse results of the  page on desktop">
+</details>
+
+<details>
+    <summary>Mobile</summary>
+    <img src="documentation/.png" alt="Lighthouse results of the  page on mobile">
+</details>
+
+### The blog detail page
+
+<details>
+    <summary>Desktop</summary>
+    <img src="documentation/.png" alt="Lighthouse results of the  page on desktop">
+</details>
+
+<details>
+    <summary>Mobile</summary>
+    <img src="documentation/.png" alt="Lighthouse results of the  page on mobile">
+</details>
+
+### The contact page
+
+<details>
+    <summary>Desktop</summary>
+    <img src="documentation/.png" alt="Lighthouse results of the  page on desktop">
+</details>
+
+<details>
+    <summary>Mobile</summary>
+    <img src="documentation/.png" alt="Lighthouse results of the  page on mobile">
+</details>
+
+### The product management page
+
+<details>
+    <summary>Desktop</summary>
+    <img src="documentation/.png" alt="Lighthouse results of the  page on desktop">
+</details>
+
+<details>
+    <summary>Mobile</summary>
+    <img src="documentation/.png" alt="Lighthouse results of the  page on mobile">
+</details>
+
+### The blog management page
+
+<details>
+    <summary>Desktop</summary>
+    <img src="documentation/.png" alt="Lighthouse results of the  page on desktop">
+</details>
+
+<details>
+    <summary>Mobile</summary>
+    <img src="documentation/.png" alt="Lighthouse results of the  page on mobile">
+</details>
+
+### The profile page
+
+<details>
+    <summary>Desktop</summary>
+    <img src="documentation/.png" alt="Lighthouse results of the  page on desktop">
+</details>
+
+<details>
+    <summary>Mobile</summary>
+    <img src="documentation/.png" alt="Lighthouse results of the  page on mobile">
+</details>
+
+### The privacy policy page
+
+<details>
+    <summary>Desktop</summary>
+    <img src="documentation/.png" alt="Lighthouse results of the  page on desktop">
+</details>
+
+<details>
+    <summary>Mobile</summary>
+    <img src="documentation/.png" alt="Lighthouse results of the  page on mobile">
+</details>

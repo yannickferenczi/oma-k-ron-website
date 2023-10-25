@@ -18,8 +18,8 @@
                 {% csrf_token %}
                 {{ form | crispy }}
                 <div class="text-right">
-                    <a href="{% url 'products' %}" class="btn btn-outline-black">Cancel</a>
-                    <button class="btn bg-blue font-weight-bold" type="submit">Add Product</button>
+                    <a href="{% url 'products' %}" class="btn btn-outline-black" aria-label="Go back to the list of products">Cancel</a>
+                    <button class="btn bg-blue font-weight-bold" type="submit" aria-label="Submit the form to add the product to the database">Add Product</button>
                 </div>
             </form>
         </div>
@@ -29,7 +29,7 @@
 
 {% block postload_js %}
     {{ block.super }}
-    <script type="text/javascript">
+    <script>
         let productType = document.querySelector('#id_product_type');
         document.querySelector("#div_id_duration").style.display = "none";
         document.querySelector("#div_id_date_of_event").style.display = "none";

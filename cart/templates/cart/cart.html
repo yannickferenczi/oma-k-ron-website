@@ -36,7 +36,7 @@
                             {% for item in cart_items %}
                                 <tr>
                                     <td class="d-none d-md-table-cell p-3 w-25">
-                                        <a href="{% url 'product_detail' item.product.id %}">
+                                        <a href="{% url 'product_detail' item.product.id %}" aria-label="Go to the product detail of {{ item.product.name }}">
                                             {% if item.product.image %}
                                                 <img class="w-100" src="{{ item.product.image.url }}" alt="{{ item.product.description }}">
                                             {% else %}
@@ -74,9 +74,9 @@
                                                 <div class="input-group">
                                                     <div class="input-group-prepend">
                                                         <button class="decrement-qty btn btn-sm btn-black" data-item_id="{{ item.item_id }}"
-                                                            id="decrement-qty_{{ item.item_id }}">
+                                                            id="decrement-qty_{{ item.item_id }}" aria-label="Decrement the quantity of {{ item.product.name }}">
                                                             <span>
-                                                                <i class="fas fa-minus fa-sm"></i>
+                                                                <i class="fas fa-minus fa-sm" aria-hidden="true"></i>
                                                             </span>
                                                         </button>
                                                     </div>
@@ -84,9 +84,9 @@
                                                         data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}" readonly>
                                                     <div class="input-group-append">
                                                         <button class="increment-qty btn btn-sm btn-black" data-item_id="{{ item.item_id }}"
-                                                            id="increment-qty_{{ item.item_id }}">
+                                                            id="increment-qty_{{ item.item_id }}" aria-label="Increment the quantity of {{ item.product.name }}">
                                                             <span>
-                                                                <i class="fas fa-plus fa-sm"></i>
+                                                                <i class="fas fa-plus fa-sm" aria-hidden="true"></i>
                                                             </span>
                                                         </button>
                                                     </div>
@@ -108,16 +108,16 @@
                             </tr>
                             <tr>
                                 <td class="text-right" colspan="5">
-                                    <a href="{% url 'products' %}" class="btn btn-lg">
+                                    <a href="{% url 'products' %}" class="btn btn-lg" aria-label="Go back to the list of products">
                                         <span class="icon">
-                                            <i class="fas fa-chevron-left"></i>
+                                            <i class="fas fa-chevron-left" aria-hidden="true"></i>
                                         </span>
                                         <span class="text-uppercase">Keep Shopping</span>
                                     </a>
-                                    <a href="{% url 'checkout' %}" class="btn bg-blue font-weight-bold btn-lg">
+                                    <a href="{% url 'checkout' %}" class="btn bg-blue font-weight-bold btn-lg" aria-label="Go to the secure checkout">
                                         <span class="text-uppercase">Secure Checkout</span>
                                         <span class="icon">
-                                            <i class="fas fa-lock"></i>
+                                            <i class="fas fa-lock" aria-hidden="true"></i>
                                         </span>
                                     </a>
                                 </td>
@@ -128,9 +128,9 @@
             {% else %}
                 <p class="lead mb-5 text-center">You do not have anything in your shopping cart yet.</p>
                 <div class="text-center">
-                    <a href="{% url 'products' %}" class="btn btn-lg">
+                    <a href="{% url 'products' %}" class="btn btn-lg" aria-label="Go back to the list of products">
                         <span class="icon">
-                            <i class="fas fa-chevron-left"></i>
+                            <i class="fas fa-chevron-left" aria-hidden="true"></i>
                         </span>
                         <span class="text-uppercase">Keep Shopping</span>
                     </a>
