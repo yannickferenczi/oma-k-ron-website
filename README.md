@@ -9,9 +9,9 @@
 
 This project aims to develop a website for the Oma K-ron company to help them have an online presence and promote their business.
 
-Oma K-ron is a bakery company specialized in baking macarons. Macarons are small cakes which can be offered as presents, enjoyed for special event or even appreciate at anytime.
+Oma K-ron is a bakery company specialized in baking macarons. They sell macarons, wedding cakes and they offer baking courses. Macarons are small cakes which can be offered as presents, enjoyed for special event or even appreciate at anytime.
 
-![Mockup responsive](documentation/amiresponsive_home.png)
+![Mockup responsive](documentation/responsive_mockup.png)
 
 **- by Yannick Ferenczi -**
 
@@ -49,6 +49,139 @@ Oma K-ron is a bakery company specialized in baking macarons. Macarons are small
 ## Business Model
 
 </div>
+
+### Business Overview
+
+The business is a B2C e-commerce platform whose goal is to sell the best macarons in Germany. They also offer baking course. Having a website can help them reach more customers and promote their products.
+
+### UX Design
+
+#### Strategy Plane
+
+##### Goals and objectives
+
+Objectives for the website are:
+
+- An easy-to-navigate website with a clear purpose
+- Allow users to see the company's offers
+- Allow users to purchase online
+
+The goals for the site owner are:
+
+- have an online presence
+- promote their business
+- show their offers and prices
+- reduce customer solicitations by providing them an online checkout system
+
+The goals for the site user are:
+
+- discover the purpose of the business
+- discover the offers of the business
+- easy online shopping
+
+##### Target Audience
+
+Potential customers are people looking for a simple gift to bring to a dinner or people organizing their wedding or any celebration where they would like to have an outstanding cake or people interested into learning or improving their baking skills.
+
+#### Scope Plane
+
+The scope of this project only focus on fulfilling the assessement criteria of Code Institute as the timeline was very tight.
+
+It was a 4 weeks schedule to develop a business model, an e-commerce website with authentication system, checkout system, notification system, product management system, a full documentation and a web marketing campaign.
+
+Therefore, there is no plan of implementing extra features within this timeline.
+
+##### Define Must-Have Features
+
+Features that every website should implement:
+
+- responsive navigation menu
+- logo
+- social media links
+- error handlers
+- favicon
+- contact form
+- a CTA
+
+Features required for this particular project:
+
+- Authentication system
+- Purchase and checkout system
+- Product management system
+- Notification system
+- Newsletter subscritpion
+- SEO
+
+##### Define Information to provide (content requirements)
+
+Users should clearly understand that the website is an online shop and that they sell Macarons.
+An about section on the main page should be developed with keywords to improve search engine ranking.
+
+#### Structure Plane
+
+##### Interaction Design (IXD)
+
+###### Define Pages
+
+- landing page
+- registration page
+- login page
+- Logout page
+- product list page
+- add product page
+- product detail page
+- edit product page
+- shopping cart page
+- checkout page
+- contact form
+- profile page
+
+###### Handle errors
+
+Error 400, 403, 404 and 500 pages are also to be implemented.
+
+##### Information Architecture (IA)
+
+information is organized with some known patterns so that users easily find what they are looking for such as:
+
+- navigation menu at the top
+- name and logo at the top
+- social media links in the footer
+- company location and newsletter in the footer
+- shopping cart and account icons on the right corner
+
+#### Skeleton Plane
+
+##### Wireframes
+
+Wireframes have been adapted during the development phase to offer a better user experience.
+
+Landing page:
+![Landing page wireframe](documentation/index_wireframe.png)
+
+List of products page:
+![Products listing page wireframe](documentation/product_list_wireframe.png)
+
+Product detail page:
+![Product detail page wireframe](documentation/product_detail_wireframe.png)
+
+Shopping cart page:
+![Shopping cart page wireframe](documentation/shopping_cart_wireframe.png)
+
+Contact form page:
+![Contact form page wireframe](documentation/contact_form_wireframe.png)
+
+#### Surface Plane
+
+##### Color Palette
+
+Two colors have been chosen for this project. They come from the hero image used for the landing page. It communicates a childish feeling and make everyday life problem disappear for a moment. They also perfectly represent the colorful world of macarons.
+
+![Color palette of the project](documentation/color_palette.png)
+
+##### Font Choices
+
+The "croissant one" font has been picked for headers to give users a feeling of abundance. The font is backed up with cursive font.
 
 ---
 <div align="center">
