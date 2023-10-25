@@ -89,6 +89,19 @@ h6 {
     line-height: 23px;
 }
 
+.menu-small-screens {
+    display: inline-block;
+    width: 28%;
+    vertical-align: middle;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.list-small-screens {
+    position: relative;
+    height: 64px;
+}
+
 .active {
     background-color: #f6b0cc !important;
     color: black !important;
@@ -111,11 +124,11 @@ h6 {
     margin-top: 195px;
 }
 
-.main-content > div:first-child {
+.main-content>div:first-child {
     padding-top: 15px;
 }
 
-.main-content > div:last-child {
+.main-content>div:last-child {
     padding-bottom: 30px;
 }
 
@@ -250,7 +263,7 @@ h6 {
     height: calc(100vh - 200px);
 }
 
-.cta-container > div {
+.cta-container>div {
     position: absolute;
     width: 90vw;
     bottom: 15vh;
@@ -345,7 +358,7 @@ h6 {
         margin-top: 171px;
     }
 
-    .main-content > div:first-child {
+    .main-content>div:first-child {
         padding-top: 40px;
     }
 }
@@ -368,7 +381,7 @@ h6 {
         z-index: 1030;
     }
 
-    .main-content > div:first-child {
+    .main-content>div:first-child {
         padding-top: 15px;
     }
 
@@ -385,7 +398,7 @@ h6 {
         background-size: cover;
     }
 
-    .cta-container > div {
+    .cta-container>div {
         width: 40vw;
         top: 5vh;
         right: 5vw;
@@ -467,10 +480,10 @@ h6 {
 /* Styles for screens larger than 1199px */
 @media (min-width: 1200px) {
     .main-content {
-            min-height: calc(100vh - 190px - 300px);
-            margin-top: 190px;
+        min-height: calc(100vh - 190px - 300px);
+        margin-top: 190px;
     }
-    
+
     .container {
         max-width: 80%;
     }
