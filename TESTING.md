@@ -112,154 +112,154 @@ The results are shown below.
 
 <details>
     <summary>Desktop</summary>
-    <img src="documentation/.png" alt="Lighthouse results of the  page on desktop">
+    <img src="documentation/landing_page_lighthouse_desktop.png" alt="Lighthouse results of the landing page on desktop">
 </details>
 
 <details>
     <summary>Mobile</summary>
-    <img src="documentation/.png" alt="Lighthouse results of the  page on mobile">
+    <img src="documentation/landing_page_lighthouse_mobile.png" alt="Lighthouse results of the landing page on mobile">
 </details>
 
 ### The Product listing page
 
 <details>
     <summary>Desktop</summary>
-    <img src="documentation/.png" alt="Lighthouse results of the  page on desktop">
+    <img src="documentation/product_listing_page_lighthouse_desktop.png" alt="Lighthouse results of the product listing page on desktop">
 </details>
 
 <details>
     <summary>Mobile</summary>
-    <img src="documentation/.png" alt="Lighthouse results of the  page on mobile">
+    <img src="documentation/product_listing_page_lighthouse_mobile.png" alt="Lighthouse results of the product listing page on mobile">
 </details>
 
 ### The product detail page
 
 <details>
     <summary>Desktop</summary>
-    <img src="documentation/.png" alt="Lighthouse results of the  page on desktop">
+    <img src="documentation/product_detail_page_lighthouse_desktop.png" alt="Lighthouse results of the product detail page on desktop">
 </details>
 
 <details>
     <summary>Mobile</summary>
-    <img src="documentation/.png" alt="Lighthouse results of the  page on mobile">
+    <img src="documentation/product_detail_page_lighthouse_mobile.png" alt="Lighthouse results of the product detail page on mobile">
 </details>
 
 ### The shopping cart page
 
 <details>
     <summary>Desktop</summary>
-    <img src="documentation/.png" alt="Lighthouse results of the  page on desktop">
+    <img src="documentation/shopping_cart_page_lighthouse_desktop.png" alt="Lighthouse results of the shopping cart page on desktop">
 </details>
 
 <details>
     <summary>Mobile</summary>
-    <img src="documentation/.png" alt="Lighthouse results of the  page on mobile">
+    <img src="documentation/shopping_cart_page_lighthouse_mobile.png" alt="Lighthouse results of the shopping cart page on mobile">
 </details>
 
 ### The checkout page
 
 <details>
     <summary>Desktop</summary>
-    <img src="documentation/.png" alt="Lighthouse results of the  page on desktop">
+    <img src="documentation/checkout_page_lighthouse_desktop.png" alt="Lighthouse results of the checkout page on desktop">
 </details>
 
 <details>
     <summary>Mobile</summary>
-    <img src="documentation/.png" alt="Lighthouse results of the  page on mobile">
+    <img src="documentation/checkout_page_lighthouse_mobile.png" alt="Lighthouse results of the checkout page on mobile">
 </details>
 
 ### The checkout success page
 
 <details>
     <summary>Desktop</summary>
-    <img src="documentation/.png" alt="Lighthouse results of the  page on desktop">
+    <img src="documentation/checkout_success_page_lighthouse_desktop.png" alt="Lighthouse results of the checkout success page on desktop">
 </details>
 
 <details>
     <summary>Mobile</summary>
-    <img src="documentation/.png" alt="Lighthouse results of the  page on mobile">
+    <img src="documentation/checkout_success_page_lighthouse_mobile.png" alt="Lighthouse results of the checkout success page on mobile">
 </details>
 
 ### The blog listing page
 
 <details>
     <summary>Desktop</summary>
-    <img src="documentation/.png" alt="Lighthouse results of the  page on desktop">
+    <img src="documentation/blog_listing_page_lighthouse_desktop.png" alt="Lighthouse results of the blog listing page on desktop">
 </details>
 
 <details>
     <summary>Mobile</summary>
-    <img src="documentation/.png" alt="Lighthouse results of the  page on mobile">
+    <img src="documentation/blog_listing_page_lighthouse_mobile.png" alt="Lighthouse results of the blog listing page on mobile">
 </details>
 
 ### The blog detail page
 
 <details>
     <summary>Desktop</summary>
-    <img src="documentation/.png" alt="Lighthouse results of the  page on desktop">
+    <img src="documentation/blog_detail_page_lighthouse_desktop.png" alt="Lighthouse results of the blog detail page on desktop">
 </details>
 
 <details>
     <summary>Mobile</summary>
-    <img src="documentation/.png" alt="Lighthouse results of the  page on mobile">
+    <img src="documentation/blog_detail_page_lighthouse_mobile.png" alt="Lighthouse results of the blog detail page on mobile">
 </details>
 
 ### The contact page
 
 <details>
     <summary>Desktop</summary>
-    <img src="documentation/.png" alt="Lighthouse results of the  page on desktop">
+    <img src="documentation/contact_page_lighthouse_desktop.png" alt="Lighthouse results of the contact page on desktop">
 </details>
 
 <details>
     <summary>Mobile</summary>
-    <img src="documentation/.png" alt="Lighthouse results of the  page on mobile">
+    <img src="documentation/contact_page_lighthouse_mobile.png" alt="Lighthouse results of the contact page on mobile">
 </details>
 
 ### The product management page
 
 <details>
     <summary>Desktop</summary>
-    <img src="documentation/.png" alt="Lighthouse results of the  page on desktop">
+    <img src="documentation/product_management_page_lighthouse_desktop.png" alt="Lighthouse results of the product_management page on desktop">
 </details>
 
 <details>
     <summary>Mobile</summary>
-    <img src="documentation/.png" alt="Lighthouse results of the  page on mobile">
+    <img src="documentation/product_management_page_lighthouse_mobile.png" alt="Lighthouse results of the product_management page on mobile">
 </details>
 
 ### The blog management page
 
 <details>
     <summary>Desktop</summary>
-    <img src="documentation/.png" alt="Lighthouse results of the  page on desktop">
+    <img src="documentation/blog_management_page_lighthouse_desktop.png" alt="Lighthouse results of the blog management page on desktop">
 </details>
 
 <details>
     <summary>Mobile</summary>
-    <img src="documentation/.png" alt="Lighthouse results of the  page on mobile">
+    <img src="documentation/blog_management_page_lighthouse_mobile.png" alt="Lighthouse results of the blog management page on mobile">
 </details>
 
 ### The profile page
 
 <details>
     <summary>Desktop</summary>
-    <img src="documentation/.png" alt="Lighthouse results of the  page on desktop">
+    <img src="documentation/profile_page_lighthouse_desktop.png" alt="Lighthouse results of the profile page on desktop">
 </details>
 
 <details>
     <summary>Mobile</summary>
-    <img src="documentation/.png" alt="Lighthouse results of the  page on mobile">
+    <img src="documentation/profile_page_lighthouse_mobile.png" alt="Lighthouse results of the profile page on mobile">
 </details>
 
 ### The privacy policy page
 
 <details>
     <summary>Desktop</summary>
-    <img src="documentation/.png" alt="Lighthouse results of the  page on desktop">
+    <img src="documentation/privacy_policy_page_lighthouse_desktop.png" alt="Lighthouse results of the privacy policy page on desktop">
 </details>
 
 <details>
     <summary>Mobile</summary>
-    <img src="documentation/.png" alt="Lighthouse results of the  page on mobile">
+    <img src="documentation/privacy_policy_page_lighthouse_mobile.png" alt="Lighthouse results of the privacy policy page on mobile">
 </details>
