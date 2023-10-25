@@ -109,7 +109,7 @@
 
 {% block postload_js %}
     {{ block.super }}
-    <script type="text/javascript">
+    <script>
         $('.btt-link').click(function (e) {
             window.scrollTo({
                 top: 0,
@@ -118,7 +118,7 @@
             });
         })
     </script>
-    <script type="text/javascript">
+    <script>
         $('#sort-selector').change(function() {
             var selector = $(this)
             var currentUrl = new URL(window.location);
