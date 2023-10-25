@@ -41,6 +41,10 @@ def add_to_cart(request, item_id):
 
 
 def adjust_cart(request, item_id):
+    """
+    Update the quantity of the selected item in the shopping cart.
+    Remove the item from the cart if the quantity reaches 0.
+    """
     product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get("quantity"))
     cart = request.session.get("cart", {})

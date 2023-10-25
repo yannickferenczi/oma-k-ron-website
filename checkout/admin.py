@@ -4,12 +4,17 @@ from .models import Order, OrderLineItem
 
 
 class OrderLineItemAdminInline(admin.TabularInline):
+    """
+    Add the OrderLineItem model as one field of the Order model in the
+    admin panel
+    """
     model = OrderLineItem
     readonly_fields = ("lineitem_total", )
 
 
 @admin.register(Order)
 class OrderAdmin(admin.ModelAdmin):
+    """ Add the Order model to the admin panel """
     inlines = (OrderLineItemAdminInline, )
 
     readonly_fields = (

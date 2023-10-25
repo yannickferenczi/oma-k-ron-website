@@ -1,7 +1,4 @@
-# -*- coding: utf-8 -*-
-
 from django.shortcuts import render, redirect, reverse
-from django.http import HttpResponse
 from django.contrib import messages
 from django.template.loader import render_to_string
 from django.core.mail import send_mail
@@ -11,7 +8,7 @@ from .forms import ContactForm
 
 
 def contact(request):
-    """This function render the contact form"""
+    """ This function render the contact form """
     if request.method == "POST":
         form = ContactForm(request.POST)
         if form.is_valid():

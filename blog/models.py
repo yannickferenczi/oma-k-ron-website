@@ -4,6 +4,10 @@ from django.contrib.auth.models import User
 
 
 class Post(models.Model):
+    """
+    A class to create a table in the database to storage blog post
+    information
+    """
     class Meta:
         ordering = ["-last_update", ]
 

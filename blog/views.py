@@ -13,25 +13,29 @@ from .forms import PostForm
 
 
 class PostList(generic.ListView):
+    """ A CBV to display a list of all published blog posts """
     model = Post
     queryset = Post.objects.filter(published=True)
     template_name = "blog/post_list.html"
 
 
 class PostDetail(View):
+    """ A CBV to display the details of a blog post """
     def get(self, request, slug, *args, **kwargs):
         queryset = Post.objects.filter(published=True)
         post = get_object_or_404(queryset, slug=slug)
         return render(request, "blog/post_detail.html", {"post": post})
 
 
-class PostCreateView(SuccessMessageMixin, PermissionRequiredMixin, CreateView):
+class PostCreateView(
+        SuccessMessageMixin,
+        PermissionRequiredMixin,
+        CreateView):
     """
     This class creates a Post instance.
 
     Users must have the permission to add post to access this content.
     """
-
     model = Post
     form_class = PostForm
     template_name = "blog/create_post.html"
@@ -50,7 +54,6 @@ class PostEditView(SuccessMessageMixin, PermissionRequiredMixin, UpdateView):
 
     Users must have the permission to change post to access this content.
     """
-
     model = Post
     form_class = PostForm
     template_name = "blog/edit_post.html"
@@ -64,7 +67,6 @@ class PostDeleteView(SuccessMessageMixin, PermissionRequiredMixin, DeleteView):
 
     Users must have the permission to delete post to access this content.
     """
-
     model = Post
     template_name = "blog/delete_post.html"
     permission_required = "blog.delete_post"

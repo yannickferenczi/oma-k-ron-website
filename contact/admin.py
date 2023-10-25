@@ -5,7 +5,9 @@ from .models import Contact
 
 @admin.register(Contact)
 class ContactAdmin(admin.ModelAdmin):
-    """This class displays instances of the contact form in the admin panel"""
+    """
+    This class displays instances of the contact form in the admin panel
+    """
     list_display = (
         "answered",
         "email",
