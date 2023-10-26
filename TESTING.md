@@ -89,6 +89,19 @@ Result of the W3C CSS validation service for the checkout.css file:
 
 ![w3c css validator results](documentation/results_of_checkout_css_validator_no-error.png)
 
+### JavaScript
+
+Most of the javascript have been written within the template files because it was very short.
+
+The javascript file is stripe_elements.js in the checkout app. The result of JSHint for that file is shown below:
+
+![JSHint results](documentation/jshint_results_for_stripe_element.png)
+
+- One undefined variable: stripe
+
+    Stripe has been integrated to the base.hmtl template of the project as Stripe recommend it in their documentation. Therefore there is no need to explicitly import it in the script.js file.
+![Stripe documentation](documentation/stripe_script_element.png)
+
 ### Python
 
 Every Python file has been ran through the [CI Python Linter](https://pep8ci.herokuapp.com/) and for all of them the result was:

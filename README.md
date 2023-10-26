@@ -183,6 +183,12 @@ Two colors have been chosen for this project. They come from the hero image used
 
 The "croissant one" font has been picked for headers to give users a feeling of abundance. The font is backed up with cursive font.
 
+### Database Schema
+
+The database schema has been modified during the development phase to provide a more powerful tool.
+
+![Database schema](documentation/Oma_k_ron_erd.png)
+
 ---
 
 <div align="center">
@@ -417,6 +423,7 @@ It would also be nice to have a "click and collect" option. I actually wanted to
   - django-countries 7.5.1
   - django-crispy-forms 1.14.0
   - django-storages 1.14.2
+  - django-summernote 0.8.20.0
   - dj-database-url 2.1.0
   - gunicorn 20.0.4
   - Pillow 10.0.1
@@ -447,6 +454,7 @@ It would also be nice to have a "click and collect" option. I actually wanted to
   - [Am I responsive](https://ui.dev/amiresponsive) has been used to create a mockup of responsiveness
   - [Shields.io](https://shields.io/) has been used to create badges within the README.md file
   - [Mailchimp](https://mailchimp.com/) has been used to collect email from potential customers
+  - [Wordtracker](https://www.wordtracker.com/) has been used to improve keywords for the SEO
 
 <div align="center">
 
@@ -464,6 +472,12 @@ Testing details can be found separately in the [TESTING.md](TESTING.md) file
 
 </div>
 
+It was a very challenging project because of its scope, its very advanced features and its timeline. Therefore I did not want to risk myself following unknown paths to deeply experiment the Django framework like I did in my last project. It was less fun but the priority was definitely to deliver a finish and functional product and I could have not done it if I would have not use some really good support.
+
+As a first huge support for this project comes, of course, the [boutique-Ado](https://github.com/Code-Institute-Solutions/boutique_ado_v1) walkthrough project. The cart context processor, the checkout process and the product searching and filtering come entirely from this project.
+
+As a second big support comes my last project [Hands Home Helpers](https://github.com/yannickferenczi/hands-home-helpers-website). From that project, I re-used some logic to implement the blog app and the contact form. I also re-used the README structure of that project to be as efficient as possible.
+
 ---
 
 <div align="center">
@@ -471,6 +485,170 @@ Testing details can be found separately in the [TESTING.md](TESTING.md) file
 ## Procedures
 
 </div>
+
+This project support fully embedded online payment with stripe services. It uses ElephantSQL as a cloud PostgreSQL database, and AWS S3 services to host media and static files. In this chapter, we will dive into seting up those external services.
+
+### Project Creation
+
+I have created the project from the [ci-full-template](https://github.com/Code-Institute-Org/ci-full-template) following the steps below:
+
+1. From the link above, click on 'Use this template' and select 'Create a new repository'
+2. Enter a name for the new repository
+3. Click 'Create Repository'
+4. From the new GitHub repository, click on the button '<> Code', then select local and copy the https link of the repository
+5. Open Code Anywhere and navigate to the 'workspaces' page
+6. Click on 'New Workspace'
+7. Paste the GitHub repo URL into the 'Repository URL' box
+8. Click 'Create'
+
+#### Create PostgreSQL database using ElephantSQL
+
+To create your production database using ElephantSQL, follow the steps below:
+
+- Log into ElephantSQL and navigate to the Dashboard.
+- Click on "Create New Instance".
+- Set up a plan by providing a name for the project and selecting a plan (for this project, the free plan "Tiny Turtle" was chosen). Tags are optional.
+- Click on "Select Region" and choose the appropriate Data center.
+- Review all the details and click "Create Instance".
+- Return to the Dashboard and click on the name of the newly created instance.
+- Copy the database URL from the details section. And add it to your environment variables (in the env.py file and on Heroku)
+
+### Local Development
+
+To Run Locally:
+
+1. Navigate to the [GitHub Repository](https://github.com/yannickferenczi/hands-home-helpers-website)
+2. Click on the button '<> Code', then 'Local' and select 'Download Zip' to download the files locally and open them with an IDE
+
+To Fork the project:
+
+1. Navigate to the [GitHub Repository](https://github.com/yannickferenczi/hands-home-helpers-website)
+2. Click on the 'Fork' button at the top right of the page and select 'Create a new fork'
+3. This will duplicate the project for you to work on
+
+> NB: To run this project locally, you will need to create an env.py file (within the root directory) configuring the above environment variables as these are not included in the GitHub files for security reasons.
+> You can duplicate the .env.dist file to get you started and put your own values. Be aware that all values must be strings.
+
+The project is set with different settings files for development and production. By default when working locally the database commands from the manage.py file will be applied to the development database (SQLite3). To apply them to the production database, change the value of the development variable in your env.py file before running them so it is not equal to "True":
+
+```py
+os.environ["DEVELOPMENT"] = "False"
+```
+
+### Hosting images and static file with AWS
+
+To host images and static files using AWS, perform the following steps:
+
+- Create an AWS account and access the AWS Management Console from the "My Account" dropdown menu.
+![AWS Dashboard](documentation/Sign_into_management_console.png)
+- Locate and access the S3 service and create a new bucket.
+![AWS search S3](documentation/searching_s3.png)
+- Check "ACLs enabled" under Object Ownership.
+![AWS create bucket](documentation/create_bucket.png)
+- Uncheck "Block all public access" and acknowledge the requirement for public access to static files.
+![AWS allow public access](documentation/allow_public_bucket.png)
+- Configure the bucket settings as follows:
+- Enable static website hosting under Properties.
+![AWS edit static website hosting](documentation/edit_static_website_hosting.png)
+- Copy the provided code into the CORS section under Permissions:
+[
+    {
+        "AllowedHeaders": [
+            "Authorization"
+        ],
+        "AllowedMethods": [
+            "GET"
+        ],
+        "AllowedOrigins": [
+            "*"
+        ],
+        "ExposeHeaders": []
+    }
+]
+![AWS cors configuration](documentation/cors_configuration_in_permissions.png)
+- Go to the "Policy generator" under Bucket policy.
+- Select "S3 Bucket Policy" as the bucket type.
+![AWS s3 full access policy](documentation/import_s3_full_access_policy.png)
+- Set the principal to "*" to allow access to all principles.
+- Set the actions to "GetObject".
+- Paste the ARN from the bucket settings tab.
+![AWS arn](documentation/copy_arn.png)
+- Click "Add Statement" and then "Generate Policy".
+- Copy the generated policy and paste it into the bucket policy editor. Append "/*" to the end of the resource key.
+![AWS copy policy](documentation/copy_policy.png)
+- Save the changes.
+
+- Check the "List" checkbox for "Everyone (public access)" under Access control list (ACL).
+
+- Create a user in the IAM (Identity and Access Management) to access the bucket.
+![AWS look for iam service](documentation/look_for_iam_service.png)
+- In the IAM, go to "User Groups" in the left sidebar.
+- Create a group for the user, assign an access policy that grants the group access to the S3 bucket, and assign the user to the group to enable access to all files.
+
+### Add Stripe to the project
+
+To test the checkout process, Stripe provides some card number to trigger different behaviour. They are as below:
+
+| Card Number | Event |
+| --- | --- |
+| 4242 4242 4242 4242 | successful payment |
+| 4000 0027 6000 3184 | 3DS authentication needed |
+| 4000 0000 0000 0002 | failed payment |
+
+Set up Stripe:
+- Go to [Stripe](https://stripe.com/en-de) website and create an account
+- Then go to the "Developers" tab and "API keys" and copy/paste the public and secret keys into your Heroky "config vars"
+![Stripe api keys](documentation/stripe_api_keys.png)
+- Then to create a webhook:
+  - go on the "Webhooks" tab and click "+ Add endpoint"
+![Stripe webhooks](documentation/stripe_webhooks.png)
+  - then select "Add an endpoint"
+  - paste in the url of the webhook (for this project the url is "https://oma-k-ron-0db832a08dd8.herokuapp.com/checkout/wh/") and add a description (optional)
+![Stripe create webhooks](documentation/stripe_create_webhook.png)
+  - select all events, click "add events" and finally "add endpoint"
+![Stripe select all events](documentation/stripe_select_all_events.png)
+  - Then back to the "Webhooks" tab, click on the created webhook, click on "Reveal" under "Signing secret", copy the value and paste it as a value of your webhook secret key in the Heroku app
+![Stripe webhook signing key](documentation/stripe_webhook_signing_secret.png)
+
+### Deployment to Heroku
+
+I used Heroku to deploy this project.
+
+To deploy to Heroku:
+
+1. In Code Anywhere CLI from the main directory, to create/update a requirements.txt file containing project dependencies, run
+
+   `pip3 freeze --local > requirements.txt`
+
+2. In Code Anywhere CLI from the main directory, to create a Procfile, run
+
+   `echo web: gunicorn oma_k_ron.wsgi > Procfile`
+
+3. Push the 2 new files to the GitHub repository
+
+4. log in to Heroku, select 'Create New App', create a unique name for the app, and select your nearest region. Click 'Create App'
+
+5. Navigate to 'settings', click reveal config vars, and input the following:
+
+| Key | Value |
+| ---: | :--- |
+| ALLOWED_HOSTS | url to the deployed site |
+| AWS_ACCESS_KEY_ID | public AWS key |
+| AWS_ACCESS_KEY_ID | secret AWS key |
+| DATABASE_URL | elephantSQL_url |
+| SECRET_KEY | django_secret_key |
+| EMAIL_HOST_PASSWORD | password from your email address |
+| EMAIL_HOST_USER | your email address |
+| PORT | 8000 |
+| SECRET_KEY | django secret key |
+| STRIPE_PUBLIC_KEY | stripe public key |
+| STRIPE_SECRET_KEY | stripe secret key |
+| STRIPE_WH_SECRET | your stripe webhook secret key |
+| USE_AWS | True |
+
+1. Navigate to the Deploy tab on the Heroku dashboard and select Github, search for your repository by name, and click 'connect'.
+2. Click deploy branch
+3. Once the build is complete click on 'Open app' to launch the new app
 
 ---
 
@@ -480,4 +658,20 @@ Testing details can be found separately in the [TESTING.md](TESTING.md) file
 
 </div>
 
+This project has been for me a lot of frustration because I would have loved to really explore and experiment all the features implemented in the walkthrough project (using other tutorials and diving deeper in the documentation). But I have felt overwhelmed since the very start of the project and now that I am reaching the end of the project, I am very happy that I did not take any risk because I am just on time to submit a project which could still be a lot improved.
+
+Whatever will be my overall result for the course, I am very happy and greatfull for the 7 months I have spent learning some good fundamentals of Full Stack Software Development with [Code Institute](https://codeinstitute.net/de/). This was definitely one of my best decision ever and I will only remember it in a very positive way.
+
+I want to give a big thank you to their very supportive community and especially to 
+- [Alan Bushell](https://github.com/Alan-Bushell) who always found the right word to keep me on track,
+- [Jason Dunton](https://www.linkedin.com/in/jason-dunton/) from Code Institute tutoring for the huge help to fix my Stripe webhooks. I have definitely spent over a week trying to fix that issue and Jason knew straight away where to look to identify clearly the origin of the problem. We could solve it within 20 minutes (and the longest part was to redeploy a few time on Heroku to test the solutions implemented)
+
 ---
+
+<div align="center">
+
+**THANK YOU FOR READING THIS DOCUMENTATION**
+
+<small>Feel free to get in touch if you have any question or if you just want to share your thoughts on that project or something similar you are working on.</small>
+
+</div>
