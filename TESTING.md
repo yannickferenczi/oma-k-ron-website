@@ -10,6 +10,8 @@
 
 ## 1. Table of Content
 
+</div>
+
 - [1. Table of Content](#1-table-of-content)
 - [2. Code Validation](#2-code-validation)
   - [2.1. HTML](#21-html)
@@ -31,9 +33,7 @@
   - [3.12. The profile page](#312-the-profile-page)
   - [3.13. The privacy policy page](#313-the-privacy-policy-page)
 - [4. Manual Testing](#4-manual-testing)
-- [5. Bugs](#15-bugs)
-
-</div>
+- [5. Bugs](#5-bugs)
 
 ---
 
