@@ -587,6 +587,15 @@ To host images and static files using AWS, perform the following steps:
 
 ### Add Stripe to the project
 
+To test the checkout process, Stripe provides some card number to trigger different behaviour. They are as below:
+
+| Card Number | Event |
+| --- | --- |
+| 4242 4242 4242 4242 | successful payment |
+| 4000 0027 6000 3184 | 3DS authentication needed |
+| 4000 0000 0000 0002 | failed payment |
+
+Set up Stripe:
 - Go to [Stripe](https://stripe.com/en-de) website and create an account
 - Then go to the "Developers" tab and "API keys" and copy/paste the public and secret keys into your Heroky "config vars"
 ![Stripe api keys](documentation/stripe_api_keys.png)
