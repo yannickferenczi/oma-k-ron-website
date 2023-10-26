@@ -89,7 +89,7 @@ Oma K-ron is a bakery company specializing in baking macarons. They sell macaron
   - [10.3. Hosting images and static file with AWS](#103-hosting-images-and-static-file-with-aws)
   - [10.4. Add Stripe to the project](#104-add-stripe-to-the-project)
   - [10.5. Deployment to Heroku](#105-deployment-to-heroku)
-- [11. Acknowledgement](#11-acknowledgement)
+- [11. Acknowledgement](#11-acknowledgment)
 
 ---
 
