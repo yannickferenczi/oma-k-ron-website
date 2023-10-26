@@ -45,6 +45,8 @@ Oma K-ron is a bakery company specializing in baking macarons. They sell macaron
 - [1. Table of Content](#1-table-of-content)
 - [2. Business Model](#2-business-model)
   - [2.1. Business Overview](#21-business-overview)
+  - [2.2. Key Business Activities](#22-key-business-activities)
+  - [2.3. Key Resources](#23-key-resources)
 - [3. UX Design](#3-ux-design)
   - [3.1. Strategy Plane](#31-strategy-plane)
     - [3.1.1. Goals and objectives](#311-goals-and-objectives)
@@ -86,10 +88,10 @@ Oma K-ron is a bakery company specializing in baking macarons. They sell macaron
   - [10.1. Project Creation](#101-project-creation)
     - [10.1.1. Create PostgreSQL database using ElephantSQL](#1011-create-postgresql-database-using-elephantsql)
   - [10.2. Local Development](#102-local-development)
-  - [10.3. Hosting images and static file with AWS](#103-hosting-images-and-static-file-with-aws)
+  - [10.3. Hosting images and static files with AWS](#103-hosting-images-and-static-files-with-aws)
   - [10.4. Add Stripe to the project](#104-add-stripe-to-the-project)
   - [10.5. Deployment to Heroku](#105-deployment-to-heroku)
-- [11. Acknowledgement](#11-acknowledgment)
+- [11. Acknowledgment](#11-acknowledgment)
 
 ---
 
@@ -102,6 +104,38 @@ Oma K-ron is a bakery company specializing in baking macarons. They sell macaron
 ### 2.1. Business Overview
 
 The business is a B2C e-commerce platform whose goal is to sell the best macarons in Germany. They also offer baking courses. Having a website can help them reach more customers and promote their products.
+
+### 2.2 Key Business Activities
+
+- Selling macarons and wedding cakes
+
+The business offers a wide range of macarons and wedding cakes. They have a well-located shop in the center of Dortmund.
+
+- Online Shop
+
+Creating this e-commerce platform enables customers to browse, select, and purchase products conveniently, with a secure checkout process.
+
+- Offering Factory visits and Baking Courses
+
+The storefront of the business in Dortmund allows the business owners to organize events at their convenience and grow a local community.
+
+- Community Engagement
+
+The business actively engages with its community at a wider scale with its presence on Facebook and its Facebook Business Page.
+
+### 2.3 Key Resources
+
+- Skilled Bakers
+
+The business owner is an expert baker and has already proven their skills in some baking contest
+
+- Physical Storefront
+
+Their location in Dortmund is definitely a huge advantage to selling products on an everyday basis.
+
+- E-commerce Platform
+
+An online shop with a secure checkout system to facilitate online sales is a key investment to expend their activities.
 
 [Back to the Table of Content](#1-table-of-content)
 
