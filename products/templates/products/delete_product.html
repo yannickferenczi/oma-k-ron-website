@@ -8,14 +8,13 @@
     <div class="col-12 col-lg-6 offset-lg-3">
         <h2 class="logo-font text-center mb-4">Product Management</h2>
         <hr class="w-50 mb-1">
-        <H5 class="text-muted text-center">Delete Product</H5>
+        <H5 class="text-muted text-center">Do you really want to delete this item?</H5>
     </div>
 </div>
 <div class="row">
     <div class="col-12 col-lg-6 offset-lg-3">
         <form action="{% url 'delete_product' product.id %}" class="form mb-2 px-3" method="POST">
             {% csrf_token %}
-            Do you really want to delete this item?
             <div class="text-right">
                 <a href="{% url 'products' %}" class="btn btn-outline-black" aria-label="Go back to the list of products">Cancel</a>
                 <button class="btn btn-danger font-weight-bold" type="submit" aria-label="Delete {{ product.name }} from the database">Delete Product</button>
