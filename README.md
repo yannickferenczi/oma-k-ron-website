@@ -38,27 +38,85 @@ Oma K-ron is a bakery company specialized in baking macarons. They sell macarons
 
 <div align="center">
 
-## Table of Content
+## 1. Table of Content
 
 </div>
+
+- [Oma K-ron](#oma-k-ron)
+  - [1. Table of Content](#1-table-of-content)
+  - [2. Business Model](#2-business-model)
+    - [2.1. Business Overview](#21-business-overview)
+  - [3. UX Design](#3-ux-design)
+    - [3.1. Strategy Plane](#31-strategy-plane)
+      - [3.1.1. Goals and objectives](#311-goals-and-objectives)
+      - [3.1.2. Target Audience](#312-target-audience)
+    - [3.2. Scope Plane](#32-scope-plane)
+      - [3.2.1. Define Must-Have Features](#321-define-must-have-features)
+      - [3.2.2. Define Information to provide (content requirements)](#322-define-information-to-provide-content-requirements)
+    - [3.3. Structure Plane](#33-structure-plane)
+      - [3.3.1. Interaction Design (IXD)](#331-interaction-design-ixd)
+        - [3.3.1.1. Define Pages](#3311-define-pages)
+        - [3.3.1.2. Handle errors](#3312-handle-errors)
+      - [3.3.2. Information Architecture (IA)](#332-information-architecture-ia)
+    - [3.4. Skeleton Plane](#34-skeleton-plane)
+      - [3.4.1. Wireframes](#341-wireframes)
+    - [3.5. Surface Plane](#35-surface-plane)
+      - [3.5.1. Color Palette](#351-color-palette)
+      - [3.5.2. Font Choices](#352-font-choices)
+    - [3.6. Database Schema](#36-database-schema)
+  - [4. Agile Development](#4-agile-development)
+    - [4.1. The workflow](#41-the-workflow)
+    - [4.2. Labels](#42-labels)
+    - [4.3. The views of the project manager](#43-the-views-of-the-project-manager)
+    - [4.4. The story points](#44-the-story-points)
+    - [4.5. The sprints](#45-the-sprints)
+  - [5. Marketing Strategy](#5-marketing-strategy)
+    - [5.1. SEO Project planning](#51-seo-project-planning)
+      - [5.1.1. Keywords](#511-keywords)
+      - [5.1.2. sitemap.xml and robots.txt files](#512-sitemapxml-and-robotstxt-files)
+    - [5.2. Content Marketing](#52-content-marketing)
+    - [5.3. Social Media Marketing](#53-social-media-marketing)
+    - [5.4. Email Marketing](#54-email-marketing)
+  - [6. Features](#6-features)
+    - [6.1. Features currently available](#61-features-currently-available)
+    - [6.2. More features to implement](#62-more-features-to-implement)
+  - [7. Technology Used](#7-technology-used)
+  - [8. Testing](#8-testing)
+  - [9. References and Credits](#9-references-and-credits)
+  - [10. Procedures](#10-procedures)
+    - [10.1. Project Creation](#101-project-creation)
+      - [10.1.1. Create PostgreSQL database using ElephantSQL](#1011-create-postgresql-database-using-elephantsql)
+    - [10.2. Local Development](#102-local-development)
+    - [10.3. Hosting images and static file with AWS](#103-hosting-images-and-static-file-with-aws)
+    - [10.4. Add Stripe to the project](#104-add-stripe-to-the-project)
+    - [10.5. Deployment to Heroku](#105-deployment-to-heroku)
+  - [11. Acknowledgement](#11-acknowledgement)
 
 ---
 
 <div align="center">
 
-## Business Model
+## 2. Business Model
 
 </div>
 
-### Business Overview
+### 2.1. Business Overview
 
 The business is a B2C e-commerce platform whose goal is to sell the best macarons in Germany. They also offer baking course. Having a website can help them reach more customers and promote their products.
 
-## UX Design
+[Back to the Table of Content](#1-table-of-content)
 
-### Strategy Plane
+---
 
-#### Goals and objectives
+<div align="center">
+
+## 3. UX Design
+
+</div>
+
+### 3.1. Strategy Plane
+
+#### 3.1.1. Goals and objectives
 
 Objectives for the website are:
 
@@ -79,11 +137,11 @@ The goals for the site user are:
 - discover the offers of the business
 - easy online shopping
 
-#### Target Audience
+#### 3.1.2. Target Audience
 
 Potential customers are people looking for a simple gift to bring to a dinner or people organizing their wedding or any celebration where they would like to have an outstanding cake or people interested into learning or improving their baking skills.
 
-### Scope Plane
+### 3.2. Scope Plane
 
 The scope of this project only focus on fulfilling the assessement criteria of Code Institute as the timeline was very tight.
 
@@ -91,7 +149,7 @@ It was a 4 weeks schedule to develop a business model, an e-commerce website wit
 
 Therefore, there is no plan of implementing extra features within this timeline.
 
-#### Define Must-Have Features
+#### 3.2.1. Define Must-Have Features
 
 Features that every website should implement:
 
@@ -112,16 +170,16 @@ Features required for this particular project:
 - Newsletter subscritpion
 - SEO
 
-#### Define Information to provide (content requirements)
+#### 3.2.2. Define Information to provide (content requirements)
 
 Users should clearly understand that the website is an online shop and that they sell Macarons.
 An about section on the main page should be developed with keywords to improve search engine ranking.
 
-### Structure Plane
+### 3.3. Structure Plane
 
-#### Interaction Design (IXD)
+#### 3.3.1. Interaction Design (IXD)
 
-##### Define Pages
+##### 3.3.1.1. Define Pages
 
 - landing page
 - registration page
@@ -136,11 +194,11 @@ An about section on the main page should be developed with keywords to improve s
 - contact form
 - profile page
 
-##### Handle errors
+##### 3.3.1.2. Handle errors
 
 Error 400, 403, 404 and 500 pages are also to be implemented.
 
-#### Information Architecture (IA)
+#### 3.3.2. Information Architecture (IA)
 
 information is organized with some known patterns so that users easily find what they are looking for such as:
 
@@ -150,9 +208,9 @@ information is organized with some known patterns so that users easily find what
 - company location and newsletter in the footer
 - shopping cart and account icons on the right corner
 
-### Skeleton Plane
+### 3.4. Skeleton Plane
 
-#### Wireframes
+#### 3.4.1. Wireframes
 
 Wireframes have been adapted during the development phase to offer a better user experience.
 
@@ -171,35 +229,37 @@ Shopping cart page:
 Contact form page:
 ![Contact form page wireframe](documentation/contact_form_wireframe.png)
 
-### Surface Plane
+### 3.5. Surface Plane
 
-#### Color Palette
+#### 3.5.1. Color Palette
 
 Two colors have been chosen for this project. They come from the hero image used for the landing page. It communicates a childish feeling and make everyday life problem disappear for a moment. They also perfectly represent the colorful world of macarons.
 
 ![Color palette of the project](documentation/color_palette.png)
 
-#### Font Choices
+#### 3.5.2. Font Choices
 
 The "croissant one" font has been picked for headers to give users a feeling of abundance. The font is backed up with cursive font.
 
-### Database Schema
+### 3.6. Database Schema
 
 The database schema has been modified during the development phase to provide a more powerful tool.
 
 ![Database schema](documentation/Oma_k_ron_erd.png)
 
+[Back to the Table of Content](#1-table-of-content)
+
 ---
 
 <div align="center">
 
-## Agile Development
+## 4. Agile Development
 
 </div>
 
 The project development has been managed with an agile project manager on GitHub. It is public [here](https://github.com/users/yannickferenczi/projects/18/views/1).
 
-### The workflow
+### 4.1. The workflow
 
 The workflow of the project has been broken down into small organized pieces to help realize the amount of work and help spread it over the given period. It organizes a hierarchy as below:
 
@@ -236,13 +296,13 @@ The workflow of the project has been broken down into small organized pieces to 
     <p>Finally, tasks were defined within the user stories to remind the stakeholder what to develop. They were there to help define the user story, giving more precise things to work on.</p>
 </details>
 
-### Labels
+### 4.2. Labels
 
 Labels have been created to quickly visualize the type of backlog product item and its priority. Below is a screenshot of the labels used for the project.
 
 ![Labels of the project](documentation/labels.png)
 
-### The views of the project manager
+### 4.3. The views of the project manager
 
 The project manager contains 4 views. The three first have been very useful during the development. The fourth one is more of a nice overview of the efforts spread over time.
 
@@ -262,13 +322,13 @@ The project manager contains 4 views. The three first have been very useful duri
 
     The fourth view is just an overview of the three weeks of work that led to this project. It did not really bring help to the development of the project.
 
-### The story points
+### 4.4. The story points
 
 Story points have been assigned to user stories only to be able to submit the project as much developed as possible and, of course, on time. It was clear that the final product would not be done in such a short time, especially because the implementation of the payment system seemd quite tricky to me and I would have like to dive more into it to really understand the whole mechanic. And as expected, I really struggle with this part of the project implementation being stock on this matter a pretty long time. This is why the story points of sprints 4 and 5 are so low.
 
 My priority was as expected to develop a minimum viable product (MVP) that corresponds to the expected project from the assessment criteria of Code Institute. To achieve this expectation in such a short time, I did not find another way than to repeat the steps of the [Boutique-Ado](https://github.com/Code-Institute-Solutions/boutique_ado_v1) walkthrough project.
 
-### The sprints
+### 4.5. The sprints
 
 The project has been developed in 9 Sprints of 3 days.
 Each sprint counts a certain amount of story points based on their Epics, User Stories, and tasks. They are as below:
@@ -287,16 +347,16 @@ Each sprint counts a certain amount of story points based on their Epics, User S
 
 To conclude, I must admit that I have started this project with a very high level of stress because the whole checkout and payment system was quite involved. Creating this agile project manager was definitely helpfull to remind me everyday that the timeline was tight and that I should not lose focus. Nevertheless, it kept my stress at its highest level for the full implementation period and made me feel overwhelm every single day.
 
-[Back to the Table of Content]()
+[Back to the Table of Content](#1-table-of-content)
 
 ---
 <div align="center">
 
-## Marketing Strategy
+## 5. Marketing Strategy
 
 </div>
 
-### SEO Project planning
+### 5.1. SEO Project planning
 
 The meta description and meta keywords have been added to the base.html template to help search engines find the website as relevant answer to users' searches.
 
@@ -304,7 +364,7 @@ Keywords have then been used as much as possible in html elements through the we
 
 Attributes rel has been set to "noopener" for social media links.
 
-#### Keywords
+#### 5.1.1. Keywords
 
 The first brainstorming came up with the following words:
 
@@ -320,15 +380,15 @@ From that brainstorming and the use of Wordtracker to optimize the selection of 
 
 - small gifts for dinner party guests, bachelorette event ideas
 
-#### sitemap.xml and robots.txt files
+#### 5.1.2. sitemap.xml and robots.txt files
 
 To help search engine understand the structure of the website and optimize its ranking in their results sitemap.xml and robots.txt files have been created and added to the root directory of the project.
 
-### Content Marketing
+### 5.2. Content Marketing
 
 A blog section has been implemented to help the owner develop new content on their website so search engines keep detecting recent activities and the amount of keyword keeps growing on the website.
 
-### Social Media Marketing
+### 5.3. Social Media Marketing
 
 A Facebook Business Page has been created to help the business develop an active community and improve the trafic to their online shop.
 
@@ -336,21 +396,23 @@ The hero-image of the landing page of their website has been used as a cover pic
 
 ![Oma K-ron facebook business page](documentation/facebook_business_page.png)
 
-### Email Marketing
+### 5.4. Email Marketing
 
 Using MailChimp was an easy way to implement a newsletter subscritpion and therefore collect email addresses of potential customers to reach them out when creating special offers or events.
+
+[Back to the Table of Content](#1-table-of-content)
 
 ---
 
 <div align="center">
 
-## Features
+## 6. Features
 
 </div>
 
 This project is a full-stack web application using a cloud-based database (PostgreSQL) to record data and an online-payment provider (Stripe) to accept payments.
 
-### Features currently available
+### 6.1. Features currently available
 
 - A branding with a logo, a name, and the colors of the company
 
@@ -396,17 +458,19 @@ This project is a full-stack web application using a cloud-based database (Postg
 
 ![Authentication system](documentation/search_and_filter_functionalities.png)
 
-### More features to implement
+### 6.2. More features to implement
 
 It would be nice to have the possibility to add a discount code within the checkout process so customers who have already purchase something are more likely to purchase again if they can benefit from a discount.
 
 It would also be nice to have a "click and collect" option. I actually wanted to implement this feature at first and I have wasted a lot of time troubleshooting the checkout process so that I have decided to give up on that feature as it was not a must have for the assessement criteria.
 
+[Back to the Table of Content](#1-table-of-content)
+
 ---
 
 <div align="center">
 
-## Technology Used
+## 7. Technology Used
 
 </div>
 
@@ -456,9 +520,13 @@ It would also be nice to have a "click and collect" option. I actually wanted to
   - [Mailchimp](https://mailchimp.com/) has been used to collect email from potential customers
   - [Wordtracker](https://www.wordtracker.com/) has been used to improve keywords for the SEO
 
+[Back to the Table of Content](#1-table-of-content)
+
+---
+
 <div align="center">
 
-## Testing
+## 8. Testing
 
 </div>
 
@@ -468,7 +536,7 @@ Testing details can be found separately in the [TESTING.md](TESTING.md) file
 
 <div align="center">
 
-## References and Credits
+## 9. References and Credits
 
 </div>
 
@@ -478,17 +546,19 @@ As a first huge support for this project comes, of course, the [boutique-Ado](ht
 
 As a second big support comes my last project [Hands Home Helpers](https://github.com/yannickferenczi/hands-home-helpers-website). From that project, I re-used some logic to implement the blog app and the contact form. I also re-used the README structure of that project to be as efficient as possible.
 
+[Back to the Table of Content](#1-table-of-content)
+
 ---
 
 <div align="center">
 
-## Procedures
+## 10. Procedures
 
 </div>
 
 This project support fully embedded online payment with stripe services. It uses ElephantSQL as a cloud PostgreSQL database, and AWS S3 services to host media and static files. In this chapter, we will dive into seting up those external services.
 
-### Project Creation
+### 10.1. Project Creation
 
 I have created the project from the [ci-full-template](https://github.com/Code-Institute-Org/ci-full-template) following the steps below:
 
@@ -501,7 +571,7 @@ I have created the project from the [ci-full-template](https://github.com/Code-I
 7. Paste the GitHub repo URL into the 'Repository URL' box
 8. Click 'Create'
 
-#### Create PostgreSQL database using ElephantSQL
+#### 10.1.1. Create PostgreSQL database using ElephantSQL
 
 To create your production database using ElephantSQL, follow the steps below:
 
@@ -513,7 +583,7 @@ To create your production database using ElephantSQL, follow the steps below:
 - Return to the Dashboard and click on the name of the newly created instance.
 - Copy the database URL from the details section. And add it to your environment variables (in the env.py file and on Heroku)
 
-### Local Development
+### 10.2. Local Development
 
 To Run Locally:
 
@@ -535,7 +605,7 @@ The project is set with different settings files for development and production.
 os.environ["DEVELOPMENT"] = "False"
 ```
 
-### Hosting images and static file with AWS
+### 10.3. Hosting images and static file with AWS
 
 To host images and static files using AWS, perform the following steps:
 
@@ -585,7 +655,7 @@ To host images and static files using AWS, perform the following steps:
 - In the IAM, go to "User Groups" in the left sidebar.
 - Create a group for the user, assign an access policy that grants the group access to the S3 bucket, and assign the user to the group to enable access to all files.
 
-### Add Stripe to the project
+### 10.4. Add Stripe to the project
 
 To test the checkout process, Stripe provides some card number to trigger different behaviour. They are as below:
 
@@ -610,7 +680,7 @@ Set up Stripe:
   - Then back to the "Webhooks" tab, click on the created webhook, click on "Reveal" under "Signing secret", copy the value and paste it as a value of your webhook secret key in the Heroku app
 ![Stripe webhook signing key](documentation/stripe_webhook_signing_secret.png)
 
-### Deployment to Heroku
+### 10.5. Deployment to Heroku
 
 I used Heroku to deploy this project.
 
@@ -650,11 +720,13 @@ To deploy to Heroku:
 2. Click deploy branch
 3. Once the build is complete click on 'Open app' to launch the new app
 
+[Back to the Table of Content](#1-table-of-content)
+
 ---
 
 <div align="center">
 
-## Acknowledgement
+## 11. Acknowledgement
 
 </div>
 
@@ -665,6 +737,8 @@ Whatever will be my overall result for the course, I am very happy and greatfull
 I want to give a big thank you to their very supportive community and especially to 
 - [Alan Bushell](https://github.com/Alan-Bushell) who always found the right word to keep me on track,
 - [Jason Dunton](https://www.linkedin.com/in/jason-dunton/) from Code Institute tutoring for the huge help to fix my Stripe webhooks. I have definitely spent over a week trying to fix that issue and Jason knew straight away where to look to identify clearly the origin of the problem. We could solve it within 20 minutes (and the longest part was to redeploy a few time on Heroku to test the solutions implemented)
+
+[Back to the Table of Content](#1-table-of-content)
 
 ---
 
