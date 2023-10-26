@@ -549,8 +549,41 @@ Here is a Screenshot of a list of successful webhook for this project:
 
 |  | chrome-desktop | chrome-mobile | safari-desktop | safari-mobile | firefox-desktop | firefox-mobile |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| If the user is authenticated, the email field for the newsletter subscription is prepopulated with the user's email address |
+| If the user tries to submit the newsletter subscription form with a non-valid email address format, errors are displayed |
+| If the email address was already submitted for the newsletter subscription, the user is notified that the email address was already registered |
+| When users fill in the newsletter subscription with a valid email address which was not submitted yet, they get a "thank you for subscribing!" |
+| Users cannot submit an invalid contact form |
+| When users submit a valid contact form, they are redirected to the all products listing page |
+| When users submit a valid contact form, they receive a confirmation email |
 </details>
 
+---
 
+<div align=center>
 
-Submitting an add blog form with a title matching exactly a title of another blog post redirect to an "error 500 - internal server error". This is due to the unique slug constraint on blog posts. The good thing is that it does not create a second blog post with the same slug or title. The bad thing is that it is really not user friendly and also really not explicit so the superuser creating the blog post might not understand what to do to solve the problem.
+## Bugs
+
+</div>
+
+Header too bright ![bug status](https://img.shields.io/static/v1?label=fixed&message=No&color=bb0000&style=plastic)
+
+The website does not display well. It looks like the main header is brighter than the viewport. Then it creates a white band on the right of the screen which is not nice. I could not implement a fix for this issue. I could only fix it with the developer tool by removing some negative margin on a nav-link element. But I did not manage to do it within my code.
+
+Unique slug exception not handled ![bug status](https://img.shields.io/static/v1?label=fixed&message=No&color=bb0000&style=plastic)
+
+Submitting an add blog post form with a title matching exactly a title of another blog post redirect to an "error 500 - internal server error". This is due to the unique slug constraint on blog posts. The good thing is that it does not create a second blog post with the same slug or title. The bad thing is that it is really not user friendly and also really not explicit so the superuser creating the blog post might not understand what to do to solve the problem.
+
+Webhook not working - phase 1 ![bug status](https://img.shields.io/static/v1?label=fixed&message=Yes&color=success&style=plastic)
+
+I have struggled a lot while implementing the checkout process and especially to have the webhook working. After so much troubleshooting, I lost hope to solve it by myself and ask the tutoring to help me. That was definitely the right decision. It appeared that I named the payment_intent_payment_failed function a certain name and I missed name the function when calling it.
+
+Webhook not working - phase 2 ![bug status](https://img.shields.io/static/v1?label=fixed&message=Yes&color=success&style=plastic)
+
+The solution above was a good start but did not solve the issue on its own. Still with the help of tutoring, we find out that my email templates for the email confirmation were in the checkout app folder instead of being in the template folder of the same app. That fixed the problem and made up my mind to carry on through the hard time.
+
+JS file from MailChimp does not load (error 404) ![bug status](https://img.shields.io/static/v1?label=fixed&message=Yes&color=success&style=plastic)
+
+For some reasons, the file (//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js) from MailChimp for the newsletter fail to load. I looked for a solution on the internet but I did not find anything relevant. Only one solution I found was to copy the content of that link and add it to a javascript file on the project. I have noticed that the url started with // so I the https: in front of it to fix the problem.
+
+Return to the [README.md](README.md) file

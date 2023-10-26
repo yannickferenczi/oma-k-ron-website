@@ -280,10 +280,10 @@ Each sprint counts a certain amount of story points based on their Epics, User S
 | Sprint 3 | 05/10 - 07/10 | 56 |
 | Sprint 4 | 09/10 - 11/10 | 16 |
 | Sprint 5 | 12/10 - 14/10 | 40 |
-| Sprint 6 | 16/10 - 18/10 | 104 |
-| Sprint 7 | 19/10 - 21/10 | 0 |
-| Sprint 8 | 23/10 - 25/10 | 0 |
-| Sprint 9 | 26/10 - 27/10 | 0 |
+| Sprint 6 | 16/10 - 18/10 | 88 |
+| Sprint 7 | 19/10 - 21/10 | 40 |
+| Sprint 8 | 23/10 - 25/10 | 32 |
+| Sprint 9 | 26/10 - 27/10 | 48 |
 
 To conclude, I must admit that I have started this project with a very high level of stress because the whole checkout and payment system was quite involved. Creating this agile project manager was definitely helpfull to remind me everyday that the timeline was tight and that I should not lose focus. Nevertheless, it kept my stress at its highest level for the full implementation period and made me feel overwhelm every single day.
 
